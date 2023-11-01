@@ -10,7 +10,7 @@ public class JacobTEMPPlayer : MonoBehaviour
     I JUST WANT TO MAKE SURE I CAN GIVE POWER-UPS
      */
 
-    [SerializeField] private float moveSpeed = 5.0f;
+    public float moveSpeed = 5.0f;
 
 
     // Start is called before the first frame update
