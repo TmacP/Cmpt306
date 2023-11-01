@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.12260585, g: 0.75997716, b: 0.7924528, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 1858917752}
   - component: {fileID: 1858917751}
   - component: {fileID: 1858917750}
+  - component: {fileID: 1858917754}
   m_Layer: 0
   m_Name: BasicFish1
   m_TagString: BasicFish
@@ -791,7 +792,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -870,6 +871,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858917754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858917749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcb6a20a23a47749a1d68c5ed72af23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1231761085918627338 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
@@ -975,12 +988,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
+      propertyPath: m_Text
+      value: 'SCORE: 99999'
       objectReference: {fileID: 0}
     - target: {fileID: 7111940181923696358, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
       propertyPath: m_Name
