@@ -12,6 +12,7 @@ public class JacobTEMPPlayer : MonoBehaviour
 
     public float moveSpeed = 5.0f;
     public float health = 50f;
+    public bool hasMagnetBuff;
 
 
     // Start is called before the first frame update
