@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // The HealthBar script is responsible for displaying the player's health using heart icons.
-// It receives the health percentage from the HealthManager and updates the heart icons accordingly.
 public class HealthBar : MonoBehaviour
 {
     // Reference to the heart icon prefab that will be displayed in the health bar.
@@ -52,3 +51,6 @@ public class HealthBar : MonoBehaviour
         }
     }
 }
+
+
+// Author: Tristen MacPherson
