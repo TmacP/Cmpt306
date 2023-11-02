@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;
+
+    public GameObject player;
   
 
     // Score Variables
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         UpdateScoreVisual();
     }
     // Update the Score Text Object
@@ -40,6 +43,11 @@ public class GameManager : MonoBehaviour
         playerScore += pointsAwarded;
         Debug.Log(playerScore);
         UpdateScoreVisual();
+    }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return player.transform.position;
     }
 
 

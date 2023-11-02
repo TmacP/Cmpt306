@@ -14,7 +14,8 @@ public class TileGeneration : MonoBehaviour
 {
     private int mapWidth = 40; //NEEDS TO BE EVEN
     private int generationHeight = 100;
-
+    private int generationEndYPos = 0; //Y position of the bottom of the current generated area
+    private int currentCrawlerXPos = 0;
 
     [SerializeField] Tilemap tilemap;
     [SerializeField] Tile[] tiles;
@@ -32,10 +33,21 @@ public class TileGeneration : MonoBehaviour
     {
         //tilemap.SetTile(new Vector3Int(0, 0, 0), tiles[0]);
 
-        Debug.Log(Time.time);
-        fillRectangle(new Vector3Int(-mapWidth/2, -6, 0), mapWidth, generationHeight, tiles[0]);
+        //Debug.Log(Time.time);
+        //fillRectangle(new Vector3Int(-mapWidth/2, -6, 0), mapWidth, generationHeight, tiles[0]);
         createTunnel(new Vector3Int(0, -6, 0), new DigType(), new Vector3Int(-mapWidth / 2, -6, 0), mapWidth, generationHeight);
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
+    }
+
+    void FixedUpdate() {
+        Vector3 playerPosition = GameManager.instance.GetPlayerPosition();
+        if (playerPosition.y < generationEndYPos + 20) {
+            fillRectangle(new Vector3Int(-mapWidth/2, generationEndYPos, 0), mapWidth, generationHeight, tiles[0]);
+            currentCrawlerXPos = createTunnel(new Vector3Int(currentCrawlerXPos, generationEndYPos, 0), new DigType(), new Vector3Int(-mapWidth / 2, generationEndYPos, 0), mapWidth, generationHeight);
+            generationEndYPos -= generationHeight;
+        }
+
+
     }
 
 
@@ -67,7 +79,7 @@ public class TileGeneration : MonoBehaviour
     /// <param name="topLeftCornerPosition">Top left of desired digging area.</param>
     /// <param name="width"></param>
     /// <param name="height"></param>
-    private void createTunnel(Vector3Int startingPosition, DigType initialDigType, Vector3Int topLeftCornerPosition, int width, int height) {
+    private int createTunnel(Vector3Int startingPosition, DigType initialDigType, Vector3Int topLeftCornerPosition, int width, int height) {
 
         Vector3Int position = startingPosition;
         int leftBoundary = topLeftCornerPosition.x;
@@ -187,7 +199,7 @@ public class TileGeneration : MonoBehaviour
                 moveDownPityTimer = 0; 
             }
         }
-        
+        return position.x;
 
     }
 }
