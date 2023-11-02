@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.12260585, g: 0.75997716, b: 0.7924528, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -516,12 +516,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c69e84c94deffdc4991679973e85fab9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52d88ce88b655594b94344fc98da988d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 6.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -537,7 +537,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 165, y: 12, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -687,7 +687,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -724,8 +724,9 @@ GameObject:
   - component: {fileID: 1858917752}
   - component: {fileID: 1858917751}
   - component: {fileID: 1858917750}
+  - component: {fileID: 1858917754}
   m_Layer: 0
-  m_Name: BasicFish
+  m_Name: BasicFish1
   m_TagString: BasicFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,8 +768,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 12.8}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 8, y: 6.02}
+    newSize: {x: 8, y: 6.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -791,7 +792,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -844,12 +845,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c35accc80394fe14d919ce4f8e2bc0ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e565449e7593f694b864b70d9804ccea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8, y: 6.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -865,11 +866,23 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -137, y: -50, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858917754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858917749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcb6a20a23a47749a1d68c5ed72af23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1231761085918627338 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
@@ -975,12 +988,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
+      propertyPath: m_Text
+      value: 'SCORE: 99999'
       objectReference: {fileID: 0}
     - target: {fileID: 7111940181923696358, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
       propertyPath: m_Name
