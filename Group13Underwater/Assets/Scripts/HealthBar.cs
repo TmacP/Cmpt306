@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public Transform heartsParent;
 
     // Define the maximum number of hearts in the health bar.
-    public int maxHearts = 10; // Adjust this number as needed.
+    public int maxHearts = 5; // Adjust this number as needed.
 
     // Initializes the HealthBar.
     private void Start()
