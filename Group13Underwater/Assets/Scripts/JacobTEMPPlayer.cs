@@ -11,6 +11,7 @@ public class JacobTEMPPlayer : MonoBehaviour
      */
 
     public float moveSpeed = 5.0f;
+    public float health = 50f;
 
 
     // Start is called before the first frame update
