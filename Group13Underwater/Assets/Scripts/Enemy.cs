@@ -48,10 +48,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (enableDebugLogs){Debug.Log("On trigger stay");}// DEBUG
-        if (other.transform.tag == "Player" && Time.time > damageTime && other is BoxCollider)
+        if (other.transform.tag == "Player" && Time.time > damageTime && other is CapsuleCollider2D)
         {
             if (enableDebugLogs){Debug.Log("Enemy is colliding with " + other.transform.tag);}
 

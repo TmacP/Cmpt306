@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
+    private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
 
     // Initial player health value
     [SerializeField] private float playerHealth = 100.0f;
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         // Function to modify the player's health and update the health display
     public void TakeDamage(float damage)
     {
-        Debug.Log("Player took damage. Playerhealth is: " + playerHealth);
+        if (enableDebugLogs){Debug.Log("Player took damage. Playerhealth is: " + playerHealth);}
         playerHealth -= damage;
 
         if (playerHealth <= 0)
