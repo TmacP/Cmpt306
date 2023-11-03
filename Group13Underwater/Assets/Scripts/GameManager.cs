@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,6 +50,16 @@ public class GameManager : MonoBehaviour
     {
         return player.transform.position;
     }
+
+        public void ReloadGameScene()
+    {
+        // Reset game state variables, if needed.
+        playerScore = 0; // For example, reset the score.
+
+        // Reload the current scene.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 
 
 }

@@ -29,7 +29,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            // Handle player death or any other logic here.
+            Destroy(this.gameObject);
+            GameManager.instance.ReloadGameScene();
         }
 
         // Update the health display in the HealthBar script.
