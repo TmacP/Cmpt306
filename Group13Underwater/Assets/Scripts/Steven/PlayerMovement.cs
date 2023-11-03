@@ -6,9 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     private int speed = 200;
     [SerializeField] Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -21,10 +23,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(Vector3.left * speed);
+
+            if (spriteRenderer.flipX == false) {
+                spriteRenderer.flipX = true;
+            }
         }
         if (Input.GetKey(KeyCode.D))
         {
             rb.AddForce(Vector3.right * speed);
+
+            if (spriteRenderer.flipX == true) {
+                spriteRenderer.flipX = false;
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {

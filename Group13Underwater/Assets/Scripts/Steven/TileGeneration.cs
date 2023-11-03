@@ -12,14 +12,21 @@ using UnityEditor;
 /// </summary>
 public class TileGeneration : MonoBehaviour
 {
-    [SerializeField] Tilemap tilemap;
-    [SerializeField] Tile[] tiles;
+    [SerializeField] Tilemap groundTilemap;
+    [SerializeField] Tile[] groundTiles;
+    
+    [SerializeField] Tilemap backgroundTileMap;
+    [SerializeField] Tile[] backgroundTiles;
 
+    [SerializeField] int backgroundWidth = 4;
+    [SerializeField] int backgroundHeight = 4;
+    
 
-    [SerializeField] int generationWidth = 40; //NEEDS TO BE EVEN
+    [SerializeField] int dirtWidth = 60; //NEEDS TO BE EVEN
+    [SerializeField] int crawlerWidth = 40;
     [SerializeField] int generationHeight = 100;
 
-    [SerializeField] (int, int) crawlerBounds = (0, 2); //THIS WILL SET THE CAVE ENTRANCE POSITION
+    [SerializeField] (int, int) crawlerBounds = (-1, 1); //THIS WILL SET THE CAVE ENTRANCE POSITION
 
     [SerializeField] int minimumCaveWidth = 2;
 
@@ -47,18 +54,23 @@ public class TileGeneration : MonoBehaviour
     //-------------------------------------------
 
     private int generationEndYPos = 0; //Y position of the bottom of the current generated area
+    private int backgroundGenerationEndYPos = 0;
+
 
     private void Awake()
     {
-        tiles = Resources.LoadAll<Tile>("Steven/Tiles");
+        groundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Ground");
+        backgroundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Background");
     }
 
     void FixedUpdate() {
         Vector3 playerPosition = GameManager.instance.GetPlayerPosition();
         if (playerPosition.y < generationEndYPos + 20) {
-            fillRectangle(new Vector3Int(-generationWidth / 2, generationEndYPos, 0), generationWidth, generationHeight, tiles[0]);
-            crawlerBounds = createTunnel(crawlerBounds, new Vector3Int(-generationWidth / 2, generationEndYPos, 0), generationWidth, generationHeight);
+            fillRectangle(new Vector3Int(-backgroundWidth / 2, backgroundGenerationEndYPos, 0), backgroundWidth, backgroundHeight, backgroundTileMap, backgroundTiles[0]);
+            fillRectangle(new Vector3Int(-dirtWidth / 2, generationEndYPos, 0), dirtWidth, generationHeight, groundTilemap, groundTiles[0]);
+            crawlerBounds = createTunnel(crawlerBounds, new Vector3Int(-crawlerWidth / 2, generationEndYPos, 0), crawlerWidth, generationHeight);
             generationEndYPos -= generationHeight;
+            backgroundGenerationEndYPos -= backgroundHeight;
         }
     }
 
@@ -71,14 +83,14 @@ public class TileGeneration : MonoBehaviour
     /// <param name="topLeftCornerPosition">Disired position of the rectangles top left corner.</param>
     /// <param name="width"></param>
     /// <param name="height"></param>
-    private void fillRectangle(Vector3Int topLeftCornerPosition, int width, int height, Tile fillTile)
+    private void fillRectangle(Vector3Int topLeftCornerPosition, int width, int height, Tilemap tileMap, Tile fillTile)
     {
         Vector3Int position = topLeftCornerPosition;
         for (int x = topLeftCornerPosition.x; x < topLeftCornerPosition.x + width; x++)
         {
             for (int y = topLeftCornerPosition.y; y > topLeftCornerPosition.y - height; y--)
             {
-                tilemap.SetTile(new Vector3Int(x, y, 0), fillTile);
+                tileMap.SetTile(new Vector3Int(x, y, 0), fillTile);
             }
         }
     }
@@ -99,7 +111,7 @@ public class TileGeneration : MonoBehaviour
             //DIG
             for (int i = bounds.Item1; i < bounds.Item2; i++) {
 
-                tilemap.SetTile(new Vector3Int(i, yPosition), null);
+                groundTilemap.SetTile(new Vector3Int(i, yPosition), null);
             }
 
 
@@ -107,42 +119,7 @@ public class TileGeneration : MonoBehaviour
             int dis;
             float rand;
 
-            //GROW
-            dir = new Direction();
-            dis = 0;
-            rand = UnityEngine.Random.value; //CHOOSE IF GROWING
-            if (rand < crawlerChanceToGrow)
-            {
-
-                rand = UnityEngine.Random.value;
-                if (rand < crawlerChanceToGrowLeft) //CHOOSE IF GROWING LEFT
-                {
-                    dir = Direction.left;
-                }
-                else
-                {
-                    dir = Direction.right;
-                }
-
-                rand = UnityEngine.Random.value; //CHOOSE HOW FAR GROWING
-                if (rand < crawlerChanceToGrow1)
-                {
-                    dis = 1;
-                }
-                else if (rand < crawlerChanceToGrow1 + crawlerChanceToGrow2)
-                {
-                    dis = 2;
-                }
-                else if (rand < crawlerChanceToGrow1 + crawlerChanceToGrow2 + crawlerChanceToGrow3)
-                {
-                    dis = 3;
-                }
-                
-                bounds = growCrawler(dis, dir, bounds, leftGenerationBoundary, rightGenerationBoundary, crawlerSize);
-            }
-
-
-
+            
             //SHRINK
             dir = new Direction();
             dis = 0;
@@ -176,8 +153,45 @@ public class TileGeneration : MonoBehaviour
 
                 bounds = shrinkCrawler(dis, dir, bounds, leftGenerationBoundary, rightGenerationBoundary, crawlerSize);
             }
-
             crawlerSize = bounds.Item2 - bounds.Item1;
+
+
+            //GROW
+            dir = new Direction();
+            dis = 0;
+            rand = UnityEngine.Random.value; //CHOOSE IF GROWING
+            if (rand < crawlerChanceToGrow)
+            {
+
+                rand = UnityEngine.Random.value;
+                if (rand < crawlerChanceToGrowLeft) //CHOOSE IF GROWING LEFT
+                {
+                    dir = Direction.left;
+                }
+                else
+                {
+                    dir = Direction.right;
+                }
+
+                rand = UnityEngine.Random.value; //CHOOSE HOW FAR GROWING
+                if (rand < crawlerChanceToGrow1)
+                {
+                    dis = 1;
+                }
+                else if (rand < crawlerChanceToGrow1 + crawlerChanceToGrow2)
+                {
+                    dis = 2;
+                }
+                else if (rand < crawlerChanceToGrow1 + crawlerChanceToGrow2 + crawlerChanceToGrow3)
+                {
+                    dis = 3;
+                }
+
+                bounds = growCrawler(dis, dir, bounds, leftGenerationBoundary, rightGenerationBoundary, crawlerSize);
+            }
+            crawlerSize = bounds.Item2 - bounds.Item1;
+
+
             yPosition--;
         
         }
