@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private int speed = 200;
+    private int speed = 10000;
     [SerializeField] Rigidbody2D rb;
     
     void Awake() {
