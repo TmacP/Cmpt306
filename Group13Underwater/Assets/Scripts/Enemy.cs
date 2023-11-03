@@ -15,20 +15,21 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
     }
-    void Update()
+    void FixedUpdate()
     {
         Movement();
     }
 
-    private void Movement()
+private void Movement()
+{
+    if (GameManager.instance.player)
     {
-        //null reference check
-        //if (GameManager.instance.player)
-        //{
-            //transform.LookAt(GameManager.instance.player.transform.position); //Look at the player
-            //transform.position += transform.forward * moveSpeed * Time.deltaTime;
-        //}
+        Vector3 targetPosition = GameManager.instance.player.transform.position;
+        Vector3 moveDirection = (targetPosition - transform.position).normalized;
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
+}
+
 
     public void TakeDamage(float damage)
     {
