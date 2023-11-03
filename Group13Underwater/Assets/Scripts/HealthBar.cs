@@ -1,56 +1,74 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// The HealthBar script is responsible for displaying the player's health using heart icons.
 public class HealthBar : MonoBehaviour
 {
-    // Reference to the heart icon prefab that will be displayed in the health bar.
     public GameObject heartPrefab;
-
-    // Parent transform where the heart icons will be instantiated.
     public Transform heartsParent;
-
-    // Define the maximum number of hearts in the health bar.
     public int maxHearts = 5; // Adjust this number as needed.
 
-    // Initializes the HealthBar.
+    // Reference to the player's health (make it public for accessibility).
+    public float playerHealth = 100.0f; // You can set the initial health value.
+
+    // Reference to full and empty heart sprites.
+    public Sprite fullHeartSprite;
+    public Sprite emptyHeartSprite;
+
     private void Start()
     {
-        // You can set up any initial configurations here.
+        // Initialize the health bar when the game starts.
+        InitializeHealthBar();
     }
 
-    // Sets the health bar display based on the provided health percentage.
-    // It calculates the number of heart icons to display based on the health percentage.
-    // Clears existing heart icons and instantiates new ones accordingly.
-    public void SetHealth(float healthPercentage)
+    private void InitializeHealthBar()
     {
-        int totalHearts = Mathf.CeilToInt(healthPercentage * maxHearts);
-
         // Clear the existing hearts.
         foreach (Transform child in heartsParent)
         {
             Destroy(child.gameObject);
         }
 
-        // Instantiate heart icons based on health percentage.
+        // Instantiate heart icons based on the maximum number of hearts.
         for (int i = 0; i < maxHearts; i++)
         {
             GameObject heart = Instantiate(heartPrefab, heartsParent);
+            Image heartImage = heart.GetComponent<Image>(); // Access the Image component
 
-            // Set the state of the heart (full/empty) based on the current health.
-            if (i < totalHearts)
+            // Set the sprite of the heart (full/empty) based on the current health.
+            if (i < Mathf.CeilToInt(playerHealth / (100.0f / maxHearts)))
             {
-                // Set it as a full heart.
-                // You may need to handle your heart visuals here.
+                heartImage.sprite = fullHeartSprite;
             }
             else
             {
-                // Set it as an empty heart.
-                // You may need to handle your heart visuals here.
+                heartImage.sprite = emptyHeartSprite;
+            }
+        }
+    }
+
+    // Update the health display based on the provided health percentage.
+    public void SetHealth(float healthPercentage)
+    {
+        playerHealth = Mathf.Clamp(healthPercentage * 100.0f, 0.0f, 100.0f);
+        UpdateHealthBar();
+    }
+
+    private void UpdateHealthBar()
+    {
+        for (int i = 0; i < maxHearts; i++)
+        {
+            Transform heart = heartsParent.GetChild(i);
+            Image heartImage = heart.GetComponent<Image>(); // Access the Image component
+
+            // Set the sprite of the heart (full/empty) based on the current health.
+            if (i < Mathf.CeilToInt(playerHealth / (100.0f / maxHearts)))
+            {
+                heartImage.sprite = fullHeartSprite;
+            }
+            else
+            {
+                heartImage.sprite = emptyHeartSprite;
             }
         }
     }
 }
-
-
-// Author: Tristen MacPherson
