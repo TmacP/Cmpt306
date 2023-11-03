@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BasicFish
   - StarFish
+  - Heart
   layers:
   - Default
   - TransparentFX
