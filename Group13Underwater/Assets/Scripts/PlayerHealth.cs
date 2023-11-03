@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
+
+    // Initial player health value
+    [SerializeField] private float playerHealth = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +20,19 @@ public class PlayerHealth : MonoBehaviour
         // You can add any health-related logic here.
     }
 
-    // Function to modify the player's health and update the health display
-    private void ModifyPlayerHealth(int healthChange)
+        // Function to modify the player's health and update the health display
+    public void TakeDamage(float damage)
     {
-        // Calculate the new health percentage
-        float newHealthPercentage = (healthBar.playerHealth + healthChange) / 100.0f;
+        Debug.Log("Player took damage. Playerhealth is: " + playerHealth);
+        playerHealth -= damage;
 
-        // Call the SetHealth function in the HealthBar script to update the health display
-        healthBar.SetHealth(newHealthPercentage);
+        if (playerHealth <= 0)
+        {
+            // Handle player death or any other logic here.
+        }
+
+        // Update the health display in the HealthBar script.
+        healthBar.SetHealth(playerHealth / 100.0f);
     }
+
 }
