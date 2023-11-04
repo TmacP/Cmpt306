@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
 
     // Initial player health value
-    [SerializeField] private float playerHealth = 100.0f;
+    [SerializeField] public float playerHealth = 100.0f;
 
     // Start is called before the first frame update
     void Start()

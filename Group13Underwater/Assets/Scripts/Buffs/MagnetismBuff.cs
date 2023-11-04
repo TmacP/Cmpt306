@@ -31,7 +31,7 @@ public class MagnetismBuff : PowerupEffect
         // Spawn an effect so that the player knows something occured:
 
         // Apply MoveSpeed Buff
-        JacobTEMPPlayer player = target.GetComponent<JacobTEMPPlayer>(); // get player data, can change
+        PlayerBuff player = target.GetComponent<PlayerBuff>(); // get player data, can change
         isBuffed = true; // set isBuffed to true
 
         player.hasMagnetBuff = true;
