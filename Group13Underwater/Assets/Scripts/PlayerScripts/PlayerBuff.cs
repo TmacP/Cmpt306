@@ -5,5 +5,6 @@ using UnityEngine;
 public class PlayerBuff : MonoBehaviour
 {
     public bool hasMagnetBuff;
+    public bool isBuffed;
 
 }
