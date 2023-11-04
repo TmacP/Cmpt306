@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     private PlayerHealth playerHealth; // Reference to the PlayerHealth script.
 
-    private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
+    private bool enableDebugLogs = false; // Flag to enable or disable debug logs.
 
     private void Start()
     {
