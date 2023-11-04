@@ -17,7 +17,7 @@ public class FishMagnetism : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, moveSpeed * Time.deltaTime);
             if (enableDebugLogs) Debug.Log("Item moved towards player."); //DEBUG
-            if (Vector2.Distance(transform.position, collision.transform.position) < 0.1f);
+            //if (Vector2.Distance(transform.position, collision.transform.position) < 0.1f);
         }
     }
 

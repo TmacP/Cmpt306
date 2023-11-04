@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class JacobTEMPCoin : MonoBehaviour
 {
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-
         GameManager gameManager = GameManager.instance;
         if (gameManager != null)
         {
