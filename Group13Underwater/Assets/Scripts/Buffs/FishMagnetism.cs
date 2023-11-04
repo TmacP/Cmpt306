@@ -9,7 +9,7 @@ using UnityEngine;
 public class FishMagnetism : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10.0f;
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
 
     private void OnTriggerStay2D(Collider2D collision)
     {

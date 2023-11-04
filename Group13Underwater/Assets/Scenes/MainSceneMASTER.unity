@@ -739,11 +739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2384681125385870879, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 2384681125385870879, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.83
+      value: -18.85
       objectReference: {fileID: 0}
     - target: {fileID: 2384681125385870879, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
       propertyPath: m_LocalPosition.z
@@ -791,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9022878280105090579, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1872,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoveSpeedBuffCollectable
       objectReference: {fileID: 0}
+    - target: {fileID: 2108966215140002497, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
     - target: {fileID: 2229242677730269985, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.57
