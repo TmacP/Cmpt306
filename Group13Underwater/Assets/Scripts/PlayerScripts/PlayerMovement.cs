@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private int speed = 1000;
+    public float moveSpeed = 1000;
     [SerializeField] Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     
@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector3.up * speed);
+            rb.AddForce(Vector3.up * moveSpeed);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector3.left * speed);
+            rb.AddForce(Vector3.left * moveSpeed);
 
             if (spriteRenderer.flipX == false) {
                 spriteRenderer.flipX = true;
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(Vector3.right * speed);
+            rb.AddForce(Vector3.right * moveSpeed);
 
             if (spriteRenderer.flipX == true) {
                 spriteRenderer.flipX = false;
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(Vector3.down * speed);
+            rb.AddForce(Vector3.down * moveSpeed);
         }
     }
 }

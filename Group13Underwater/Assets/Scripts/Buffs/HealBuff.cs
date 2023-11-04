@@ -8,6 +8,6 @@ public class HealBuff : PowerupEffect
     public float healAmount;
     public override void Apply(GameObject target)
     {
-        target.GetComponent<JacobTEMPPlayer>().health += healAmount;
+        target.GetComponent<PlayerHealth>().playerHealth += healAmount;
     }
 }
