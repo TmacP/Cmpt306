@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// This script controls the magnetism of an item toward the player.
-/// This item give the player a score when it is collected.
+
 /// </summary>
 public class FishMagnetism : MonoBehaviour
 {
@@ -17,21 +17,8 @@ public class FishMagnetism : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, moveSpeed * Time.deltaTime);
             if (enableDebugLogs) Debug.Log("Item moved towards player."); //DEBUG
-            if (Vector2.Distance(transform.position, collision.transform.position) < 0.1f)
-            {
-                AddScoreWhenCollected();
-            }
+            if (Vector2.Distance(transform.position, collision.transform.position) < 0.1f);
         }
     }
 
-    private void AddScoreWhenCollected()
-    {
-        GameManager gameManager = GameManager.instance;
-        if (gameManager != null)
-        {
-            gameManager.AddScore(1);
-            if (enableDebugLogs) Debug.Log("Score added when item was collected."); //DEBUG
-        }
-        Destroy(gameObject);
-    }
 }

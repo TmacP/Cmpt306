@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class JacobTEMPCoin : MonoBehaviour
 {
+    private bool enableDebugLogs = true; // Control debug logs
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            // If the collectable is colliding with player, apply powerup
-            Destroy(this.gameObject);
+
+        GameManager gameManager = GameManager.instance;
+        if (gameManager != null)
+        {
+            gameManager.AddScore(1);
+            if (enableDebugLogs) Debug.Log("Score added when item was collected."); //DEBUG
         }
+        // If the collectable is colliding with player, apply powerup
+        Destroy(this.gameObject);
+        }
+
+
+
+
+
     }
+
 }
