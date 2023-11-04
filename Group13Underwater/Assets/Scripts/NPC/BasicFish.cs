@@ -1,15 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BasicFish : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 50;
-    [SerializeField] private float maxHorizontalAngle = 30f;
-    [SerializeField] private float changeDirectionTimer = 2f;
-    [SerializeField] private bool enableDebugLogs = true;
-
-    private Rigidbody2D rb;
+    private float moveSpeed = 5;
+    [SerializeField] private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private Vector3 currentDirection = Vector3.zero;
+    private float changeDirectionTimer = 2f;
     private float timer;
 
     void Awake()
@@ -26,7 +23,7 @@ public class BasicFish : MonoBehaviour
 
     void FixedUpdate()
     {
-        RotateFish();
+        transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * 15, 7));
         timer -= Time.fixedDeltaTime;
 
         if (timer <= 0f)
@@ -36,49 +33,25 @@ public class BasicFish : MonoBehaviour
         }
     }
 
-    void RotateFish()
+    private void ChangeRandomDirection()
     {
-        // Code for fish movement/animation (tilting)
-        transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * 15, 7));
-    }
+        float randomDirectionX = Random.Range(-1f, 1f); // Random horizontal direction between -1 and 1
+        rb.velocity = new Vector2(randomDirectionX, 0) * moveSpeed; // Move only horizontally
 
-private void ChangeRandomDirection()
-{
-    float randomX = Random.Range(-1f, 1f); // Random value between -1 and 1
-    Vector3 randomDirection = new Vector3(randomX, 0, 0);
-
-    // Ensure the random direction is not zero
-    while (randomDirection == Vector3.zero)
-    {
-        randomX = Random.Range(-1f, 1f);
-        randomDirection = new Vector3(randomX, 0, 0);
-    }
-
-    rb.AddForce(randomDirection * moveSpeed);
-
-    if (currentDirection != randomDirection)
-    {
-        if (randomDirection.x > 0)
+        // Flip the sprite based on the direction
+        if (randomDirectionX > 0)
         {
             if (!spriteRenderer.flipX)
             {
                 spriteRenderer.flipX = true;
             }
         }
-        else if (randomDirection.x < 0)
+        else if (randomDirectionX < 0)
         {
             if (spriteRenderer.flipX)
             {
                 spriteRenderer.flipX = false;
             }
         }
-
-        currentDirection = randomDirection;
-    }
-
-
-
-        // Instead of directly adding force here, you can add your logic for changing direction.
-        // If you want to add force to move the fish in this method, you can do that.
     }
 }
