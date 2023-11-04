@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMagnetBuff: 0
+  isBuffed: 0
 --- !u!1001 &217423476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1850,6 +1851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9054269541296040355, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: b549a47a42dd7e542ad04d32e0b4918f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
