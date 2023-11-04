@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 65470187}
-  scoreVisual: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
+  scoreVisual: {fileID: 1982954688}
 --- !u!4 &787859435
 Transform:
   m_ObjectHideFlags: 0
@@ -2816,6 +2816,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 209814021679898669, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
   m_PrefabInstance: {fileID: 1374729225}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1982954688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4204326705865554611, guid: fca3f81a06c70c34bab2e00d4c92c51d, type: 3}
+  m_PrefabInstance: {fileID: 1374729225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2070104592 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6625484362242070032, guid: 5538f8d2f3f994aaba3f0ace29c43831, type: 3}
