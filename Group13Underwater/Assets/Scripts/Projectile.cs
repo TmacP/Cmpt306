@@ -29,11 +29,12 @@ public class Projectile : MonoBehaviour
         transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
+            Destroy(this.gameObject); // after bullet hits enemy, destroy bullet
         }
     }
 }
