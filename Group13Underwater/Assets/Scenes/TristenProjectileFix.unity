@@ -340,12 +340,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 65470187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757cac78e2b15c94585fb3cd8f3ca9cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 59b1ba3a0ddc0c545ad4fcacb9251188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
-  moveSpeed: 50
-  damage: 50
+  projectile: {fileID: 6316560282846793674, guid: ed6d739ab618cbd4493b8f026f5b4e1b, type: 3}
+  shotCooldown: 2
 --- !u!1001 &217423476
 PrefabInstance:
   m_ObjectHideFlags: 0
