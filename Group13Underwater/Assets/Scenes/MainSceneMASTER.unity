@@ -557,7 +557,7 @@ MonoBehaviour:
   playerTransform: {fileID: 65470191}
   spawnRadius: 10
   maxEnemies: 20
-  spawnInterval: 4
+  spawnInterval: 8
 --- !u!1 &315566846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 65470187}
+  enemy: {fileID: 9022878280105090579, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
   scoreVisual: {fileID: 1982954688}
 --- !u!4 &787859435
 Transform:
@@ -3114,8 +3115,8 @@ SceneRoots:
   - {fileID: 744247515}
   - {fileID: 366192185}
   - {fileID: 512696841}
-  - {fileID: 1204562290}
   - {fileID: 310259740}
+  - {fileID: 1204562290}
   - {fileID: 961041917}
   - {fileID: 751064799}
   - {fileID: 1040549860}
