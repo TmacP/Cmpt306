@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     public GameObject itemPrefab; // Reference to the item prefab
     private float nextSpawnTime = 0f;
     public float spawnInterval = 2f; // Adjust this interval as needed

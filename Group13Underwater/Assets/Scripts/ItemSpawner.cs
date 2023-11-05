@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     public GameObject ScoreCollectable; // Reference to the prefab ScoreCollectable
     public GameObject HealBuffCollectable; // Reference to the prefab HealBuffCollectable
     public GameObject MagnetBuffCollectable; // Reference to the prefab MagnetBuffCollectable

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
-    private bool enableDebugLogs = false; // Flag to enable or disable debug logs.
+    private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
 
     // Initial player health value
     [SerializeField] public float playerHealth = 100.0f;
