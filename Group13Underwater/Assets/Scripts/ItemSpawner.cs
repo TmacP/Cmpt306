@@ -59,7 +59,8 @@ public class ItemSpawner : MonoBehaviour
         Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
 
         if (enableDebugLogs) { Debug.Log("Spawned item at position: " + spawnPosition); } //DEBUG
-
+        // Remove the used position from the list
+        tileGeneration.emptyTilePositions.RemoveAt(randomIndex);
 
     }
 

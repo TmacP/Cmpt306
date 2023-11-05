@@ -1399,10 +1399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundTilemap: {fileID: 662628255}
   groundTiles: []
-  backgroundTileMap: {fileID: 662628255}
-  backgroundTiles: []
-  backgroundWidth: 4
-  backgroundHeight: 4
   dirtWidth: 60
   crawlerWidth: 40
   generationHeight: 100
