@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     public static GameManager instance = null;
 
     public GameObject player;
