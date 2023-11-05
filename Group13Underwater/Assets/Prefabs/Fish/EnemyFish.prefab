@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 6960230718216161038}
   - component: {fileID: 8846426866650991694}
   m_Layer: 0
-  m_Name: EnemyFish1
+  m_Name: EnemyFish
   m_TagString: BasicFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2384681125385870879
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  health: 100
+  health: 1
   damageToPlayer: 20
   damageRate: 0.2
 --- !u!50 &6960230718216161038
