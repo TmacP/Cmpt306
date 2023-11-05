@@ -25,8 +25,8 @@ public class TileGeneration : MonoBehaviour
     [SerializeField] int dirtWidth = 60; //NEEDS TO BE EVEN
     [SerializeField] int crawlerWidth = 40;
     [SerializeField] int generationHeight = 100;
-
-    [SerializeField] (int, int) crawlerBounds = (-1, 1); //THIS WILL SET THE CAVE ENTRANCE POSITION
+    [SerializeField] int caveEntrance = 10;
+    private (int, int) crawlerBounds; //THIS WILL SET THE CAVE ENTRANCE POSITION
 
     [SerializeField] int minimumCaveWidth = 2;
 
@@ -62,6 +62,7 @@ public class TileGeneration : MonoBehaviour
 
     private void Awake()
     {
+        crawlerBounds = (-1, caveEntrance); // Set crawlerBounds in Awake method.
         groundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Ground");
         //backgroundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Background");
     }

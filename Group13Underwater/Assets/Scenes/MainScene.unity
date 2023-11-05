@@ -1465,7 +1465,8 @@ MonoBehaviour:
   dirtWidth: 60
   crawlerWidth: 40
   generationHeight: 100
-  minimumCaveWidth: 2
+  caveEntrance: 5
+  minimumCaveWidth: 20
   emptyTilePositions: []
   crawlerChanceToGrow: 0.3
   crawlerChanceToGrowLeft: 0.5
