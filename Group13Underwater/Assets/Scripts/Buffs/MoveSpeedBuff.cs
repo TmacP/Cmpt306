@@ -8,7 +8,7 @@ public class MoveSpeedBuff : PowerupEffect
     public float speedMultiplier; 
     public float maxBuffDuration; 
     private bool isBuffed = false;
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
 
     public override void Apply(GameObject target)
     {
