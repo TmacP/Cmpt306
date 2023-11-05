@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 5.0f;
     [SerializeField] private float moveSpeed = 50.0f;
-    [SerializeField] private int damage = 1;
+    [SerializeField] private float damage = 50.0f;
     private Vector3 direction;
 
     void Start()
