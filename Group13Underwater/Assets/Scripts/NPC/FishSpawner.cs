@@ -1,44 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
+using static UnityEngine.Random;
 
 public class FishSpawner : MonoBehaviour
 {
-    public GameObject Enemy;
-    public int xPos;
-    public int zPos;
-    public int EnemyCount;
-    public float terrainHeightOffset = 2f;
-    
+	public GameObject enemyPrefab;
+	[SerializeField] private float spawnRate = 2.0f;
+	[SerializeField] private float spawnRadius = 6f;
+	private float maxVar = 0.05f;
+	//[SerializeField] private Transform[] spawnPoints;
+	private float spawnTimer;
+	private int numberOfEnemiesSpawned = 0;
 
-    // Start is called before the first frame update
+	
+   // Update is called once per frame
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
+        InvokeRepeating("SpawnEnemy", 0.05f, spawnRate);
     }
 
-    // Update is called once per frame
-    private IEnumerator SpawnEnemies()
-    {
-        while (EnemyCount<20){
-            xPos = Random.Range(-16,13);
-            zPos = Random.Range(-20,1);
-            
-            // Raycast to find the terrain height at the spawn point
-            RaycastHit hit;
 
-            Vector3 raycastOrigin = new Vector3(xPos, 100f, zPos); // Cast ray from above to find terrain
-            if (Physics.Raycast(raycastOrigin, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("TileMap")))
-            {  float yPosition = hit.point.y + terrainHeightOffset;
-                Vector3 spawnPosition = new Vector3(xPos, yPosition, zPos);
-                Instantiate(Enemy, spawnPosition, Quaternion.identity);
+	private void SpawnEnemy(){
+		
+		if(Time.time >spawnTimer){
+			Vector3 playerPosition = GameManager.instance.player.transform.position;
+			float randomAngle = Random.Range(0, 2 * Mathf.PI);
+			 Vector3 randomSpawnOffset = new Vector3(
+                spawnRadius * Mathf.Cos(randomAngle),
+                0,
+                spawnRadius * Mathf.Sin(randomAngle)
+            );
+			Vector3 randomSpawnPosition = playerPosition + randomSpawnOffset;
+			GameObject newEnemy = Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
+			numberOfEnemiesSpawned++;
+			spawnTimer=Time.time+spawnRate+Random.Range(-maxVar,maxVar);
+		}
 
-            //Instantiate(Enemy, new Vector3(xPos,-4,zPos), Quaternion.identity);
-            }
-             yield return new WaitForSeconds(8);
-            EnemyCount+=1;
-
-        }
-        
-    }
 }
+}
+
+
