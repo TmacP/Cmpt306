@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            // Handle enemy death logic.
+            Destroy(this.gameObject);
         }
     }
 
