@@ -6,15 +6,16 @@ public class ItemSpawner : MonoBehaviour
 {
     private bool enableDebugLogs = true; // Control debug logs
     public GameObject ScoreCollectable; // Reference to the prefab ScoreCollectable
-    public GameObject HealBuffCollectable; // Reference to the prefab HealBuffCollectable
-    public GameObject MagnetBuffCollectable; // Reference to the prefab MagnetBuffCollectable
-    public GameObject MoveSpeedBuffCollectable; // Reference to the prefab MoveSpeedBuffCollectable
+    public GameObject HealBuff; // Reference to the prefab HealBuffCollectable
+    public GameObject MagnetBuff; // Reference to the prefab MagnetBuffCollectable
+    public GameObject MoveSpeedBuff; // Reference to the prefab MoveSpeedBuffCollectable
+    public GameObject itemPrefab;
     private float nextSpawnTime = 0f;
     public float spawnInterval = 2f; // Adjust this interval as needed
 
     public TileGeneration tileGeneration; // Reference to the TileGeneration script which has our list of empty tile positions
 
-    public List<Vector3Int> emptyTilePositions;
+    //public List<Vector3Int> emptyTilePositions;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class ItemSpawner : MonoBehaviour
             return;
         }
 
-        GameObject itemPrefab = GetRandomItemPrefab(); // Get a random item prefab
+        itemPrefab = GetRandomItemPrefab(); // Get a random item prefab
 
         if (itemPrefab == null)
         {
@@ -53,12 +54,11 @@ public class ItemSpawner : MonoBehaviour
 
         int randomIndex = Random.Range(0, tileGeneration.emptyTilePositions.Count);
         Vector3Int position = tileGeneration.emptyTilePositions[randomIndex];
-
+         if (enableDebugLogs) { Debug.Log("Position is :" +position); }
         // Instantiate the chosen item prefab at the random position
-        Vector3 spawnPosition = new Vector3(position.x, position.y, 0);
-        Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
-
+        Vector3Int spawnPosition = new Vector3Int(position.x, position.y, 0);
         if (enableDebugLogs) { Debug.Log("Spawned item at position: " + spawnPosition); } //DEBUG
+        Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
         // Remove the used position from the list
         tileGeneration.emptyTilePositions.RemoveAt(randomIndex);
 
@@ -70,11 +70,28 @@ public class ItemSpawner : MonoBehaviour
     {
         if (enableDebugLogs) { Debug.Log("Getting a random item prefab."); } //DEBUG
 
-        GameObject[] itemPrefabs = { ScoreCollectable, HealBuffCollectable, MagnetBuffCollectable, MoveSpeedBuffCollectable };
+        GameObject[] itemPrefabs = { ScoreCollectable, HealBuff, MagnetBuff, MoveSpeedBuff };
 
-        int randomIndex = Random.Range(0, itemPrefabs.Length);
-        if (enableDebugLogs) { Debug.Log("Chose item prefab: " + itemPrefabs[randomIndex].name); } //DEBUG
+         List<GameObject> validPrefabs = new List<GameObject>();
+        foreach (var prefab in itemPrefabs)
+        {
+            if (prefab != null)
+            {
+                validPrefabs.Add(prefab);
+            }
+        }
 
-        return itemPrefabs[randomIndex];
-    }
+        if (validPrefabs.Count == 0)
+        {
+        // Handle the case where no valid prefabs are available
+            Debug.Log("No valid item prefabs assigned!");
+            return null;
+        }
+
+         int randomIndex = Random.Range(0, validPrefabs.Count);
+         if (enableDebugLogs) { Debug.Log("Chose item prefab: " + validPrefabs[randomIndex].name); } //DEBUG
+
+         return validPrefabs[randomIndex];
+        }
 }
+
