@@ -4,33 +4,51 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // setting up the variable that the player will need
-    [SerializeField] private float shootCooldown = 0.00f;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private float shotCooldown = 2.0f;
+    
+    private bool canShoot = true;
+    private float shotTimer = 0.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        // Update the shot timer
+        shotTimer += Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) && canShoot)
+        {
+            Shoot();
+        }
     }
 
+    void Shoot()
+    {
+        // Reset the shot timer when shooting
+        shotTimer = 0.0f;
+        
+        // Set canShoot to false to prevent shooting during cooldown
+        canShoot = false;
 
+        // Get the mouse position in screen coordinates and convert it to a world point
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = 10.0f; // Set the distance from the camera
 
-    // Update is called once per frame
+        Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        // Calculate the direction to the mouse position
+        Vector3 shootDirection = (targetPosition - transform.position).normalized;
+
+        // Instantiate the projectile and set its direction
+        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+        newProjectile.GetComponent<Projectile>().SetDirection(shootDirection);
+    }
+
     void FixedUpdate()
     {
-        Shoot();
-        if (shootCooldown >= 0) {
-            shootCooldown = shootCooldown - 1.0f;
+        if (shotTimer >= shotCooldown)
+        {
+            // The cooldown time has passed, allow shooting
+            canShoot = true;
         }
     }
-
-
-    void Shoot() {
-        if ((Input.GetKey("space") || Input.GetKey(KeyCode.Mouse0)) && shootCooldown <= 0) {
-            Instantiate(projectile, transform.position, transform.rotation);
-            shootCooldown = 20.00f;
-        }
-    }
-
 }
