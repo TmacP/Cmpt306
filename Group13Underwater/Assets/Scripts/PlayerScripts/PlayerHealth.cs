@@ -24,8 +24,9 @@ public class PlayerHealth : MonoBehaviour
         // Function to modify the player's health and update the health display
     public void TakeDamage(float damage)
     {
-        if (enableDebugLogs){Debug.Log("Player took damage. Playerhealth is: " + playerHealth);}
         playerHealth -= damage;
+        if (enableDebugLogs){Debug.Log("Player took damage. Playerhealth is: " + playerHealth);}
+ 
 
         if (playerHealth <= 0)
         {
