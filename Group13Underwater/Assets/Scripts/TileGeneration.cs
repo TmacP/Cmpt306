@@ -31,7 +31,7 @@ public class TileGeneration : MonoBehaviour
     [SerializeField] int minimumCaveWidth = 2;
 
     public List<Vector3Int> emptyTilePositions = new List<Vector3Int>(); // List of all empty tile positions for spawing enemies, items, etc.
-    private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
+    private bool enableDebugLogs = false; // Flag to enable or disable debug logs.
 
 
 
@@ -62,7 +62,6 @@ public class TileGeneration : MonoBehaviour
 
     private void Awake()
     {
-        if (enableDebugLogs){Debug.Log("emptyTilePositions: ");}//DEBUG
         groundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Ground");
         backgroundTiles = Resources.LoadAll<Tile>("Steven/Tiles/Background");
     }
@@ -116,6 +115,9 @@ public class TileGeneration : MonoBehaviour
             for (int i = bounds.Item1; i < bounds.Item2; i++) {
 
                 groundTilemap.SetTile(new Vector3Int(i, yPosition), null);
+                emptyTilePositions.Add(new Vector3Int(i, yPosition, 0)); // Add empty tile position to list
+                if (enableDebugLogs){Debug.Log("emptyTilePositions.Add: " + string.Join(", ", emptyTilePositions));}//DEBUG
+
             }
 
 
