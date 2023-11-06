@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    private bool enableDebugLogs = false; // Control debug logs
     public static GameManager instance = null;
-  
+
+    public GameObject player;
 
     // Score Variables
     public Text scoreVisual;
@@ -15,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // I think this is for the player, change accordingly
         if (instance == null)
         {
             instance = this;
@@ -24,23 +25,40 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (enableDebugLogs) Debug.Log("GameManager Awake"); //DEBUG
     }
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScore = 0;
         UpdateScoreVisual();
+        if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
     }
-    // Update the Score Text Object
+
     void UpdateScoreVisual()
     {
         scoreVisual.text = "Score: " + playerScore.ToString();
+        if (enableDebugLogs) Debug.Log("Updating Score Visual;"); //DEBUG
     }
-    // Award n amount of points (pointsAwarded depends on fish type etc.)
+
     public void AddScore(int pointsAwarded)
     {
         playerScore += pointsAwarded;
-        Debug.Log(playerScore);
+        if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
         UpdateScoreVisual();
     }
 
+    public Vector3 GetPlayerPosition()
+    {
+        return player.transform.position;
+    }
 
+    public void ReloadGameScene()
+    {
+        if (enableDebugLogs) Debug.Log("ReloadGameScene;"); //DEBUG
+        playerScore = 0;
+        UpdateScoreVisual();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
