@@ -18,7 +18,8 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // You can add any health-related logic here.
+        // Update the health display in the HealthBar script.
+        healthBar.SetHealth(playerHealth / 100.0f);
     }
 
         // Function to modify the player's health and update the health display
