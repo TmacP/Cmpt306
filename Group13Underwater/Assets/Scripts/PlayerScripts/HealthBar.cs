@@ -7,6 +7,21 @@ public class HealthBar : MonoBehaviour
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
 
+
+
+    public update()
+    {
+       if (numHeartsToShow > 1)
+        {
+            // Access the PlayerMovement component and adjust the speed here
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.moveSpeed = 1000; // Boost speed
+            }
+        }
+    }
+
     // Update the health display based on the provided health percentage.
     public void SetHealth(float healthPercentage)
     {
@@ -23,5 +38,17 @@ public class HealthBar : MonoBehaviour
                 hearts[i].sprite = emptyHeartSprite;
             }
         }
+
+        // Check if there is exactly 1 heart, then boost speed
+        if (numHeartsToShow == 1)
+        {
+            // Access the PlayerMovement component and adjust the speed here
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            if (playerMovement != null)
+            {
+                playerMovement.moveSpeed *= 0.5f; // Boost speed
+            }
+        }
+        
     }
 }
