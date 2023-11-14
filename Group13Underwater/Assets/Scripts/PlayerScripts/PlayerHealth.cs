@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
@@ -11,12 +10,20 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvulnerable = false; // Flag to track player's invulnerability status.
     [SerializeField] private float invulnerabilityDuration = 2.0f; // Duration of invulnerability in seconds.
 
+    [SerializeField] private Sprite normalSprite; // The normal sprite of the player
+    [SerializeField] private Sprite invulnerableSprite; // The sprite to use during invulnerability
+
     // Initial player health value
     [SerializeField] public float playerHealth = 100.0f;
+
+    private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
     // Start is called before the first frame update
     void Start()
     {
+        // Get the SpriteRenderer component attached to the player GameObject
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         // You can set up any initial configurations here.
     }
 
@@ -26,8 +33,16 @@ public class PlayerHealth : MonoBehaviour
         // Check if the player is currently invulnerable
         if (isInvulnerable)
         {
-            // Implement logic for invulnerability, such as visual feedback.
+            // Change the player's sprite to the invulnerable sprite
+            spriteRenderer.sprite = invulnerableSprite;
+
+            // Implement any other logic for invulnerability, such as additional visual feedback.
             // For example, you might want to change the player's color or add a visual effect.
+        }
+        else
+        {
+            // Change the player's sprite back to the normal sprite
+            spriteRenderer.sprite = normalSprite;
         }
 
         // Update the health display in the HealthBar script.
