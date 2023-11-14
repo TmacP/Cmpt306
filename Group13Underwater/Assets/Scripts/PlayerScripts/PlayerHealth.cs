@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
     private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
-    
+    private PlayerMovement player;
     private bool isInvulnerable = false; // Flag to track player's invulnerability status.
     [SerializeField] private float invulnerabilityDuration = 2.0f; // Duration of invulnerability in seconds.
 
@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // Get the SpriteRenderer component attached to the player GameObject
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        player = GetComponent<PlayerMovement>();
         // You can set up any initial configurations here.
     }
 
@@ -56,6 +56,16 @@ public class PlayerHealth : MonoBehaviour
         if (!isInvulnerable)
         {
             playerHealth -= damage;
+
+            // Check if player's health is down to 20
+            if (playerHealth <= 20)
+            {
+                player.moveSpeed *= 2.0f;
+                // Implement code when player's health is down to 20
+                // For example, you can play a warning sound or trigger a visual effect.
+                // Add your specific code here.
+                if (enableDebugLogs) { Debug.Log("Player's health is down to 20!"); }
+            }
             if (enableDebugLogs) { Debug.Log("Player took damage. Player health is: " + playerHealth); }
 
             if (playerHealth <= 0)
