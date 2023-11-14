@@ -12,11 +12,12 @@ public class JacobTEMPCoin : MonoBehaviour
         GameManager gameManager = GameManager.instance;
         if (gameManager != null)
         {
-            gameManager.AddScore(1);
-            if (enableDebugLogs) Debug.Log("Score added when item was collected."); //DEBUG
+            gameManager.AddMoney(1);
+            if (enableDebugLogs) Debug.Log("Money added when item was collected."); //DEBUG
+            // If the collectable is colliding with player, apply powerup
+            Destroy(this.gameObject);
         }
-        // If the collectable is colliding with player, apply powerup
-        Destroy(this.gameObject);
+
         }
 
 
