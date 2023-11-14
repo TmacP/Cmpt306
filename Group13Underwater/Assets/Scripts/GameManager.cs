@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
 
     // Score Variables
     public Text scoreVisual;
+    public Text moneyVisual;
     private int playerScore = 0;
+    private int playerMoney = 0;
 
     void Awake()
     {
@@ -32,7 +34,9 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerScore = 0;
+        playerMoney = 0;
         UpdateScoreVisual();
+        UpdateMoneyVisual();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
     }
 
@@ -41,12 +45,24 @@ public class GameManager : MonoBehaviour
         scoreVisual.text = "Score: " + playerScore.ToString();
         if (enableDebugLogs) Debug.Log("Updating Score Visual;"); //DEBUG
     }
+    void UpdateMoneyVisual()
+    {
+        moneyVisual.text = "Money: " + playerMoney.ToString();
+        if (enableDebugLogs) Debug.Log("Updating Money Visual;"); //DEBUG
+    }
 
     public void AddScore(int pointsAwarded)
     {
         playerScore += pointsAwarded;
         if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
         UpdateScoreVisual();
+    }
+
+    public void AddMoney(int moneyAwarded)
+    {
+        playerMoney += moneyAwarded;
+        if (enableDebugLogs) Debug.Log("AddMoney(), Money awarded to player; playerMoney: " + playerMoney); //DEBUG
+        UpdateMoneyVisual();
     }
 
     public Vector3 GetPlayerPosition()
@@ -58,7 +74,9 @@ public class GameManager : MonoBehaviour
     {
         if (enableDebugLogs) Debug.Log("ReloadGameScene;"); //DEBUG
         playerScore = 0;
+        playerMoney = 0;
         UpdateScoreVisual();
+        UpdateMoneyVisual();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
