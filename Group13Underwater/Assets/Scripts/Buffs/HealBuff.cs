@@ -8,7 +8,7 @@ public class HealBuff : PowerupEffect
     private bool enableDebugLogs = false; // Control debug logs
 
     [SerializeField] public float healAmount; //currently stuck at 50 for some reason LR Nov 5
-    public override void Apply(GameObject target)
+public override void Apply(GameObject target)
     {
         PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
         PlayerMovement playerMovement = target.GetComponent<PlayerMovement>();
@@ -35,9 +35,12 @@ public class HealBuff : PowerupEffect
                 if (enableDebugLogs) { Debug.Log("Health after heal:" + playerHealth.playerHealth); } // DEBUG
             }
 
-            // Set the player's movement speed to 1000
-            // MAGIC NUMBER ALERT: 1000 is the default movement speed. tm to handle tricky edge case where player heals last heart
-            playerMovement.moveSpeed = 1000;
+            // Example usage from another script
+            if (playerMovement != null)
+            {
+                playerMovement.ResetMoveSpeed();
+            }
         }
     }
 }
+

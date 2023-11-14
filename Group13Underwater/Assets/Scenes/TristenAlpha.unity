@@ -304,6 +304,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1381177646}
+  invulnerabilityDuration: 2
+  normalSprite: {fileID: 21300000, guid: c22625f5e79534ba3b82e2495868b24b, type: 3}
+  invulnerableSprite: {fileID: 21300000, guid: dd898c5d15d0644f7b360e60341bdf57, type: 3}
   playerHealth: 100
 --- !u!114 &65470194
 MonoBehaviour:

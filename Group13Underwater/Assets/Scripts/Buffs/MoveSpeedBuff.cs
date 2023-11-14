@@ -38,7 +38,10 @@ public class MoveSpeedBuff : PowerupEffect
         }
 
         if (enableDebugLogs) Debug.Log("Buff Expired #DEBUG"); // Debug log for buff expiration
-        player.moveSpeed /= speedMultiplier;
+        // set the speed back to normal
+
+            player.ResetMoveSpeed();
+
         isBuffed = false;
     }
 }

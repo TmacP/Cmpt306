@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+ // Public property to access and modify moveSpeed
     public float moveSpeed = 1000;
-    [SerializeField] Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
-    
-    void Awake() {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+    private float originalMoveSpeed;
+    public float MoveSpeed
+    {
+        get { return moveSpeed; }
+        set { moveSpeed = value; }
     }
 
+    [SerializeField] Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Set the original speed during initialization
+        originalMoveSpeed = moveSpeed;
+    }
 
     void FixedUpdate()
     {
@@ -40,5 +51,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.down * moveSpeed);
         }
+    }
+
+        // Function to reset the speed to its original value
+    public void ResetMoveSpeed()
+    {
+        moveSpeed = originalMoveSpeed;
     }
 }
