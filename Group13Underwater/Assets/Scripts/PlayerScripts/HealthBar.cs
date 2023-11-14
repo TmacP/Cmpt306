@@ -46,7 +46,7 @@ public class HealthBar : MonoBehaviour
             PlayerMovement playerMovement = GetComponent<PlayerMovement>();
             if (playerMovement != null)
             {
-                playerMovement.moveSpeed *= 0.5f; // Boost speed
+                playerMovement.moveSpeed *= 0.5f; // Boost speed // is undone in HealBuff.cs via magic numer!!!
             }
         }
         
