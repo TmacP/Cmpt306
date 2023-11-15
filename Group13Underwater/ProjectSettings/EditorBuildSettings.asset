@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 2ecb21c23662c454a8cee90033d0c61b
   - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 42d6c7da77c314b00962e5f204588382
+  - enabled: 0
     path: Assets/Scenes/PiperM3.unity
     guid: f84a2aaa2bb48b044a6dd46111696bc5
   m_configObjects: {}
