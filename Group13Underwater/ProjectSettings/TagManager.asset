@@ -8,6 +8,7 @@ TagManager:
   - StarFish
   - Heart
   - Enemy
+  - UncommonFish
   layers:
   - Default
   - TransparentFX
