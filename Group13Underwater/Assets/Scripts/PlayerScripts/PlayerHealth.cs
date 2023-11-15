@@ -10,7 +10,13 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvulnerable = false; // Flag to track player's invulnerability status.
     [SerializeField] private float invulnerabilityDuration = 2.0f; // Duration of invulnerability in seconds.
 
-    [SerializeField] private Sprite normalSprite; // The normal sprite of the player
+    [SerializeField] public Sprite normalSprite; // The normal sprite of the player
+    [SerializeField] public Sprite rewardSprite_1; // buy in the store
+    [SerializeField] public Sprite rewardSprite_2; // buy in the store
+    [SerializeField] public Sprite rewardSprite_3; // buy in the store
+    [SerializeField] public Sprite rewardSprite_4; // buy in the store
+    [SerializeField] public Sprite rewardSprite_5; // buy in the store
+    [SerializeField] public Sprite rewardSprite_6; // buy in the store
     [SerializeField] private Sprite invulnerableSprite; // The sprite to use during invulnerability
 
     // Initial player health value

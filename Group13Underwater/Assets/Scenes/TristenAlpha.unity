@@ -765,6 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinButton: {fileID: 1691910568}
   pauseScreen: {fileID: 1081611003}
+  skin1: {fileID: 21300000, guid: 26eef94396a0b4863af233cfa8c163b9, type: 3}
 --- !u!1 &441593149
 GameObject:
   m_ObjectHideFlags: 0

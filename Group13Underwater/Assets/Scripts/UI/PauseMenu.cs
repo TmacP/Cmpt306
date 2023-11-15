@@ -42,7 +42,15 @@ public class PauseMenu : MonoBehaviour
         {
             GameManager.instance.playerMoney -= 1;
             GameManager.instance.UpdateMoneyVisual();
-            if (enableDebugLogs) Debug.Log("buy a skin."); //DEBUG
+            
+            // Update the player's sprite to rewardSprite_1
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_1;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 }
