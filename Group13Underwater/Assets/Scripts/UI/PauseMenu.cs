@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button skinButton;
     public GameObject pauseScreen;
+    private bool enableDebugLogs = true; // Control debug logs
+
     void Start()
     {
-        
+        // Assuming skinButton is properly assigned in the Unity Editor
+        skinButton.onClick.AddListener(OnClickSkin);
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Pause the game when the escape key is pressed, unpause when pressed again
@@ -31,6 +34,15 @@ public class PauseMenu : MonoBehaviour
                 pauseScreen.SetActive(true);
             }
         }
+    }
 
+    public void OnClickSkin()
+    {
+        if (GameManager.instance.playerMoney >= 1)
+        {
+            GameManager.instance.playerMoney -= 1;
+            GameManager.instance.UpdateMoneyVisual();
+            if (enableDebugLogs) Debug.Log("buy a skin."); //DEBUG
+        }
     }
 }
