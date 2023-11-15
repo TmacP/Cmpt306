@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public Button skinButton;
+    public Button skin1Button;
+    public Button skin2Button;
+    public Button skin3Button;
+    public Button skin4Button;
+    public Button skin5Button;
     public GameObject pauseScreen;
     private bool enableDebugLogs = true; // Control debug logs
 
@@ -14,6 +19,12 @@ public class PauseMenu : MonoBehaviour
     {
         // Assuming skinButton is properly assigned in the Unity Editor
         skinButton.onClick.AddListener(OnClickSkin);
+        skin1Button.onClick.AddListener(OnClickSkin1);
+        skin2Button.onClick.AddListener(OnClickSkin2);
+        skin3Button.onClick.AddListener(OnClickSkin3);
+        skin4Button.onClick.AddListener(OnClickSkin4);
+        skin5Button.onClick.AddListener(OnClickSkin5);
+
     }
 
     void Update()
@@ -35,12 +46,14 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Here is the skins for sale. the code is copy pasted which should be genralized. but I think we can accept ugly code since it isn't going to live past this month.
+    /// </summary>
     public void OnClickSkin()
     {
-        if (GameManager.instance.playerMoney >= 1)
+        if (GameManager.instance.playerMoney >= 20)
         {
-            GameManager.instance.playerMoney -= 1;
+            GameManager.instance.playerMoney -= 20;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_1
@@ -53,4 +66,97 @@ public class PauseMenu : MonoBehaviour
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
+
+
+    public void OnClickSkin1()
+    {
+        if (GameManager.instance.playerMoney >= 20)
+        {
+            GameManager.instance.playerMoney -= 20;
+            GameManager.instance.UpdateMoneyVisual();
+            
+            // Update the player's sprite to rewardSprite_2
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_2;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
+        }
+    }
+
+        public void OnClickSkin2()
+    {
+        if (GameManager.instance.playerMoney >= 20)
+        {
+            GameManager.instance.playerMoney -= 20;
+            GameManager.instance.UpdateMoneyVisual();
+            
+            // Update the player's sprite to rewardSprite_3
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_3;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
+        }
+    }
+
+        public void OnClickSkin3()
+    {
+        if (GameManager.instance.playerMoney >= 50)
+        {
+            GameManager.instance.playerMoney -= 50;
+            GameManager.instance.UpdateMoneyVisual();
+            
+            // Update the player's sprite to rewardSprite_4
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_4;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
+        }
+    }
+
+
+        public void OnClickSkin4()
+    {
+        if (GameManager.instance.playerMoney >= 100)
+        {
+            GameManager.instance.playerMoney -= 100;
+            GameManager.instance.UpdateMoneyVisual();
+            
+            // Update the player's sprite to rewardSprite_5
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_5;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
+        }
+    }
+
+            public void OnClickSkin5()
+    {
+        if (GameManager.instance.playerMoney >= 200)
+        {
+            GameManager.instance.playerMoney -= 200;
+            GameManager.instance.UpdateMoneyVisual();
+            
+            // Update the player's sprite to rewardSprite_6
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.normalSprite = playerHealth.rewardSprite_6;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
+        }
+    }
+
 }
