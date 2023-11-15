@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    public MoveSpeedBuff msBuff;
+
     // Score Variables
     public Text scoreVisual;
     public Text moneyVisual;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
         playerMoney = 0;
         UpdateScoreVisual();
         UpdateMoneyVisual();
+        msBuff.isBuffedRestart();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
     }
 

@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
+    [SerializeField] private MoveSpeedBuff msBuff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +62,9 @@ public class PlayerHealth : MonoBehaviour
             // Check if player's health is down to 20
             if (playerHealth <= 20)
             {
-                player.moveSpeed *= 2.0f;
+                //player.moveSpeed *= 2.0f;
+                Debug.Log(player);
+                msBuff.Apply(player.gameObject);
                 // Implement code when player's health is down to 20
                 // For example, you can play a warning sound or trigger a visual effect.
                 // Add your specific code here.

@@ -308,6 +308,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: c22625f5e79534ba3b82e2495868b24b, type: 3}
   invulnerableSprite: {fileID: 21300000, guid: dd898c5d15d0644f7b360e60341bdf57, type: 3}
   playerHealth: 100
+  msBuff: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
 --- !u!114 &65470194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,6 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 65470187}
+  msBuff: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
   scoreVisual: {fileID: 1982954688}
   moneyVisual: {fileID: 2103448601}
 --- !u!4 &787859435

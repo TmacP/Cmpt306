@@ -7,6 +7,8 @@ public class HealthBar : MonoBehaviour
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
 
+    //public MoveSpeedBuff msBuff;
+
 
     // Update the health display based on the provided health percentage.
     public void SetHealth(float healthPercentage)
@@ -30,9 +32,13 @@ public class HealthBar : MonoBehaviour
         {
             // Access the PlayerMovement component and adjust the speed here
             PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            //Debug.Log(playerMovement.gameObject.name);
             if (playerMovement != null)
             {
-                playerMovement.moveSpeed *= 0.5f; // Boost speed
+                Debug.Log("NOT NULL"); // This is NOT appearing. Trying to work in PlayerHealth script now
+                //playerMovement.moveSpeed *= 0.5f; // Boost speed
+                //powerupEffect.Apply(msBuff);
+                //msBuff.Apply(playerObject);
             }
         }
         

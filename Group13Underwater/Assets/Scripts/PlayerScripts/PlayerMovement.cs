@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         // Function to reset the speed to its original value
     public void ResetMoveSpeed()
     {
+        Debug.Log("Was MS Reset?");
         moveSpeed = originalMoveSpeed;
     }
 }
