@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  health: 1
+  health: 30
   damageToPlayer: 10
   damageRate: 0.2
 --- !u!50 &6960230718216161038

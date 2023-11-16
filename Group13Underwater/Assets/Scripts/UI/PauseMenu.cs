@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Button damageButton;
     public Button heartButton;
     public Button skinButton;
     public Button skin1Button;
@@ -19,6 +20,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         // Assuming skinButton is properly assigned in the Unity Editor
+        damageButton.onClick.AddListener(OnClickDamage);
         heartButton.onClick.AddListener(OnClickHeart);
         skinButton.onClick.AddListener(OnClickSkin);
         skin1Button.onClick.AddListener(OnClickSkin1);
@@ -48,6 +50,30 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+    public void OnClickDamage()
+    {
+        PlayerShoot playerShoot = FindObjectOfType<PlayerShoot>(); // Assuming only one PlayerShoot script in the scene
+
+        if (GameManager.instance.playerMoney >= 10 && playerShoot != null)
+        {
+            // Get the current damage
+            float currentDamage = playerShoot.GetProjectileDamage();
+
+            // Increase the damage by 10
+            float newDamage = currentDamage + 10;
+
+            // Set the new damage
+            playerShoot.SetProjectileDamage(newDamage);
+
+            // Deduct money and update the visual
+            GameManager.instance.playerMoney -= 10;
+            GameManager.instance.UpdateMoneyVisual();
+
+            if (enableDebugLogs) Debug.Log("Buy damage. New damage: " + newDamage); // DEBUG
+        }
+    }
+
 
     /// <summary> 
     /// Button to add additional hearts to player
