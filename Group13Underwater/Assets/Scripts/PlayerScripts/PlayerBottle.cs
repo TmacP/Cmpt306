@@ -16,7 +16,7 @@ public class PlayerBottle : MonoBehaviour
     void Start()
     {
         // this should change the text of the message
-        messagePicker();
+        //messagePicker();
     }
     private void Update()
     {
@@ -41,8 +41,12 @@ public class PlayerBottle : MonoBehaviour
     {
         if (other.transform.tag == "MessageBottle" && (GameManager.instance != null))
         {
+            GameManager gameManager = GameManager.instance;
+
+            // Each time a bottle is caught, we want a new message to be chosen
+            messagePicker();
             // Add 5 money
-            GameManager.instance.AddMoney(5);
+            gameManager.AddMoney(5);
             // Destroy the bottle 
             Destroy(other.gameObject);
 
