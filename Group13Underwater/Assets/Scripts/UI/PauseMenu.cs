@@ -54,18 +54,25 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void OnClickHeart()
     {
-        if (GameManager.instance.playerMoney >= 100)
+        PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+        HealthBar healthBar = FindObjectOfType<HealthBar>();
+        if (GameManager.instance.playerMoney >= 100 && healthBar.SpawnHearts < 10 )
         {
             GameManager.instance.playerMoney -= 100;
             GameManager.instance.UpdateMoneyVisual();
-            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
-            if (playerHealth != null)
+
+            if (playerHealth != null && healthBar != null)
             {
+                healthBar.SpawnHearts += 1;
                 playerHealth.playerHealth += 10;
-                playerHealth.fullHealth += 10;
+                playerHealth.fullHealth += 10;   
+                if (enableDebugLogs) Debug.Log("buy a heart."); // DEBUG
+            }
+            else
+            {
+                if (enableDebugLogs) Debug.Log("playerHealth or healthBar is null."); // DEBUG
             }
 
-            if (enableDebugLogs) Debug.Log("buy a heart."); // DEBUG
         }
     }
     

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Image[] hearts; // Assign the heart objects in the Inspector.
-    public int spawnHearts = 5; // Number of hearts to spawn
+    public int SpawnHearts = 5; // Number of hearts to spawn
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
 
@@ -12,15 +12,16 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         // Initially hide hearts
-        InitializeHearts(spawnHearts);
+        InitializeHearts(SpawnHearts);
     }
 
     // Update the health display based on the provided health percentage.
     public void SetHealth(float healthPercentage)
     {
-        int numHeartsToShow = Mathf.CeilToInt(healthPercentage * spawnHearts);
+        
+        int numHeartsToShow = Mathf.CeilToInt(healthPercentage * SpawnHearts);
 
-        for (int i = 0; i < spawnHearts; i++)
+        for (int i = 0; i < SpawnHearts; i++)
         {
             if (i < numHeartsToShow)
             {
@@ -30,6 +31,8 @@ public class HealthBar : MonoBehaviour
             {
                 hearts[i].sprite = emptyHeartSprite;
             }
+            InitializeHearts(SpawnHearts);
+
         }
 
         // Check if there is exactly 1 heart, then boost speed

@@ -72,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
                 // Implement code when player's health is down to 20
                 // For example, you can play a warning sound or trigger a visual effect.
                 // Add your specific code here.
-                if (enableDebugLogs) { Debug.Log("Player's health is down to 20!"); }
+                if (enableDebugLogs) { Debug.Log("Player's health is down to 10!"); }
             }
             if (enableDebugLogs) { Debug.Log("Player took damage. Player health is: " + playerHealth); }
 
