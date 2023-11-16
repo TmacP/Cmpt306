@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   health: 1
-  damageToPlayer: 20
+  damageToPlayer: 10
   damageRate: 0.2
 --- !u!50 &6960230718216161038
 Rigidbody2D:

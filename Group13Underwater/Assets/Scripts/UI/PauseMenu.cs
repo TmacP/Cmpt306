@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Button heartButton;
     public Button skinButton;
     public Button skin1Button;
     public Button skin2Button;
@@ -18,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         // Assuming skinButton is properly assigned in the Unity Editor
+        heartButton.onClick.AddListener(OnClickHeart);
         skinButton.onClick.AddListener(OnClickSkin);
         skin1Button.onClick.AddListener(OnClickSkin1);
         skin2Button.onClick.AddListener(OnClickSkin2);
@@ -46,6 +48,30 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+    /// <summary> 
+    /// Button to add additional hearts to player
+    /// </summary>
+    public void OnClickHeart()
+    {
+        if (GameManager.instance.playerMoney >= 100)
+        {
+            GameManager.instance.playerMoney -= 100;
+            GameManager.instance.UpdateMoneyVisual();
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.playerHealth += 10;
+                playerHealth.fullHealth += 10;
+            }
+
+            if (enableDebugLogs) Debug.Log("buy a heart."); // DEBUG
+        }
+    }
+    
+
+
+
     /// <summary>
     /// Here is the skins for sale. the code is copy pasted which should be genralized. but I think we can accept ugly code since it isn't going to live past this month.
     /// </summary>

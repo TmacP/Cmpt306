@@ -20,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Sprite invulnerableSprite; // The sprite to use during invulnerability
 
     // Initial player health value
-    [SerializeField] public float playerHealth = 100.0f;
+    [SerializeField] public float fullHealth = 50.0f;
+    [SerializeField] public float playerHealth = 50.0f;
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GetComponent<PlayerMovement>();
         // You can set up any initial configurations here.
+        playerHealth = fullHealth; // to get rid of half the hearts start at half health
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Update the health display in the HealthBar script.
-        healthBar.SetHealth(playerHealth / 100.0f);
+        healthBar.SetHealth(playerHealth / fullHealth);
     }
 
     // Function to modify the player's health and update the health display
@@ -64,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
             playerHealth -= damage;
 
             // Check if player's health is down to 20
-            if (playerHealth <= 20)
+            if (playerHealth <= 10)
             {
                 player.moveSpeed *= 2.0f;
                 // Implement code when player's health is down to 20
@@ -81,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
             }
 
             // Update the health display in the HealthBar script.
-            healthBar.SetHealth(playerHealth / 100.0f);
+            healthBar.SetHealth(playerHealth / fullHealth);
 
             // Set the invulnerability flag to true and start the countdown
             StartCoroutine(StartInvulnerability());
