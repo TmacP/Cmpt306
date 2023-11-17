@@ -8,6 +8,8 @@ TagManager:
   - StarFish
   - Heart
   - Enemy
+  - UncommonFish
+  - MessageBottle
   layers:
   - Default
   - TransparentFX
