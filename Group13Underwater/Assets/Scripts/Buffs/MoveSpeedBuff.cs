@@ -6,7 +6,8 @@ using UnityEngine;
 public class MoveSpeedBuff : PowerupEffect
 {
     public float speedMultiplier; 
-    public float maxBuffDuration; 
+    public float maxBuffDuration;
+    public float remainingBuffDuration;
     private bool isBuffed = false;
     private bool enableDebugLogs = false; // Control debug logs
 
@@ -20,6 +21,10 @@ public class MoveSpeedBuff : PowerupEffect
             monoBehaviour.StartCoroutine(Pickup(player)); // Start the Pickup coroutine
             if (enableDebugLogs) Debug.Log("Pickup Speed Buff"); // Debug log with comment
         }
+        else if (player != null && isBuffed) 
+        {
+            remainingBuffDuration = maxBuffDuration;
+        }
     }
 
     IEnumerator Pickup(PlayerMovement player)
@@ -29,12 +34,12 @@ public class MoveSpeedBuff : PowerupEffect
         isBuffed = true;
         player.moveSpeed *= speedMultiplier;
 
-        float timer = maxBuffDuration;
-        while (timer > 0f)
+        remainingBuffDuration = maxBuffDuration;
+        while (remainingBuffDuration > 0f)
         {
-            if (enableDebugLogs) Debug.Log("Remaining Buff Duration: " + timer + " seconds #DEBUG"); // Debug log for remaining duration
+            if (enableDebugLogs) Debug.Log("Remaining Buff Duration: " + remainingBuffDuration + " seconds #DEBUG"); // Debug log for remaining duration
             yield return null;
-            timer -= Time.deltaTime;
+            remainingBuffDuration -= Time.deltaTime;
         }
 
         if (enableDebugLogs) Debug.Log("Buff Expired #DEBUG"); // Debug log for buff expiration
@@ -43,5 +48,11 @@ public class MoveSpeedBuff : PowerupEffect
             player.ResetMoveSpeed();
 
         isBuffed = false;
+    }
+
+    public void IsBuffedRestart()
+    {
+        isBuffed = false;
+        remainingBuffDuration = 0f;
     }
 }

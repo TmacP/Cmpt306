@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    public MoveSpeedBuff msBuff;
+    public MagnetismBuff magnetismBuff;
+
     // Score Variables
     public Text scoreVisual;
     public Text moneyVisual;
@@ -37,6 +40,8 @@ public class GameManager : MonoBehaviour
         playerMoney = 0;
         UpdateScoreVisual();
         UpdateMoneyVisual();
+        msBuff.IsBuffedRestart();
+        magnetismBuff.IsBuffedRestart();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
     }
 

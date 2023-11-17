@@ -44,4 +44,10 @@ public class MagnetismBuff : PowerupEffect
         player.hasMagnetBuff = false;
         isBuffed = false; // Player is no longer buffed
     }
+
+    public void IsBuffedRestart()
+    {
+        isBuffed = false;
+        remainingBuffDuration = 0f;
+    }
 }
