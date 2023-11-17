@@ -35,14 +35,14 @@ public class HealthBar : MonoBehaviour
 
         }
 
-        // Check if there is exactly 1 heart, then boost speed
+        // Check if there is exactly 1 heart, then boost speed. I THINK THIS CAN BE REMOVED?
         if (numHeartsToShow == 1)
         {
             // Access the PlayerMovement component and adjust the speed here
             PlayerMovement playerMovement = GetComponent<PlayerMovement>();
             if (playerMovement != null)
             {
-                playerMovement.moveSpeed *= 0.5f; // Boost speed
+                //playerMovement.moveSpeed *= 0.5f; // Boost speed
             }
         }
     }

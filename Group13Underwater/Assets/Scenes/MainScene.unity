@@ -315,6 +315,7 @@ MonoBehaviour:
   rewardSprite_5: {fileID: 21300000, guid: a653d3bbf97c94fe7a9b3dd79531ba46, type: 3}
   rewardSprite_6: {fileID: 21300000, guid: 8cc5f20a1d13d43b987a01f22df531f9, type: 3}
   invulnerableSprite: {fileID: 21300000, guid: dd898c5d15d0644f7b360e60341bdf57, type: 3}
+  msBuff: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
   fullHealth: 50
   playerHealth: 50
 --- !u!114 &65470194
@@ -2994,6 +2995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 65470187}
+  msBuff: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
+  magnetismBuff: {fileID: 11400000, guid: 7347df10bdbe3e049884965840f62f8c, type: 2}
   scoreVisual: {fileID: 1982954688}
   moneyVisual: {fileID: 2103448601}
   playerMoney: 0
