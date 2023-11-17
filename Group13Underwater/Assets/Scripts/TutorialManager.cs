@@ -3,66 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
-{   
+{
     public GameObject[] popUps;
     private int popUpIndex;
     public GameObject spawner;
-    public float waitTime=2.0f;
+
+
 
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < popUps.Length; i++){
-            if(i==popUpIndex){
+        for (int i = 0; i < popUps.Length; i++)
+        {
+            if (i == popUpIndex)
+            {
                 popUps[i].SetActive(true);
-            } 
-            else {
+            }
+            else
+            {
                 popUps[i].SetActive(false);
             }
-        }   
+        }
+            HandleTutorialInput();
+    }
 
-       
-        if (popUpIndex == 0)
+    void HandleTutorialInput()
+    {
+        if (popUpIndex == 0 && Input.GetKey(KeyCode.W))
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                // If W is pressed, move to the next popUp
-                popUpIndex++;
-            }
+            // If W is pressed, move to the next popUp
+            popUpIndex++;
         }
-        else if (popUpIndex == 1)
+        else if (popUpIndex == 1 && Input.GetKey(KeyCode.S))
         {
-            if (Input.GetKey(KeyCode.S))
-            {
-                // If S is pressed, move to the next popUp
-                popUpIndex++;
-            }
+            // If S is pressed, move to the next popUp
+            popUpIndex++;
         }
-
-        else if (popUpIndex == 2)
+        else if (popUpIndex == 2 && Input.GetKey(KeyCode.D))
         {
-            if (Input.GetKey(KeyCode.D))
-            {
-                // If D is pressed, move to the next popUp
-                popUpIndex++;
-            }
+            // If D is pressed, move to the next popUp
+            popUpIndex++;
         }
-        else if (popUpIndex == 3)
+        else if (popUpIndex == 3 && Input.GetKeyDown(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                // If A is pressed, move to the next popUp
-                popUpIndex++;
-            }
+            // If A is pressed, move to the next popUp
+            popUpIndex++;
         }
-        else if (popUpIndex == 4)
+        else if (popUpIndex == 4 && Input.GetMouseButtonDown(0))
         {
-
-            if (Input.GetMouseButtonDown(0)){
-                //Time.time+waitTime;
-                 spawner.SetActive(true);
-                 popUpIndex++; }
+            spawner.SetActive(true);
+            popUpIndex++;
         }
-}
-
+    }
 }
