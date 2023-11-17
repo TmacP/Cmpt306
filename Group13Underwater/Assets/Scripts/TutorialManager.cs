@@ -7,7 +7,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] popUps;
     private int popUpIndex;
     public GameObject spawner;
-    public float waitTime=3.0f;
+    public float waitTime=2.0f;
 
     // Update is called once per frame
     void Update()
@@ -57,9 +57,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 4)
         {
-            if (Input.GetMouseButtonDown(0)){
-            // Check if the waitTime has elapsed
-                if (waitTime <= 0)
+             if (waitTime <= 0)
                 {
                     spawner.SetActive(true);
                 }
@@ -67,8 +65,10 @@ public class TutorialManager : MonoBehaviour
                 {
                     waitTime -= Time.deltaTime;
                 }
-            popUpIndex++;
-        }
+
+            if (Input.GetMouseButtonDown(0)){
+            
+            popUpIndex++; }
         }
 }
 
