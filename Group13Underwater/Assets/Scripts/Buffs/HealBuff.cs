@@ -36,10 +36,10 @@ public override void Apply(GameObject target)
             }
 
             // Example usage from another script
-            if (playerMovement != null)
+            /*if (playerMovement != null)
             {
                 playerMovement.ResetMoveSpeed();
-            }
+            }*/
         }
     }
 }
