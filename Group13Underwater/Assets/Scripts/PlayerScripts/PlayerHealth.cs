@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public Sprite rewardSprite_6; // buy in the store
     [SerializeField] private Sprite invulnerableSprite; // The sprite to use during invulnerability
 
+    [SerializeField] private MoveSpeedBuff msBuff;
+
     // Initial player health value
     [SerializeField] public float fullHealth = 50.0f;
     [SerializeField] public float playerHealth = 50.0f;
@@ -68,7 +70,8 @@ public class PlayerHealth : MonoBehaviour
             // Check if player's health is down to 20
             if (playerHealth <= 10)
             {
-                player.moveSpeed *= 2.0f;
+                //player.moveSpeed *= 2.0f;
+                msBuff.Apply(player.gameObject);
                 // Implement code when player's health is down to 20
                 // For example, you can play a warning sound or trigger a visual effect.
                 // Add your specific code here.
