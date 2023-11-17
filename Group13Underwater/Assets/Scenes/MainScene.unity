@@ -906,7 +906,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 100$
+  m_Text: Buy a skin 50$
 --- !u!222 &220553754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -1706,7 +1706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 20$
+  m_Text: Buy a skin 15$
 --- !u!222 &489614088
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3250,7 +3250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy Health Piece 100$
+  m_Text: Buy Health Piece 20$
 --- !u!222 &830595871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4507,7 +4507,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 200$
+  m_Text: Buy a skin 100$
 --- !u!222 &1119040291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4530,7 +4530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: spawnInterval
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: tileGeneration
@@ -4947,7 +4947,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.586775, y: 5.0152297, z: -0.8489095}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 662628253}
@@ -5107,7 +5107,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 20$
+  m_Text: Buy a skin 10$
 --- !u!222 &1313634570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5463,7 +5463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 50$
+  m_Text: Buy a skin 25$
 --- !u!222 &1406904845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5550,7 +5550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3807621385668324646, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
-  spawnInterval: 3
+  spawnInterval: 1.5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1426469901
@@ -5790,7 +5790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy a skin 20$
+  m_Text: Buy a skin 5$
 --- !u!222 &1488408435
 CanvasRenderer:
   m_ObjectHideFlags: 0
