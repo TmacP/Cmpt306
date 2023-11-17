@@ -82,9 +82,9 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
         HealthBar healthBar = FindObjectOfType<HealthBar>();
-        if (GameManager.instance.playerMoney >= 100 && healthBar.SpawnHearts < 10 )
+        if (GameManager.instance.playerMoney >= 20 && healthBar.SpawnHearts < 10 )
         {
-            GameManager.instance.playerMoney -= 100;
+            GameManager.instance.playerMoney -= 20;
             GameManager.instance.UpdateMoneyVisual();
 
             if (playerHealth != null && healthBar != null)
@@ -110,9 +110,9 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void OnClickSkin()
     {
-        if (GameManager.instance.playerMoney >= 20)
+        if (GameManager.instance.playerMoney >= 5)
         {
-            GameManager.instance.playerMoney -= 20;
+            GameManager.instance.playerMoney -= 5;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_1
@@ -129,9 +129,9 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickSkin1()
     {
-        if (GameManager.instance.playerMoney >= 20)
+        if (GameManager.instance.playerMoney >= 10)
         {
-            GameManager.instance.playerMoney -= 20;
+            GameManager.instance.playerMoney -= 10;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_2
@@ -147,9 +147,9 @@ public class PauseMenu : MonoBehaviour
 
         public void OnClickSkin2()
     {
-        if (GameManager.instance.playerMoney >= 20)
+        if (GameManager.instance.playerMoney >= 15)
         {
-            GameManager.instance.playerMoney -= 20;
+            GameManager.instance.playerMoney -= 15;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_3
@@ -165,9 +165,9 @@ public class PauseMenu : MonoBehaviour
 
         public void OnClickSkin3()
     {
-        if (GameManager.instance.playerMoney >= 50)
+        if (GameManager.instance.playerMoney >= 25)
         {
-            GameManager.instance.playerMoney -= 50;
+            GameManager.instance.playerMoney -= 25;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_4
@@ -184,9 +184,9 @@ public class PauseMenu : MonoBehaviour
 
         public void OnClickSkin4()
     {
-        if (GameManager.instance.playerMoney >= 100)
+        if (GameManager.instance.playerMoney >= 50)
         {
-            GameManager.instance.playerMoney -= 100;
+            GameManager.instance.playerMoney -= 50;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_5
@@ -202,9 +202,9 @@ public class PauseMenu : MonoBehaviour
 
             public void OnClickSkin5()
     {
-        if (GameManager.instance.playerMoney >= 200)
+        if (GameManager.instance.playerMoney >= 100)
         {
-            GameManager.instance.playerMoney -= 200;
+            GameManager.instance.playerMoney -= 100;
             GameManager.instance.UpdateMoneyVisual();
             
             // Update the player's sprite to rewardSprite_6
