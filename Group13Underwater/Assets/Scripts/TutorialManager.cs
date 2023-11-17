@@ -57,18 +57,11 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 4)
         {
-             if (waitTime <= 0)
-                {
-                    spawner.SetActive(true);
-                }
-                else
-                {
-                    waitTime -= Time.deltaTime;
-                }
 
             if (Input.GetMouseButtonDown(0)){
-            
-            popUpIndex++; }
+                //Time.time+waitTime;
+                 spawner.SetActive(true);
+                 popUpIndex++; }
         }
 }
 
