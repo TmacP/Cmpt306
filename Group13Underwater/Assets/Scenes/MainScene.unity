@@ -632,6 +632,54 @@ MonoBehaviour:
   spawnInterval: 10
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
+--- !u!1 &190331558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190331559}
+  - component: {fileID: 190331560}
+  m_Layer: 0
+  m_Name: TreasureChestSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &190331559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190331558}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772691251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &190331560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190331558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
+  spawnInterval: 20
+  tileGeneration: {fileID: 744247514}
+  emptyTilePositions: []
 --- !u!1 &211490425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7245789219852475047, guid: 1643dc0013bfe4a4e8a974d6e916d5d3, type: 3}
@@ -6529,6 +6577,7 @@ Transform:
   - {fileID: 1426469901}
   - {fileID: 1224122660}
   - {fileID: 1971016609}
+  - {fileID: 190331559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802449124
