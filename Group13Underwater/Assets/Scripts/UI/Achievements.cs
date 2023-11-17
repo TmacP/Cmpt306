@@ -40,7 +40,7 @@ public class Achievements : MonoBehaviour
 
     void KillsNextAchievement() {
     
-        achievement_list.Add(string.Format("Defeaded {0} Enemies", kills_to_next));
+        achievement_list.Add(string.Format("Defeated {0} Enemies", kills_to_next));
         // place holder for canvas element code
         kills_to_next *= 2;
     
