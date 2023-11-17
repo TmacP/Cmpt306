@@ -27,6 +27,26 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
         }
+        if (other.transform.tag == "SpecialFish" && (GameManager.instance != null))
+        {
+
+            // Add a point
+            GameManager.instance.AddScore(3);
+
+
+            // Destroy the fish instance
+            Destroy(other.gameObject);
+        }
+        if (other.transform.tag == "RareFish" && (GameManager.instance != null))
+        {
+
+            // Add a point
+            GameManager.instance.AddScore(4);
+
+
+            // Destroy the fish instance
+            Destroy(other.gameObject);
+        }
     }
 
 }

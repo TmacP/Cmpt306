@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - UncommonFish
   - MessageBottle
+  - RareFish
+  - SpecialFish
   layers:
   - Default
   - TransparentFX
