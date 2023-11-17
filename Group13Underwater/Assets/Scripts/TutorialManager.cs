@@ -21,20 +21,51 @@ public class TutorialManager : MonoBehaviour
             }
         }   
 
-        if (popUpIndex==0){
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)){
+       
+        if (popUpIndex == 0)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                // If W is pressed, move to the next popUp
                 popUpIndex++;
             }
-            else if (Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D)){
+        }
+        else if (popUpIndex == 1)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                // If S is pressed, move to the next popUp
                 popUpIndex++;
             }
-            else if(popUpIndex==2){
-                if(waitTime<=0){
-                    spawner.SetActive(true);
-                } else {
-                    waitTime -= Time.deltaTime;
-                }
+        }
+
+        else if (popUpIndex == 2)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                // If A is pressed, move to the next popUp
+                popUpIndex++;
             }
+        }
+        else if (popUpIndex == 3)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                // If S is pressed, move to the next popUp
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 4)
+        {
+            // Check if the waitTime has elapsed
+            if (waitTime <= 0)
+            {
+                spawner.SetActive(true);
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
+            }
+        }
     }
-}
 }
