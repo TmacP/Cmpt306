@@ -24,14 +24,14 @@ public class Achievements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (kills = kills_next_achievement) {
+        if (kills == kills_next_achievement) {
 
             KillsNextAchievement();
             kills_next_achievement += 1; 
 
         }
 
-        if (scolls_collected = scrolls_to_next) {
+        if (scolls_collected == scrolls_to_next) {
 
             ScrollsNextAchievement();
             scrolls_next_achievement += 1;
