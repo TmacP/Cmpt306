@@ -7,7 +7,7 @@ public class HealBuff : PowerupEffect
 {
     private bool enableDebugLogs = false; // Control debug logs
 
-    [SerializeField] public float healAmount; //currently stuck at 50 for some reason LR Nov 5
+    [SerializeField] public float healAmount;
 public override void Apply(GameObject target)
     {
         PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
