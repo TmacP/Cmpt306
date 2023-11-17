@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public Text scoreVisual;
     public Text moneyVisual;
     private int playerScore = 0;
-    private int playerMoney = 0;
+    public int playerMoney = 0;
 
     void Awake()
     {
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         scoreVisual.text = "Score: " + playerScore.ToString();
         if (enableDebugLogs) Debug.Log("Updating Score Visual;"); //DEBUG
     }
-    void UpdateMoneyVisual()
+    public void UpdateMoneyVisual()
     {
         moneyVisual.text = "Money: " + playerMoney.ToString();
         if (enableDebugLogs) Debug.Log("Updating Money Visual;"); //DEBUG

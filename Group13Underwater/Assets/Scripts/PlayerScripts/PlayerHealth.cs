@@ -10,11 +10,18 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvulnerable = false; // Flag to track player's invulnerability status.
     [SerializeField] private float invulnerabilityDuration = 2.0f; // Duration of invulnerability in seconds.
 
-    [SerializeField] private Sprite normalSprite; // The normal sprite of the player
+    [SerializeField] public Sprite normalSprite; // The normal sprite of the player
+    [SerializeField] public Sprite rewardSprite_1; // buy in the store
+    [SerializeField] public Sprite rewardSprite_2; // buy in the store
+    [SerializeField] public Sprite rewardSprite_3; // buy in the store
+    [SerializeField] public Sprite rewardSprite_4; // buy in the store
+    [SerializeField] public Sprite rewardSprite_5; // buy in the store
+    [SerializeField] public Sprite rewardSprite_6; // buy in the store
     [SerializeField] private Sprite invulnerableSprite; // The sprite to use during invulnerability
 
     // Initial player health value
-    [SerializeField] public float playerHealth = 100.0f;
+    [SerializeField] public float fullHealth = 50.0f;
+    [SerializeField] public float playerHealth = 50.0f;
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
@@ -25,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GetComponent<PlayerMovement>();
         // You can set up any initial configurations here.
+        playerHealth = fullHealth; // to get rid of half the hearts start at half health
     }
 
     // Update is called once per frame
@@ -46,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Update the health display in the HealthBar script.
-        healthBar.SetHealth(playerHealth / 100.0f);
+        healthBar.SetHealth(playerHealth / fullHealth);
     }
 
     // Function to modify the player's health and update the health display
@@ -58,13 +66,13 @@ public class PlayerHealth : MonoBehaviour
             playerHealth -= damage;
 
             // Check if player's health is down to 20
-            if (playerHealth <= 20)
+            if (playerHealth <= 10)
             {
                 player.moveSpeed *= 2.0f;
                 // Implement code when player's health is down to 20
                 // For example, you can play a warning sound or trigger a visual effect.
                 // Add your specific code here.
-                if (enableDebugLogs) { Debug.Log("Player's health is down to 20!"); }
+                if (enableDebugLogs) { Debug.Log("Player's health is down to 10!"); }
             }
             if (enableDebugLogs) { Debug.Log("Player took damage. Player health is: " + playerHealth); }
 
@@ -75,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
             }
 
             // Update the health display in the HealthBar script.
-            healthBar.SetHealth(playerHealth / 100.0f);
+            healthBar.SetHealth(playerHealth / fullHealth);
 
             // Set the invulnerability flag to true and start the countdown
             StartCoroutine(StartInvulnerability());

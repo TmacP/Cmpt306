@@ -17,11 +17,11 @@ public override void Apply(GameObject target)
         {
             if (enableDebugLogs) { Debug.Log("Health before heal:" + playerHealth.playerHealth); } // DEBUG
 
-            if (playerHealth.playerHealth < 100.0f)
+            if (playerHealth.playerHealth < playerHealth.fullHealth)
             {
-                if ((playerHealth.playerHealth + healAmount) > 100.0f)
+                if ((playerHealth.playerHealth + healAmount) > playerHealth.fullHealth)
                 {
-                    playerHealth.playerHealth = 100.0f;
+                    playerHealth.playerHealth = playerHealth.fullHealth;
                     if (enableDebugLogs) { Debug.Log("Health after heal:" + playerHealth.playerHealth); } // DEBUG
                 }
                 else
