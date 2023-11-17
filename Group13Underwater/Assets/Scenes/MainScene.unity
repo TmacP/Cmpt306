@@ -1753,6 +1753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481393762}
   - component: {fileID: 481393761}
+  - component: {fileID: 481393763}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1767,7 +1768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481393760}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
   m_Name: 
@@ -1791,6 +1792,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1772691251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481393763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481393760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0399fcd05382174fbe9605132c0efbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 9022878280105090579, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
+  spawnInterval: 2
+  tileGeneration: {fileID: 744247514}
+  emptyTilePositions: []
+  zoomDuration: 5
+  zoomedOutSize: 5
 --- !u!1 &489614085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,7 +5928,6 @@ MonoBehaviour:
   - {fileID: 673609984}
   - {fileID: 282872487}
   spawner: {fileID: 481393760}
-  waitTime: 2
 --- !u!4 &1443957249
 Transform:
   m_ObjectHideFlags: 0
