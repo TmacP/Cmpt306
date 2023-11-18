@@ -43,7 +43,7 @@ private void Movement()
         {
             Vector3 targetPosition = GameManager.instance.player.transform.position;
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
-            if (moveDirection.magnitude >= 20) transform.position += moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += moveDirection * moveSpeed * Time.deltaTime;
         }
     }
 

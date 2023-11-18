@@ -305,6 +305,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1381177646}
+  invulnerabilityDuration: 2
+  normalSprite: {fileID: 0}
+  rewardSprite_1: {fileID: 0}
+  rewardSprite_2: {fileID: 0}
+  rewardSprite_3: {fileID: 0}
+  rewardSprite_4: {fileID: 0}
+  rewardSprite_5: {fileID: 0}
+  rewardSprite_6: {fileID: 0}
+  invulnerableSprite: {fileID: 0}
+  msBuff: {fileID: 0}
+  fullHealth: 50
   playerHealth: 50
 --- !u!114 &65470194
 MonoBehaviour:
@@ -344,8 +355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b1ba3a0ddc0c545ad4fcacb9251188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectilePrefab: {fileID: 0}
   shotCooldown: 1
+  projectileDamage: 10
 --- !u!114 &65470197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,6 +1203,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d67533d254e15479bd490bc6c69e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageButton: {fileID: 0}
+  heartButton: {fileID: 0}
+  skinButton: {fileID: 0}
+  skin1Button: {fileID: 0}
+  skin2Button: {fileID: 0}
+  skin3Button: {fileID: 0}
+  skin4Button: {fileID: 0}
+  skin5Button: {fileID: 0}
   pauseScreen: {fileID: 1081611003}
 --- !u!1 &441593149
 GameObject:
@@ -2428,6 +2448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundTilemap: {fileID: 662628255}
   groundTiles: []
+  backgroundTileMap: {fileID: 0}
+  backgroundTiles: []
   dirtWidth: 60
   crawlerWidth: 40
   generationHeight: 100
@@ -2489,7 +2511,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 65470187}
+  msBuff: {fileID: 0}
+  magnetismBuff: {fileID: 0}
   scoreVisual: {fileID: 1982954688}
+  moneyVisual: {fileID: 0}
+  playerMoney: 0
 --- !u!4 &787859435
 Transform:
   m_ObjectHideFlags: 0
@@ -4558,6 +4584,7 @@ MonoBehaviour:
   - {fileID: 1485224267}
   - {fileID: 143120346}
   - {fileID: 2086288886}
+  SpawnHearts: 5
   fullHeartSprite: {fileID: 21300000, guid: 9054639cee1894f3b939aa19947a1cc5, type: 3}
   emptyHeartSprite: {fileID: 21300000, guid: 5a89b5bd10a5f4775bbd9e2cbe2b2fb3, type: 3}
 --- !u!1 &1406904842
@@ -5172,6 +5199,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1573887483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2345720098788432660, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_Name
+      value: EvilSeaHorse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882831776922830194, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c914b71380a33d24aad7e6efa628b81d, type: 3}
 --- !u!1 &1591918994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6682,3 +6766,4 @@ SceneRoots:
   - {fileID: 1284815510}
   - {fileID: 481393762}
   - {fileID: 4165804504303567587}
+  - {fileID: 1573887483}
