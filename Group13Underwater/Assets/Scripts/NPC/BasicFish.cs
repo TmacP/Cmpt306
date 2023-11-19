@@ -3,7 +3,9 @@ using UnityEngine.Serialization;
 
 public class BasicFish : MonoBehaviour
 {
-    private float moveSpeed = 5;
+    [SerializeField] private int moveSpeed = 5;
+    [SerializeField] private int tiltSpeed = 15; // The standard speed of our tilt 
+    [SerializeField] private int tiltDepth = 7; // The standard depth/degree of our tilt
     [SerializeField] private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private float changeDirectionTimer = 2f;
@@ -23,7 +25,11 @@ public class BasicFish : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * 15, 7));
+        // OG: 15, 7
+        // Slower Longer, 15, 20
+        // Quicker: 25, 7
+        // Really quick: 35, 10 ?
+        transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * tiltSpeed, tiltDepth));
         timer -= Time.fixedDeltaTime;
 
         if (timer <= 0f)
