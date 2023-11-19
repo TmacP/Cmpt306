@@ -26,10 +26,18 @@ public class TreasureChest : MonoBehaviour
             Vector3 spawnPosition3 = new Vector3(transform.position.x, transform.position.y+1, 0);
             Vector3 spawnPosition4 = new Vector3(transform.position.x, transform.position.y-1, 0);
 
-            Instantiate(itemPrefab1, spawnPosition1, Quaternion.identity);
-            Instantiate(itemPrefab2, spawnPosition2, Quaternion.identity);
-            Instantiate(itemPrefab3, spawnPosition3, Quaternion.identity);
-            Instantiate(itemPrefab4, spawnPosition4, Quaternion.identity);
+            GameObject newlyAddedItem;
+            newlyAddedItem = Instantiate(itemPrefab1, spawnPosition1, Quaternion.identity);
+            newlyAddedItem.AddComponent<Despawnable>();
+
+            newlyAddedItem = Instantiate(itemPrefab2, spawnPosition2, Quaternion.identity);
+            newlyAddedItem.AddComponent<Despawnable>();
+
+            newlyAddedItem = Instantiate(itemPrefab3, spawnPosition3, Quaternion.identity);
+            newlyAddedItem.AddComponent<Despawnable>();
+
+            newlyAddedItem = Instantiate(itemPrefab4, spawnPosition4, Quaternion.identity);
+            newlyAddedItem.AddComponent<Despawnable>();
 
             Destroy(this.gameObject);
         }

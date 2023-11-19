@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 65470194}
   - component: {fileID: 65470195}
   - component: {fileID: 65470196}
-  - component: {fileID: 65470197}
   - component: {fileID: 65470198}
   m_Layer: 0
   m_Name: Player
@@ -434,18 +433,6 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6316560282846793674, guid: ed6d739ab618cbd4493b8f026f5b4e1b, type: 3}
   shotCooldown: 1
   projectileDamage: 10
---- !u!114 &65470197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65470187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ad2fe0228b243edb686d616733f2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &65470198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,7 +1746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &481393761
 MonoBehaviour:
   m_ObjectHideFlags: 0

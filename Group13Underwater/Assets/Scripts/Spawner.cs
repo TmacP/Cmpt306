@@ -51,10 +51,12 @@ public class Spawner : MonoBehaviour
 
         // Instantiate the chosen item prefab at the random position
         Vector3 spawnPosition = new Vector3(position.x, position.y, 0);
-        Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        GameObject newlySpawnedEntity = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        newlySpawnedEntity.AddComponent<Despawnable>();
+
 
         if (enableDebugLogs) { Debug.Log("Spawned item at position: " + spawnPosition); } //DEBUG
         // Remove the used position from the list
-        tileGeneration.emptyTilePositions.RemoveAt(randomIndex);
+        //tileGeneration.emptyTilePositions.RemoveAt(randomIndex);
     }
 }

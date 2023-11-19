@@ -19,12 +19,12 @@ public class TileGeneration : MonoBehaviour
     [SerializeField] Tile[] backgroundTiles;
 
     private int backgroundWidth = 4;
-    private int backgroundHeight = 4;
+    private int backgroundHeight = 10;
     
 
     [SerializeField] int dirtWidth = 60; //NEEDS TO BE EVEN
     [SerializeField] int crawlerWidth = 40;
-    [SerializeField] int generationHeight = 100;
+    [SerializeField] int generationHeight = 200;
     [SerializeField] int caveEntrance = 10;
     private (int, int) crawlerBounds; //THIS WILL SET THE CAVE ENTRANCE POSITION
 
@@ -76,13 +76,27 @@ public class TileGeneration : MonoBehaviour
 
     void FixedUpdate() {
         Vector3 playerPosition = GameManager.instance.GetPlayerPosition();
-        if (playerPosition.y < generationEndYPos + 20) {
-            fillRectangle(new Vector3Int(-backgroundWidth / 2, backgroundGenerationEndYPos, 0), backgroundWidth, backgroundHeight, backgroundTileMap, backgroundTiles[0]);
+        
+        if (playerPosition.y/4 < generationEndYPos + 60) {
+            emptyTilePositions.Clear();
+            
             fillRectangle(new Vector3Int(-dirtWidth / 2, generationEndYPos, 0), dirtWidth, generationHeight, groundTilemap, groundTiles[0]);
             crawlerBounds = createTunnel(crawlerBounds, new Vector3Int(-crawlerWidth / 2, generationEndYPos, 0), crawlerWidth, generationHeight);
+
+            fillRectangle(new Vector3Int(-dirtWidth / 2, generationEndYPos + (generationHeight*3), 0), dirtWidth, generationHeight, groundTilemap, null);
+            
             generationEndYPos -= generationHeight;
+        }
+
+        if (playerPosition.y/50 < backgroundGenerationEndYPos + 4) {
+            fillRectangle(new Vector3Int(-backgroundWidth / 2, backgroundGenerationEndYPos, 0), backgroundWidth, backgroundHeight, backgroundTileMap, backgroundTiles[0]);
+
+            fillRectangle(new Vector3Int(-backgroundWidth / 2, backgroundGenerationEndYPos + (backgroundHeight * 3), 0), backgroundWidth, backgroundHeight, backgroundTileMap, null);
+
             backgroundGenerationEndYPos -= backgroundHeight;
         }
+
+
     }
 
 
@@ -123,9 +137,8 @@ public class TileGeneration : MonoBehaviour
             for (int i = bounds.Item1; i < bounds.Item2; i++) {
 
                 groundTilemap.SetTile(new Vector3Int(i, yPosition), null);
-                emptyTilePositions.Add(new Vector3Int(i, yPosition, 0)); // Add empty tile position to list
+                emptyTilePositions.Add(new Vector3Int(i*4, yPosition*4, 0)); // Add empty tile position to list
                 if (enableDebugLogs){Debug.Log("emptyTilePositions.Add: " + string.Join(", ", emptyTilePositions));}//DEBUG
-
             }
 
 
