@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
-  spawnInterval: 7
+  spawnInterval: 10
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &137015836
@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &183651948
 Transform:
   m_ObjectHideFlags: 0
@@ -3232,7 +3232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69535283537338492, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: spawnInterval
@@ -3701,7 +3701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5508618796463800368, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3806,7 +3806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3469101303786823258, guid: d4a2304785601b04288d7b0fed111d81, type: 3}
-  spawnInterval: 11
+  spawnInterval: 6
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &914054368
@@ -5026,7 +5026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
-  spawnInterval: 9
+  spawnInterval: 12
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1001 &1180486734
@@ -5749,7 +5749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 5313831108751375777, guid: 5bbb78d6ce1bdfd47a00c70b2bfcb3da, type: 3}
-  spawnInterval: 5
+  spawnInterval: 8
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1372041040
@@ -6124,7 +6124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1419175614
 Transform:
   m_ObjectHideFlags: 0
@@ -6869,7 +6869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7700501427573992916, guid: e6e748b5c637e1a42b4aa23541a0b2e9, type: 3}
-  spawnInterval: 2
+  spawnInterval: 4
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1659303002
@@ -6917,7 +6917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 972118677540165689, guid: 63effa2270a13fd4ba3efa20980b7cf1, type: 3}
-  spawnInterval: 20
+  spawnInterval: 30
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1667508576
@@ -7357,14 +7357,14 @@ Transform:
   - {fileID: 481393762}
   - {fileID: 1419175614}
   - {fileID: 183651948}
-  - {fileID: 1628503017}
   - {fileID: 770451148}
   - {fileID: 848216684}
+  - {fileID: 1628503017}
   - {fileID: 1834748413}
+  - {fileID: 869859747}
   - {fileID: 1338336073}
   - {fileID: 67877757}
   - {fileID: 1147966966}
-  - {fileID: 869859747}
   - {fileID: 1659303003}
   - {fileID: 1284815510}
   - {fileID: 1927323088}
@@ -7564,7 +7564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3379981302833418993, guid: 345bb4427e79e1c4fa7f9450ae636255, type: 3}
-  spawnInterval: 3
+  spawnInterval: 4
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1834748413

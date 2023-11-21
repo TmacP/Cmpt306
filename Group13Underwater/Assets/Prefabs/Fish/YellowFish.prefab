@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcb6a20a23a47749a1d68c5ed72af23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 15
   tiltSpeed: 20
   tiltDepth: 7
   rb: {fileID: 3267873063953987694}
