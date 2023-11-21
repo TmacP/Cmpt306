@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: 2ecb21c23662c454a8cee90033d0c61b
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
+    guid: 04dae7afa65d2b04ab08b99fb5212581
+  - enabled: 0
+    path: Assets/Scenes/MainScenexxx.unity
     guid: 7d04810b9d26d469a88e4d5b427e87f2
   - enabled: 0
     path: Assets/Scenes/Bottles.unity
