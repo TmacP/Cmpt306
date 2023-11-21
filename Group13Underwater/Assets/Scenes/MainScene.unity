@@ -448,54 +448,6 @@ MonoBehaviour:
   messageScreen: {fileID: 211490425}
   bottle: {fileID: 847689971}
   bottleMessage: {fileID: 771511662}
---- !u!1 &67877756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 67877757}
-  - component: {fileID: 67877758}
-  m_Layer: 0
-  m_Name: ClownSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &67877757
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67877756}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.386237, y: 10.71451, z: 0.01503408}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &67877758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67877756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
-  spawnInterval: 10
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
 --- !u!1 &137015836
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &183651948
 Transform:
   m_ObjectHideFlags: 0
@@ -3232,11 +3184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69535283537338492, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: spawnInterval
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: tileGeneration
@@ -3687,128 +3639,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2269427130011032786, guid: 1643dc0013bfe4a4e8a974d6e916d5d3, type: 3}
   m_PrefabInstance: {fileID: 990776580}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &848216683
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1772691251}
-    m_Modifications:
-    - target: {fileID: 5508618796463800368, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_Name
-      value: RareFish
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508618796463800368, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6607441342868505058, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: spawnInterval
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6607441342868505058, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-      propertyPath: tileGeneration
-      value: 
-      objectReference: {fileID: 744247514}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
---- !u!4 &848216684 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6222336850842099067, guid: 0c6bdafeab1b0e347ac121c5e40a01af, type: 3}
-  m_PrefabInstance: {fileID: 848216683}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &869859746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 869859747}
-  - component: {fileID: 869859748}
-  m_Layer: 0
-  m_Name: YellowFishSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &869859747
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869859746}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.321901, y: -3.4625468, z: 0.44525665}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &869859748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869859746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3469101303786823258, guid: d4a2304785601b04288d7b0fed111d81, type: 3}
-  spawnInterval: 6
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
 --- !u!1 &914054368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +4811,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119040288}
   m_CullTransparentMesh: 1
---- !u!1 &1147966965
+--- !u!1 &1154248407
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4989,43 +4819,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1147966966}
-  - component: {fileID: 1147966967}
+  - component: {fileID: 1154248408}
+  - component: {fileID: 1154248409}
   m_Layer: 0
-  m_Name: LionFishSpawn
+  m_Name: RareFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1147966966
+--- !u!4 &1154248408
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147966965}
+  m_GameObject: {fileID: 1154248407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.321901, y: -3.4625468, z: 0.44525665}
+  m_LocalPosition: {x: 4.7534766, y: 17.081676, z: 0.37023246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1772691251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1147966967
+--- !u!114 &1154248409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147966965}
+  m_GameObject: {fileID: 1154248407}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
+  itemPrefab: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
   spawnInterval: 12
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
@@ -5169,6 +4999,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181516939}
   m_CullTransparentMesh: 1
+--- !u!1 &1223134250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223134251}
+  - component: {fileID: 1223134252}
+  m_Layer: 0
+  m_Name: LegendaryFish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223134251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223134250}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7534766, y: 17.081676, z: 0.37023246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772691251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223134252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223134250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
+  spawnInterval: 18
+  tileGeneration: {fileID: 744247514}
+  emptyTilePositions: []
 --- !u!1 &1224122659
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,54 +5582,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313634567}
   m_CullTransparentMesh: 1
---- !u!1 &1338336072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1338336073}
-  - component: {fileID: 1338336074}
-  m_Layer: 0
-  m_Name: PinkPuffSpawn
-  m_TagString: SpecialFish
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1338336073
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338336072}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.386237, y: 10.71451, z: 0.01503408}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338336074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338336072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 5313831108751375777, guid: 5bbb78d6ce1bdfd47a00c70b2bfcb3da, type: 3}
-  spawnInterval: 8
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
 --- !u!1 &1372041040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,7 +5954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1419175614
 Transform:
   m_ObjectHideFlags: 0
@@ -6824,102 +6654,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1772691251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1628503016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1628503017}
-  - component: {fileID: 1628503018}
-  m_Layer: 0
-  m_Name: MintFishSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1628503017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628503016}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.7534766, y: 17.081676, z: 0.37023246}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1628503018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628503016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 7700501427573992916, guid: e6e748b5c637e1a42b4aa23541a0b2e9, type: 3}
-  spawnInterval: 4
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
---- !u!1 &1659303002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1659303003}
-  - component: {fileID: 1659303004}
-  m_Layer: 0
-  m_Name: RainbowFishSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1659303003
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659303002}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.321901, y: -3.4625468, z: 0.44525665}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1659303004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659303002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 972118677540165689, guid: 63effa2270a13fd4ba3efa20980b7cf1, type: 3}
-  spawnInterval: 30
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
 --- !u!1 &1667508576
 GameObject:
   m_ObjectHideFlags: 0
@@ -7358,14 +7092,7 @@ Transform:
   - {fileID: 1419175614}
   - {fileID: 183651948}
   - {fileID: 770451148}
-  - {fileID: 848216684}
-  - {fileID: 1628503017}
-  - {fileID: 1834748413}
-  - {fileID: 869859747}
-  - {fileID: 1338336073}
-  - {fileID: 67877757}
-  - {fileID: 1147966966}
-  - {fileID: 1659303003}
+  - {fileID: 1223134251}
   - {fileID: 1284815510}
   - {fileID: 1927323088}
   - {fileID: 1625404063}
@@ -7373,6 +7100,7 @@ Transform:
   - {fileID: 1224122660}
   - {fileID: 1971016609}
   - {fileID: 190331559}
+  - {fileID: 1154248408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802449124
@@ -7534,54 +7262,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1834748411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1834748413}
-  - component: {fileID: 1834748412}
-  m_Layer: 0
-  m_Name: RedFishSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1834748412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834748411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3379981302833418993, guid: 345bb4427e79e1c4fa7f9450ae636255, type: 3}
-  spawnInterval: 4
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
---- !u!4 &1834748413
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834748411}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.386237, y: 10.71451, z: 0.01503408}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858430164
 GameObject:
   m_ObjectHideFlags: 0

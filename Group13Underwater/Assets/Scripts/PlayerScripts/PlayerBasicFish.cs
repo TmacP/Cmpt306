@@ -47,6 +47,16 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
         }
+        if (other.transform.tag == "LegendFish" && (GameManager.instance != null))
+        {
+
+            // Add a point
+            GameManager.instance.AddScore(6);
+
+
+            // Destroy the fish instance
+            Destroy(other.gameObject);
+        }
     }
 
 }

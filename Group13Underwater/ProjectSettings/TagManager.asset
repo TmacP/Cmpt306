@@ -12,6 +12,7 @@ TagManager:
   - MessageBottle
   - RareFish
   - SpecialFish
+  - LegendFish
   layers:
   - Default
   - TransparentFX
