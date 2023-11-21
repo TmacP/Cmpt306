@@ -68,9 +68,40 @@ public class GameManager : MonoBehaviour
         // Check for achievements based on playerScore
         if (playerScore >= 1)
         {
-            achievementManager.ShowBadge("Score1");
+            achievementManager.ShowBadge("Fantastic, You scored 1 point!", 1); // show badge 1
         }
-
+        if (playerScore >= 5)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 5 point!", 2); // show badge 1
+        }
+        if (playerScore >= 10)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 10 point!", 3); // show badge 1
+        }
+        if (playerScore >= 20)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 20 point!", 4); // show badge 1
+        }
+        if (playerScore >= 30)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 30 point!", 5); // show badge 1
+        }
+        if (playerScore >= 40)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 40 point!", 6); // show badge 1
+        }
+        if (playerScore >= 50)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 50 point!", 7); // show badge 1
+        }
+        if (playerScore >= 60)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 60 point!", 8); // show badge 1
+        }
+        if (playerScore >= 70)
+        {
+            achievementManager.ShowBadge("Fantastic, You scored 70 point!", 9); // show badge 1
+        }
     }
 
     public void AddMoney(int moneyAwarded)
