@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    public AchievementManager achievementManager;
     private bool enableDebugLogs = false; // Control debug logs
     public static GameManager instance = null;
 
@@ -61,6 +63,14 @@ public class GameManager : MonoBehaviour
         playerScore += pointsAwarded;
         if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
         UpdateScoreVisual();
+
+
+        // Check for achievements based on playerScore
+        if (playerScore >= 1)
+        {
+            achievementManager.ShowBadge("Score1");
+        }
+
     }
 
     public void AddMoney(int moneyAwarded)
