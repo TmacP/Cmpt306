@@ -4,15 +4,20 @@ using System.Collections.Generic;
 
 public class AchievementManager : MonoBehaviour
 {
-    public GameObject badgeObject1;
-    public GameObject badgeObject2;
-    public GameObject badgeObject3;
-    public GameObject badgeObject4;
-    public GameObject badgeObject5;
-    public GameObject badgeObject6;
-    public GameObject badgeObject7;
-    public GameObject badgeObject8;
-    public GameObject badgeObject9;
+    public GameObject scoreBadge1;
+    public GameObject scoreBadge2;
+    public GameObject scoreBadge3;
+    public GameObject scoreBadge4;
+    public GameObject scoreBadge5;
+    public GameObject scoreBadge6;
+    public GameObject scoreBadge7;
+    public GameObject scoreBadge8;
+    public GameObject scoreBadge9;
+    public GameObject scoreBadge10;
+    public GameObject scoreBadge11;
+    public GameObject scoreBadge12;
+
+
 
     public float displayTime = 3f;
 
@@ -42,31 +47,40 @@ public class AchievementManager : MonoBehaviour
         switch (badgeNumber)
         {
             case 1:
-                selectedBadge = badgeObject1;
+                selectedBadge = scoreBadge1;
                 break;
             case 2:
-                selectedBadge = badgeObject2;
+                selectedBadge = scoreBadge2;
                 break;
             case 3:
-                selectedBadge = badgeObject3;
+                selectedBadge = scoreBadge3;
                 break;
             case 4:
-                selectedBadge = badgeObject4;
+                selectedBadge = scoreBadge4;
                 break;
             case 5:
-                selectedBadge = badgeObject5;
+                selectedBadge = scoreBadge5;
                 break;
             case 6:
-                selectedBadge = badgeObject6;
+                selectedBadge = scoreBadge6;
                 break;
             case 7:
-                selectedBadge = badgeObject7;
+                selectedBadge = scoreBadge7;
                 break;
             case 8:
-                selectedBadge = badgeObject8;
+                selectedBadge = scoreBadge8;
                 break;
             case 9:
-                selectedBadge = badgeObject9;
+                selectedBadge = scoreBadge9;
+                break;
+            case 10:
+                selectedBadge = scoreBadge10;
+                break;  
+            case 11:    
+                selectedBadge = scoreBadge11;
+                break;
+            case 12:    
+                selectedBadge = scoreBadge12;
                 break;
 
             default:
@@ -90,14 +104,17 @@ public class AchievementManager : MonoBehaviour
     void HideAllBadges()
     {
         // Hide all badges
-        badgeObject1.SetActive(false);
-        badgeObject2.SetActive(false);
-        badgeObject3.SetActive(false);
-        badgeObject4.SetActive(false);
-        badgeObject5.SetActive(false);
-        badgeObject6.SetActive(false);
-        badgeObject7.SetActive(false);
-        badgeObject8.SetActive(false);
-        badgeObject9.SetActive(false);
+        scoreBadge1.SetActive(false);
+        scoreBadge2.SetActive(false);
+        scoreBadge3.SetActive(false);
+        scoreBadge4.SetActive(false);
+        scoreBadge5.SetActive(false);
+        scoreBadge6.SetActive(false);
+        scoreBadge7.SetActive(false);
+        scoreBadge8.SetActive(false);
+        scoreBadge9.SetActive(false);
+        scoreBadge10.SetActive(false);
+        scoreBadge11.SetActive(false);
+        scoreBadge12.SetActive(false);
     }
 }

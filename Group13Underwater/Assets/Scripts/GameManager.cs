@@ -66,42 +66,18 @@ public class GameManager : MonoBehaviour
 
 
         // Check for achievements based on playerScore
-        if (playerScore >= 1)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 1 point!", 1); // show badge 1
-        }
-        if (playerScore >= 5)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 5 point!", 2); // show badge 1
-        }
-        if (playerScore >= 10)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 10 point!", 3); // show badge 1
-        }
-        if (playerScore >= 20)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 20 point!", 4); // show badge 1
-        }
-        if (playerScore >= 30)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 30 point!", 5); // show badge 1
-        }
-        if (playerScore >= 40)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 40 point!", 6); // show badge 1
-        }
-        if (playerScore >= 50)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 50 point!", 7); // show badge 1
-        }
-        if (playerScore >= 60)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 60 point!", 8); // show badge 1
-        }
-        if (playerScore >= 70)
-        {
-            achievementManager.ShowBadge("Fantastic, You scored 70 point!", 9); // show badge 1
-        }
+        if (playerScore >= 1) achievementManager.ShowBadge("Nice, scored 1 point!", 1);
+        if (playerScore >= 5) achievementManager.ShowBadge("Great, scored 5 points! Keep it up!", 2);
+        if (playerScore >= 10) achievementManager.ShowBadge("Excellent, scored 10 points! You're on a roll!", 3);
+        if (playerScore >= 20) achievementManager.ShowBadge("Amazing, scored 20 points! Spectacular performance!", 4);
+        if (playerScore >= 30) achievementManager.ShowBadge("Awesome, scored 30 points! Unstoppable!", 5);
+        if (playerScore >= 40) achievementManager.ShowBadge("Exciting, scored 40 points! You're crushing it!", 6);
+        if (playerScore >= 50) achievementManager.ShowBadge("Incredible, scored 50 points! Mind-blowing achievement!", 7);
+        if (playerScore >= 60) achievementManager.ShowBadge("Unbelievable, scored 60 points! Insanely good!", 8);
+        if (playerScore >= 70) achievementManager.ShowBadge("Outstanding, scored 70 points! Masterful play!", 9);
+        if (playerScore >= 80) achievementManager.ShowBadge("Otherworldly, scored 80 points! Supernatural skills!", 10);
+        if (playerScore >= 90) achievementManager.ShowBadge("Superhuman, scored 90 points! You're a gaming legend!", 11);
+        if (playerScore >= 100) achievementManager.ShowBadge("Fantastic, scored 100 points! You've reached the pinnacle!", 12);
     }
 
     public void AddMoney(int moneyAwarded)
