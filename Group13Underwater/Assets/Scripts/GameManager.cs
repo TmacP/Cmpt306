@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public MoveSpeedBuff msBuff;
     public MagnetismBuff magnetismBuff;
 
+
     // Score Variables
     public Text scoreVisual;
     public Text moneyVisual;

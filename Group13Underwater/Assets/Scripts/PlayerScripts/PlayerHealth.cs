@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public float playerHealth = 50.0f;
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
+
+    public string GameOver; // Show this screen when player dies
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +86,8 @@ public class PlayerHealth : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 GameManager.instance.ReloadGameScene();
+                // Show game over screen
+                SceneManager.LoadScene(GameOver);
             }
 
             // Update the health display in the HealthBar script.
