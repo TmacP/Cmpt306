@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
     // Score Variables
     public Text scoreVisual;
     public Text moneyVisual;
-    private int playerScore = 0;
+    private int playerScore = 0; 
     public int playerMoney = 0;
+    private int enemyKilled = 0; // Used for achievements
 
     void Awake()
     {
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateMoneyVisual()
     {
-        moneyVisual.text = "Money: " + playerMoney.ToString();
+        moneyVisual.text = "Money: " + playerMoney.ToString() + " $";
         if (enableDebugLogs) Debug.Log("Updating Money Visual;"); //DEBUG
     }
 
@@ -78,6 +79,24 @@ public class GameManager : MonoBehaviour
         if (playerScore >= 80) achievementManager.ShowBadge("Otherworldly, scored 80 points!", 10);
         if (playerScore >= 90) achievementManager.ShowBadge("Superhuman, scored 90 points!", 11);
         if (playerScore >= 100) achievementManager.ShowBadge("Fantastic, scored 100 points!", 12);
+    }
+
+    public void AddEnemyKilled(int enemiesKilled)
+    {
+        enemyKilled += enemiesKilled;
+        if (enableDebugLogs) Debug.Log("AddEnemyKilled(), Enemies killed; enemyKilled: " + enemyKilled); //DEBUG
+        if (enemyKilled >= 1) achievementManager.ShowBadge("Nice, killed 1 enemy!", 13);
+        if (enemyKilled >= 5) achievementManager.ShowBadge("Great, killed 5 enemies!", 14);
+        if (enemyKilled >= 10) achievementManager.ShowBadge("Excellent, killed 10 enemies!", 15);
+        if (enemyKilled >= 20) achievementManager.ShowBadge("Amazing, killed 20 enemies!", 16);
+        if (enemyKilled >= 30) achievementManager.ShowBadge("Awesome, killed 30 enemies!", 17);
+        if (enemyKilled >= 40) achievementManager.ShowBadge("Exciting, killed 40 enemies!", 18);
+        if (enemyKilled >= 50) achievementManager.ShowBadge("Incredible, killed 50 enemies!", 19);
+        if (enemyKilled >= 60) achievementManager.ShowBadge("Unbelievable, killed 60 enemies!", 20);
+        if (enemiesKilled >= 70) achievementManager.ShowBadge("Outstanding, killed 70 enemies!", 21);
+        if (enemiesKilled >= 80) achievementManager.ShowBadge("Otherworldly, killed 80 enemies!", 22);
+        if (enemiesKilled >= 90) achievementManager.ShowBadge("Superhuman, killed 90 enemies!", 23);
+        if (enemiesKilled >= 100) achievementManager.ShowBadge("Fantastic, killed 100 enemies!", 24);
     }
 
     public void AddMoney(int moneyAwarded)

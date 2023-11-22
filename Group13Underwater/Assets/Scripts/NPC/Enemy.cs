@@ -45,7 +45,11 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            // update the game manager enemy killed for achievements
+            GameManager.instance.AddEnemyKilled(1);
         }
+
+
     }
 
     private void OnTriggerStay2D(Collider2D other)

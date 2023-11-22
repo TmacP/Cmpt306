@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class AchievementManager : MonoBehaviour
 {
+    // Score badges
     public GameObject scoreBadge1;
     public GameObject scoreBadge2;
     public GameObject scoreBadge3;
@@ -16,6 +17,20 @@ public class AchievementManager : MonoBehaviour
     public GameObject scoreBadge10;
     public GameObject scoreBadge11;
     public GameObject scoreBadge12;
+    // Enemy killed badges
+    public GameObject enemyBadge1;
+    public GameObject enemyBadge2;
+    public GameObject enemyBadge3;
+    public GameObject enemyBadge4;
+    public GameObject enemyBadge5;
+    public GameObject enemyBadge6;
+    public GameObject enemyBadge7;
+    public GameObject enemyBadge8;
+    public GameObject enemyBadge9;
+    public GameObject enemyBadge10;
+    public GameObject enemyBadge11;
+    public GameObject enemyBadge12;
+
 
 
 
@@ -46,6 +61,7 @@ public class AchievementManager : MonoBehaviour
         GameObject selectedBadge = null;
         switch (badgeNumber)
         {
+            // Score badges
             case 1:
                 selectedBadge = scoreBadge1;
                 break;
@@ -82,6 +98,45 @@ public class AchievementManager : MonoBehaviour
             case 12:    
                 selectedBadge = scoreBadge12;
                 break;
+            // Enemy killed badges
+            case 13:
+                selectedBadge = enemyBadge1;
+                break;
+            case 14:
+                selectedBadge = enemyBadge2;
+                break;
+            case 15:    
+                selectedBadge = enemyBadge3;
+                break;
+            case 16:
+                selectedBadge = enemyBadge4;
+                break;
+            case 17:    
+                selectedBadge = enemyBadge5;
+                break;
+            case 18:    
+                selectedBadge = enemyBadge6;
+                break;
+            case 19:    
+                selectedBadge = enemyBadge7;
+                break;
+            case 20:
+                selectedBadge = enemyBadge8;
+                break;  
+            case 21:
+                selectedBadge = enemyBadge9;
+                break;
+            case 22:
+                selectedBadge = enemyBadge10;
+                break;
+            case 23:
+                selectedBadge = enemyBadge11;
+                break;
+            case 24:
+                selectedBadge = enemyBadge12;
+                break;
+            // next badge 
+
 
             default:
                 Debug.LogWarning("Unknown badge number: " + badgeNumber);
@@ -104,6 +159,7 @@ public class AchievementManager : MonoBehaviour
     void HideAllBadges()
     {
         // Hide all badges
+        // Score badges
         scoreBadge1.SetActive(false);
         scoreBadge2.SetActive(false);
         scoreBadge3.SetActive(false);
@@ -116,5 +172,18 @@ public class AchievementManager : MonoBehaviour
         scoreBadge10.SetActive(false);
         scoreBadge11.SetActive(false);
         scoreBadge12.SetActive(false);
+        // Enemy killed badges
+        enemyBadge1.SetActive(false);
+        enemyBadge2.SetActive(false);
+        enemyBadge3.SetActive(false);
+        enemyBadge4.SetActive(false);
+        enemyBadge5.SetActive(false);
+        enemyBadge6.SetActive(false);
+        enemyBadge7.SetActive(false);
+        enemyBadge8.SetActive(false);
+        enemyBadge9.SetActive(false);
+        enemyBadge10.SetActive(false);
+        enemyBadge11.SetActive(false);
+        enemyBadge12.SetActive(false);
     }
 }
