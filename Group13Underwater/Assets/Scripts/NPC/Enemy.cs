@@ -1,26 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Default Enemy stats
     [SerializeField] private float moveSpeed = 15.0f;
     [SerializeField] private float health = 100.0f;
-
     [SerializeField] private float damageToPlayer = 10.0f;
     [SerializeField] private float damageRate = 0.2f;
+    [SerializeField] private float wiggleSpeed = 5.0f;
     private float damageTime;
 
-    private PlayerHealth playerHealth; // Reference to the PlayerHealth script.
+    private PlayerHealth playerHealth;
+    private bool enableDebugLogs = false;
+    private Vector2 swimDirection;
+    
 
-    private bool enableDebugLogs = false; // Flag to enable or disable debug logs.
+    private SpriteRenderer spriteRenderer; // Added SpriteRenderer reference
 
     private void Start()
     {
         playerHealth = GameManager.instance.player.GetComponent<PlayerHealth>();
-        if (enableDebugLogs){Debug.Log("Enemy Start");}//DEBUG
-        // Find the PlayerHealth script attached to the player GameObject.
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Get SpriteRenderer component
+        if (enableDebugLogs) { Debug.Log("Enemy Start"); }
+        StartCoroutine(Wiggle());
     }
 
     private void FixedUpdate()
@@ -35,6 +37,37 @@ public class Enemy : MonoBehaviour
             Vector3 targetPosition = GameManager.instance.player.transform.position;
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+            // Update swim direction
+            swimDirection = new Vector2(moveDirection.x, moveDirection.y);
+
+            // Flip the sprite based on the swim direction
+            if (swimDirection.x > 0)
+            {
+                if (!spriteRenderer.flipX)
+                {
+                    spriteRenderer.flipX = true;
+                }
+            }
+            else if (swimDirection.x < 0)
+            {
+                if (spriteRenderer.flipX)
+                {
+                    spriteRenderer.flipX = false;
+                }
+            }
+        }
+    }
+
+    private IEnumerator Wiggle()
+    {
+        while (true)
+        {
+            float wiggleOffset = Mathf.Sin(Time.time * wiggleSpeed) * 0.5f;
+            Vector3 newRotation = new Vector3(0, 0, wiggleOffset * 15);
+            transform.localEulerAngles = newRotation;
+
+            yield return null;
         }
     }
 
@@ -45,19 +78,16 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            // update the game manager enemy killed for achievements
             GameManager.instance.AddEnemyKilled(1);
         }
-
-
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (enableDebugLogs){Debug.Log("On trigger stay");}// DEBUG
+        if (enableDebugLogs) { Debug.Log("On trigger stay"); }
         if (other.transform.tag == "Player" && Time.time > damageTime && other is CapsuleCollider2D)
         {
-            if (enableDebugLogs){Debug.Log("Enemy is colliding with " + other.transform.tag);}
+            if (enableDebugLogs) { Debug.Log("Enemy is colliding with " + other.transform.tag); }
 
             if (playerHealth != null)
             {

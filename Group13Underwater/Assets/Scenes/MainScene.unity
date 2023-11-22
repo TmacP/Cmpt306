@@ -218,6 +218,54 @@ MonoBehaviour:
   m_EffectColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &14493370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14493371}
+  - component: {fileID: 14493372}
+  m_Layer: 0
+  m_Name: Enemy2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14493371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14493370}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.647314, y: 22.67748, z: 0.5376407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772691251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14493372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14493370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7116325711183489634, guid: 57cd13dfecdb644d2b5ba0c457bc77a7, type: 3}
+  spawnInterval: 10
+  tileGeneration: {fileID: 744247514}
+  emptyTilePositions: []
 --- !u!1 &48513654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 9022878280105090579, guid: e0706e2c1e52d4bad89966ca0f841572, type: 3}
+  itemPrefab: {fileID: 8225202820594584473, guid: 5ac4656100f2c4b4b8eef7e345cd81d5, type: 3}
   spawnInterval: 20
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
@@ -7811,7 +7859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 5490299660330610288, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
-  spawnInterval: 30
+  spawnInterval: 10
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1284815510
@@ -10722,6 +10770,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 481393762}
+  - {fileID: 14493371}
   - {fileID: 1419175614}
   - {fileID: 183651948}
   - {fileID: 770451148}
