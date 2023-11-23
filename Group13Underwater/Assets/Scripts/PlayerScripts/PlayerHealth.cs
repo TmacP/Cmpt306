@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
-    public string GameOver; // Show this screen when player dies
+    //public string GameOver; // Show this screen when player dies
 
     // Start is called before the first frame update
     void Start()
@@ -87,7 +87,7 @@ public class PlayerHealth : MonoBehaviour
                 Destroy(this.gameObject);
                 GameManager.instance.ReloadGameScene();
                 // Show game over screen
-                SceneManager.LoadScene(GameOver);
+                //SceneManager.LoadScene(GameOver);
             }
 
             // Update the health display in the HealthBar script.

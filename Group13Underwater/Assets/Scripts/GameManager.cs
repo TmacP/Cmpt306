@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public MoveSpeedBuff msBuff;
     public MagnetismBuff magnetismBuff;
 
+    //public string GameOver;
+
 
     // Score Variables
     public Text scoreVisual;
@@ -83,6 +85,8 @@ public class GameManager : MonoBehaviour
         playerMoney = 0;
         UpdateScoreVisual();
         UpdateMoneyVisual();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(GameOver);
+        SceneManager.LoadScene("GameOver");
     }
 }
