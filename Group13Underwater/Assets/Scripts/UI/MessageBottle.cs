@@ -10,7 +10,7 @@ public class MessageBottle : MonoBehaviour
     public GameObject messageScreen;
     public GameObject playerPref;
     public TextMeshProUGUI bottleMessage; // This is the message that appears in the scroll pop up
-    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Don’t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait." };
+    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Don’t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
 
     // Start is called before the first frame update
     void Start()

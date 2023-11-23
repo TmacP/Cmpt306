@@ -10,7 +10,7 @@ public class PlayerBottle : MonoBehaviour
     public GameObject bottle;
 
     public TextMeshProUGUI bottleMessage; // This is the message that appears in the scroll pop up
-    string[] messages = new string[] { "To the one who finds this bottle, be shore of yourself!", "May this message find its way to the one who needs it. Seas the day!", "Dear reader, you are doing fin-tastic!", "Don’t be crabby, heres some money to bring your spirits up.", "Use the money I left you and tret yourshellf!", "Seas and greetings! Keep up the good work.", "To the lucky one who find this, water you waiting for?", "Dear finder of this bottle, good things come to those who bait." };
+    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Don’t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
 
     void Start()
     {
@@ -36,7 +36,8 @@ public class PlayerBottle : MonoBehaviour
         messageScreen.SetActive(false);
         Time.timeScale = 1;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+
+    IEnumerator OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.tag == "MessageBottle" && (GameManager.instance != null))
         {
@@ -50,11 +51,14 @@ public class PlayerBottle : MonoBehaviour
             Destroy(other.gameObject);
 
             // Show the message (pause game, show message panel)
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             messageScreen.SetActive(true);
+            yield return new WaitForSeconds(4);
+            messageScreen.SetActive(false);
 
             // Close message with button in message bottle script
 
         }
     }
+
 }
