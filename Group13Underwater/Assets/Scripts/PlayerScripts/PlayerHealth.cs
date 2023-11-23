@@ -86,8 +86,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 GameManager.instance.ReloadGameScene();
-                // Show game over screen
-                //SceneManager.LoadScene(GameOver);
+ 
             }
 
             // Update the health display in the HealthBar script.

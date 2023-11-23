@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public MoveSpeedBuff msBuff;
     public MagnetismBuff magnetismBuff;
 
-    //public string GameOver;
 
 
     // Score Variables
