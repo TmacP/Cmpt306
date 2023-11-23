@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     public Button skin5Button;
     public GameObject pauseScreen;
     private bool enableDebugLogs = true; // Control debug logs
+    private bool isShopTouched = false;
 
     void Start()
     {
@@ -28,28 +29,33 @@ public class PauseMenu : MonoBehaviour
         skin3Button.onClick.AddListener(OnClickSkin3);
         skin4Button.onClick.AddListener(OnClickSkin4);
         skin5Button.onClick.AddListener(OnClickSkin5);
-
     }
 
-    void Update()
+void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Escape)) // Check if the Escape key is pressed
     {
-        // Pause the game when the escape key is pressed, unpause when pressed again
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Unpause
+        if (enableDebugLogs) Debug.Log("unpause: "); // DEBUG
+        Time.timeScale = 1;
+        pauseScreen.SetActive(false);
+        isShopTouched = false;
+    }
+}
+
+
+    // Assume you have a collider on the shop GameObject with "Shop" tag
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            if (Time.timeScale == 0)
-            {
-                // Unpause
-                Time.timeScale = 1;
-                pauseScreen.SetActive(false);
-            }
-            else
-            {
-                // Pause
-                Time.timeScale = 0;
-                pauseScreen.SetActive(true);
-            }
+        if (enableDebugLogs) Debug.Log("pause: "); // DEBUG
+        Time.timeScale = 0;
+        pauseScreen.SetActive(true);
         }
     }
+
+
 
     public void OnClickDamage()
     {
