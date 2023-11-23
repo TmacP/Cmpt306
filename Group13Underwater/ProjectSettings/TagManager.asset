@@ -13,6 +13,7 @@ TagManager:
   - RareFish
   - SpecialFish
   - LegendFish
+  - Shop
   layers:
   - Default
   - TransparentFX
