@@ -12166,7 +12166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: spawnInterval
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: tileGeneration
