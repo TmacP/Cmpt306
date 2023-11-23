@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     public Button skin4Button;
     public Button skin5Button;
     public GameObject pauseScreen;
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     private bool isShopTouched = false;
 
     void Start()
