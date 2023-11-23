@@ -9524,6 +9524,7 @@ MonoBehaviour:
   player: {fileID: 65470187}
   msBuff: {fileID: 11400000, guid: 1d06b80256bc4e64fad4b91925186392, type: 2}
   magnetismBuff: {fileID: 11400000, guid: 7347df10bdbe3e049884965840f62f8c, type: 2}
+  GameOver: GameOver
   scoreVisual: {fileID: 1982954688}
   moneyVisual: {fileID: 2103448601}
   playerMoney: 0
