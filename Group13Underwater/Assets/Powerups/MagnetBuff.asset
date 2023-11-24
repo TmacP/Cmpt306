@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MagnetBuff
   m_EditorClassIdentifier: 
   maxBuffDuration: 3
-  remainingBuffDuration: -0.0017119127
+  remainingBuffDuration: -0.00028785894
