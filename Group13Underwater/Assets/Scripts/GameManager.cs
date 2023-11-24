@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     public MoveSpeedBuff msBuff;
     public MagnetismBuff magnetismBuff;
 
-
+    // Sound Variables
+    public AudioSource moneySound; // Assign in Unity Editor
+    public AudioSource scoreSound; // Assign in Unity Editor
 
     // Score Variables
     public Text scoreVisual;
@@ -50,6 +52,8 @@ public class GameManager : MonoBehaviour
         msBuff.IsBuffedRestart();
         magnetismBuff.IsBuffedRestart();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
+
+
     }
 
 
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour
         playerScore += pointsAwarded;
         if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
         UpdateScoreVisual();
+        scoreSound.Play();
 
 
         // Check for achievements based on playerScore
@@ -122,6 +127,9 @@ public class GameManager : MonoBehaviour
         playerMoney += moneyAwarded;
         if (enableDebugLogs) Debug.Log("AddMoney(), Money awarded to player; playerMoney: " + playerMoney); //DEBUG
         UpdateMoneyVisual();
+        // sound
+        moneySound.Play();
+
     }
 
     public Vector3 GetPlayerPosition()

@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
-    //public string GameOver; // Show this screen when player dies
+    public AudioSource damageSound; // Assign in Unity Editor
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
         // Check if the player is currently invulnerable
         if (!isInvulnerable)
         {
+            damageSound.Play(); // Play the damage sound
             playerHealth -= damage;
 
             // Check if player's health is down to 20

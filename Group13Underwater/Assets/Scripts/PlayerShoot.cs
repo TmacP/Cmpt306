@@ -11,6 +11,8 @@ public class PlayerShoot : MonoBehaviour
     private bool canShoot = true;
     private float shotTimer = 0.0f;
 
+    public AudioSource shootSound; // Assign in Unity Editor
+
     void Update()
     {
         // Update the shot timer
@@ -24,6 +26,8 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
+        // Play the shoot sound
+        shootSound.Play();
         // Reset the shot timer when shooting
         shotTimer = 0.0f;
 

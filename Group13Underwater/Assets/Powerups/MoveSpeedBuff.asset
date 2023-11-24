@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14c1494313ad7b44826724b85d1036e, type: 3}
   m_Name: MoveSpeedBuff
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
-  maxBuffDuration: 3
-  remainingBuffDuration: -0.0012255404
+  speedMultiplier: 1.5
+  maxBuffDuration: 5
+  remainingBuffDuration: 0
