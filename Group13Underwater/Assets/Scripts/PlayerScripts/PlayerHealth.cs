@@ -108,4 +108,28 @@ public class PlayerHealth : MonoBehaviour
         // Reset the invulnerability flag
         isInvulnerable = false;
     }
+
+    public Sprite GetRewardSpriteByID(int skinID)
+    {
+        switch (skinID)
+        {
+            case 0:
+                return normalSprite;
+            case 1:
+                return rewardSprite_1;
+            case 2:
+                return rewardSprite_2;
+            case 3:
+                return rewardSprite_3;
+            case 4:
+                return rewardSprite_4;
+            case 5:
+                return rewardSprite_5;
+            case 6:
+                return rewardSprite_6;
+            default:
+                return normalSprite; // Return default sprite if the skin ID is not recognized
+        }
+    }
+
 }

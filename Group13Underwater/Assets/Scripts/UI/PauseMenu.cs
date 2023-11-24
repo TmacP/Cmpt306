@@ -139,7 +139,7 @@ void Update()
 
     public void OnClickSkin1()
     {
-        int skinID = 1; // Assign a unique ID to each skin
+        int skinID = 2; // Assign a unique ID to each skin
 
         if (GameManager.instance.playerMoney >= 10 && !GameManager.instance.IsSkinPurchased(skinID))
         {
@@ -161,7 +161,7 @@ void Update()
 
     public void OnClickSkin2()
     {
-        int skinID = 2; // Assign a unique ID to each skin
+        int skinID = 3; // Assign a unique ID to each skin
 
         if (GameManager.instance.playerMoney >= 15 && !GameManager.instance.IsSkinPurchased(skinID))
         {
@@ -183,7 +183,7 @@ void Update()
 
     public void OnClickSkin3()
     {
-        int skinID = 3; // Assign a unique ID to each skin
+        int skinID = 4; // Assign a unique ID to each skin
 
         if (GameManager.instance.playerMoney >= 25 && !GameManager.instance.IsSkinPurchased(skinID))
         {
@@ -205,7 +205,7 @@ void Update()
 
     public void OnClickSkin4()
     {
-        int skinID = 4; // Assign a unique ID to each skin
+        int skinID = 5; // Assign a unique ID to each skin
 
         if (GameManager.instance.playerMoney >= 50 && !GameManager.instance.IsSkinPurchased(skinID))
         {
@@ -227,7 +227,7 @@ void Update()
 
     public void OnClickSkin5()
     {
-        int skinID = 5; // Assign a unique ID to each skin
+        int skinID = 6; // Assign a unique ID to each skin
 
         if (GameManager.instance.playerMoney >= 100 && !GameManager.instance.IsSkinPurchased(skinID))
         {
