@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SkinSelectMenu : MonoBehaviour
 {
     public GameObject skinselectmenu;
+    public GameObject pauseScreen;
     public Button skinSwitchButton;
     public Button skin1SwitchButton;
     public Button skin2SwitchButton;
@@ -27,17 +28,15 @@ public class SkinSelectMenu : MonoBehaviour
     void Update()
     {
         // Pause the game when the escape key is pressed, unpause when pressed again
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseScreen.activeSelf)
         {
-            if (Time.timeScale == 0)
+            if (skinselectmenu.activeSelf )
             {
-                // Unpause
                 Time.timeScale = 1;
                 skinselectmenu.SetActive(false);
             }
             else
             {
-                // Pause
                 Time.timeScale = 0;
                 skinselectmenu.SetActive(true);
             }

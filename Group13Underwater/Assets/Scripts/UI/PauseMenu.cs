@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     public Button skin4Button;
     public Button skin5Button;
     public GameObject pauseScreen;
+    public GameObject skinselectmenu;
     private bool enableDebugLogs = false; // Control debug logs
     private bool isShopTouched = false;
 
@@ -33,7 +34,7 @@ public class PauseMenu : MonoBehaviour
 
 void Update()
 {
-    if (Input.GetKeyDown(KeyCode.Escape)) // Check if the Escape key is pressed
+    if (Input.GetKeyDown(KeyCode.Escape) & !skinselectmenu.activeSelf) // Check if the Escape key is pressed
     {
         // Unpause
         if (enableDebugLogs) Debug.Log("unpause: "); // DEBUG
