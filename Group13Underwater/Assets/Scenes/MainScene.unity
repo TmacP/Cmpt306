@@ -5836,7 +5836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
   spawnInterval: 20
-  tileGeneration: {fileID: 744247514}
+  tileGeneration: {fileID: 0}
   emptyTilePositions: []
 --- !u!1 &211490425 stripped
 GameObject:
