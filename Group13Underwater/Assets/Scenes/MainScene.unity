@@ -6896,6 +6896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinselectmenu: {fileID: 3960623131917168358}
+  pauseScreen: {fileID: 3960623133231788443}
   skinSwitchButton: {fileID: 1308724194}
   skin1SwitchButton: {fileID: 768529467}
   skin2SwitchButton: {fileID: 1417847112}
@@ -7922,6 +7923,10 @@ PrefabInstance:
       propertyPath: damageButton
       value: 
       objectReference: {fileID: 265087968}
+    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skinselectmenu
+      value: 
+      objectReference: {fileID: 3960623131917168358}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
