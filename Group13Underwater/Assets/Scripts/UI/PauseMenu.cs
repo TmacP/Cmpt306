@@ -17,7 +17,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject skinselectmenu;
     private bool enableDebugLogs = false; // Control debug logs
-    private bool isShopTouched = false;
 
     void Start()
     {
@@ -40,7 +39,6 @@ void Update()
         if (enableDebugLogs) Debug.Log("unpause: "); // DEBUG
         Time.timeScale = 1;
         pauseScreen.SetActive(false);
-        isShopTouched = false;
     }
 }
 
@@ -67,8 +65,8 @@ void Update()
             // Get the current damage
             float currentDamage = playerShoot.GetProjectileDamage();
 
-            // Increase the damage by 10
-            float newDamage = currentDamage + 10;
+            // Increase the damage by 2
+            float newDamage = currentDamage + 2;
 
             // Set the new damage
             playerShoot.SetProjectileDamage(newDamage);

@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private float damageTime;
 
     private PlayerHealth playerHealth;
-    private bool enableDebugLogs = false;
+    private bool enableDebugLogs = true;
     private Vector2 swimDirection;
     
 
@@ -19,9 +19,11 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        int enemyKilled = GameManager.instance.enemyKilled;
+        health += enemyKilled;
         playerHealth = GameManager.instance.player.GetComponent<PlayerHealth>();
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get SpriteRenderer component
-        if (enableDebugLogs) { Debug.Log("Enemy Start"); }
+        if (enableDebugLogs) { Debug.Log("Enemy Start with health: " + health); }
         StartCoroutine(Wiggle());
     }
 
@@ -84,10 +86,10 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (enableDebugLogs) { Debug.Log("On trigger stay"); }
+        //if (enableDebugLogs) { Debug.Log("On trigger stay"); }
         if (other.transform.tag == "Player" && Time.time > damageTime && other is CapsuleCollider2D)
         {
-            if (enableDebugLogs) { Debug.Log("Enemy is colliding with " + other.transform.tag); }
+            //if (enableDebugLogs) { Debug.Log("Enemy is colliding with " + other.transform.tag); }
 
             if (playerHealth != null)
             {

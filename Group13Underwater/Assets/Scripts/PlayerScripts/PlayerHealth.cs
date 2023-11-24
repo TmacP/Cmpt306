@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBar healthBar; // Reference to the HealthBar script attached to the player.
-    private bool enableDebugLogs = true; // Flag to enable or disable debug logs.
+    private bool enableDebugLogs = false; // Flag to enable or disable debug logs.
     private PlayerMovement player;
     private bool isInvulnerable = false; // Flag to track player's invulnerability status.
     [SerializeField] private float invulnerabilityDuration = 2.0f; // Duration of invulnerability in seconds.

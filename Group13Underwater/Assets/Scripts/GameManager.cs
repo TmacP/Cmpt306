@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public Text moneyVisual;
     private int playerScore = 0; 
     public int playerMoney = 0;
-    private int enemyKilled = 0; // Used for achievements
+    public int enemyKilled = 0; // Used for achievements
 
     private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
 
