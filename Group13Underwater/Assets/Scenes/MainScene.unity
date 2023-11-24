@@ -6982,7 +6982,6 @@ GameObject:
   - component: {fileID: 366192183}
   - component: {fileID: 366192182}
   - component: {fileID: 366192186}
-  - component: {fileID: 366192187}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7100,28 +7099,6 @@ MonoBehaviour:
   skin3SwitchButton: {fileID: 1688851532}
   skin4SwitchButton: {fileID: 614166244}
   skin5SwitchButton: {fileID: 1132512351}
---- !u!114 &366192187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366192181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d67533d254e15479bd490bc6c69e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageButton: {fileID: 265087968}
-  heartButton: {fileID: 1488839235}
-  skinButton: {fileID: 1691910568}
-  skin1Button: {fileID: 499100428}
-  skin2Button: {fileID: 1086918896}
-  skin3Button: {fileID: 993858481}
-  skin4Button: {fileID: 137015838}
-  skin5Button: {fileID: 1696708085}
-  pauseScreen: {fileID: 3960623133231788443}
-  skinselectmenu: {fileID: 3960623131917168358}
 --- !u!1 &441593149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8158,7 +8135,10 @@ PrefabInstance:
     - {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4064986294138138388, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679481821}
   m_SourcePrefab: {fileID: 100100000, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
 --- !u!114 &614166244 stripped
 MonoBehaviour:
@@ -13748,6 +13728,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4064986294138138388, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
   m_PrefabInstance: {fileID: 607086953}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679481821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679481816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d67533d254e15479bd490bc6c69e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageButton: {fileID: 265087968}
+  heartButton: {fileID: 1488839235}
+  skinButton: {fileID: 1691910568}
+  skin1Button: {fileID: 499100428}
+  skin2Button: {fileID: 1086918896}
+  skin3Button: {fileID: 993858481}
+  skin4Button: {fileID: 137015838}
+  skin5Button: {fileID: 1696708085}
+  pauseScreen: {fileID: 3960623133231788443}
+  skinselectmenu: {fileID: 3960623131917168358}
 --- !u!1 &1688412043
 GameObject:
   m_ObjectHideFlags: 0
