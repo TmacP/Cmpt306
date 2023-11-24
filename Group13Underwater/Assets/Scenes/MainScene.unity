@@ -16195,6 +16195,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366192185}
     m_Modifications:
+    - target: {fileID: 1370534189245837162, guid: 5538f8d2f3f994aaba3f0ace29c43831, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370534189245837162, guid: 5538f8d2f3f994aaba3f0ace29c43831, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370534189245837162, guid: 5538f8d2f3f994aaba3f0ace29c43831, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3960623133434327023, guid: 5538f8d2f3f994aaba3f0ace29c43831, type: 3}
       propertyPath: m_Name
       value: PauseMenu
