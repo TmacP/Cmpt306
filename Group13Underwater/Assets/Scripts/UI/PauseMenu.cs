@@ -114,9 +114,12 @@ void Update()
     /// <summary>
     /// Here is the skins for sale. the code is copy pasted which should be genralized. but I think we can accept ugly code since it isn't going to live past this month.
     /// </summary>
+
     public void OnClickSkin()
     {
-        if (GameManager.instance.playerMoney >= 5)
+        int skinID = 1; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 5 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 5;
             GameManager.instance.UpdateMoneyVisual();
@@ -128,14 +131,17 @@ void Update()
                 playerHealth.normalSprite = playerHealth.rewardSprite_1;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 
-
     public void OnClickSkin1()
     {
-        if (GameManager.instance.playerMoney >= 10)
+        int skinID = 1; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 10 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 10;
             GameManager.instance.UpdateMoneyVisual();
@@ -147,81 +153,103 @@ void Update()
                 playerHealth.normalSprite = playerHealth.rewardSprite_2;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 
-        public void OnClickSkin2()
+    public void OnClickSkin2()
     {
-        if (GameManager.instance.playerMoney >= 15)
+        int skinID = 2; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 15 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 15;
             GameManager.instance.UpdateMoneyVisual();
             
-            // Update the player's sprite to rewardSprite_3
+            // Update the player's sprite to rewardSprite_2
             PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.normalSprite = playerHealth.rewardSprite_3;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 
-        public void OnClickSkin3()
+    public void OnClickSkin3()
     {
-        if (GameManager.instance.playerMoney >= 25)
+        int skinID = 3; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 25 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 25;
             GameManager.instance.UpdateMoneyVisual();
             
-            // Update the player's sprite to rewardSprite_4
+            // Update the player's sprite to rewardSprite_2
             PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.normalSprite = playerHealth.rewardSprite_4;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 
-
-        public void OnClickSkin4()
+    public void OnClickSkin4()
     {
-        if (GameManager.instance.playerMoney >= 50)
+        int skinID = 4; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 50 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 50;
             GameManager.instance.UpdateMoneyVisual();
             
-            // Update the player's sprite to rewardSprite_5
+            // Update the player's sprite to rewardSprite_2
             PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.normalSprite = playerHealth.rewardSprite_5;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
 
-            public void OnClickSkin5()
+    public void OnClickSkin5()
     {
-        if (GameManager.instance.playerMoney >= 100)
+        int skinID = 5; // Assign a unique ID to each skin
+
+        if (GameManager.instance.playerMoney >= 100 && !GameManager.instance.IsSkinPurchased(skinID))
         {
             GameManager.instance.playerMoney -= 100;
             GameManager.instance.UpdateMoneyVisual();
             
-            // Update the player's sprite to rewardSprite_6
+            // Update the player's sprite to rewardSprite_2
             PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.normalSprite = playerHealth.rewardSprite_6;
             }
 
+            GameManager.instance.MarkSkinAsPurchased(skinID);
+
             if (enableDebugLogs) Debug.Log("buy a skin."); // DEBUG
         }
     }
+
+
+
+
+
 
 }

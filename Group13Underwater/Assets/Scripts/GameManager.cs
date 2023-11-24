@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public int playerMoney = 0;
     private int enemyKilled = 0; // Used for achievements
 
+        private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
+
     void Awake()
     {
         if (instance == null)
@@ -48,6 +50,20 @@ public class GameManager : MonoBehaviour
         msBuff.IsBuffedRestart();
         magnetismBuff.IsBuffedRestart();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
+    }
+
+
+    public bool IsSkinPurchased(int skinID)
+    {
+        return purchasedSkins.Contains(skinID);
+    }
+
+    public void MarkSkinAsPurchased(int skinID)
+    {
+        if (!purchasedSkins.Contains(skinID))
+        {
+            purchasedSkins.Add(skinID);
+        }
     }
 
     void UpdateScoreVisual()
