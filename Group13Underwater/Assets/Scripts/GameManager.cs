@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public int playerMoney = 0;
     private int enemyKilled = 0; // Used for achievements
 
-        private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
+    private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
 
     void Awake()
     {
