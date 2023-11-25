@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private PlayerHealth playerHealth;
     private bool enableDebugLogs = false;
     private Vector2 swimDirection;
+    [SerializeField] private GameObject deathParticle;
     
 
     private SpriteRenderer spriteRenderer; // Added SpriteRenderer reference
@@ -81,6 +82,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.instance.AddEnemyKilled(1);
+            GameObject effect = Instantiate(deathParticle, transform.position, transform.rotation);
         }
     }
 
