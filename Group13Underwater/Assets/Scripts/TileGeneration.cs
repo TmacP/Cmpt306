@@ -78,7 +78,7 @@ public class TileGeneration : MonoBehaviour
         Vector3 playerPosition = GameManager.instance.GetPlayerPosition();
         
         if (playerPosition.y/4 < generationEndYPos + 60) {
-            emptyTilePositions.Clear();
+            //emptyTilePositions.Clear(); // THIS LINE BREAKS THE SPAWNER.CS SCRIPT WE WANT TO KEEP THE TILES IN THE LIST
             
             fillRectangle(new Vector3Int(-dirtWidth / 2, generationEndYPos, 0), dirtWidth, generationHeight, groundTilemap, groundTiles[0]);
             crawlerBounds = createTunnel(crawlerBounds, new Vector3Int(-crawlerWidth / 2, generationEndYPos, 0), crawlerWidth, generationHeight);

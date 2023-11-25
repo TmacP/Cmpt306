@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private float damageTime;
 
     private PlayerHealth playerHealth;
-    private bool enableDebugLogs = true;
+    private bool enableDebugLogs = false;
     private Vector2 swimDirection;
     
 
