@@ -9,8 +9,7 @@ public class Spawner : MonoBehaviour
     private float nextSpawnTime = 0f;
     public float spawnInterval = 2f; // Adjust this interval as needed
     private float playerYCoordinate;
-    [SerializeField] public int maxItems; // The maximum number of items that can be spawned at once
-    private List<GameObject> spawnedItems = new List<GameObject>(); // List of spawned items
+
     public TileGeneration tileGeneration; // Reference to the TileGeneration script which has our list of empty tile positions
 
     public List<Vector3Int> emptyTilePositions;
@@ -22,7 +21,7 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= nextSpawnTime && spawnedItems.Count < maxItems)
+        if (Time.time >= nextSpawnTime)
         {
             //if (enableDebugLogs) { Debug.Log("Time to spawn items."); } //DEBUG
             SpawnItems();
@@ -31,10 +30,6 @@ public class Spawner : MonoBehaviour
     }
 
 
-    public void DecrementSpawnedItemsList(GameObject item)
-    {
-        spawnedItems.Remove(item);
-    }
     private void SpawnItems()
     {
         //if (enableDebugLogs) { Debug.Log("Spawning items."); } //DEBUG
@@ -89,13 +84,11 @@ public class Spawner : MonoBehaviour
         }
 
         // all the checks have passed so spawn the item
-        // add to the count so we can keep track of how many items are spawned
         GameObject newlySpawnedEntity = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
         // Pass a reference to the spawner to the spawned object
-        Despawnable despawnableComponent = newlySpawnedEntity.AddComponent<Despawnable>();
-        despawnableComponent.SetSpawner(this);
+        newlySpawnedEntity.AddComponent<Despawnable>();
+        
 
-        spawnedItems.Add(newlySpawnedEntity);
 
 
         //if (enableDebugLogs) { Debug.Log("Spawned item at position: " + spawnPosition); } //DEBUG

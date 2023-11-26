@@ -134,7 +134,14 @@ public class GameManager : MonoBehaviour
 
     public Vector3 GetPlayerPosition()
     {
-        return player.transform.position;
+        if (player != null)
+        {
+            return player.transform.position;
+        }
+        else
+        {
+            return new Vector3(0, 0, 0);
+        }
     }
 
     public void ReloadGameScene()
