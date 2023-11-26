@@ -4,8 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
-{
+    public class GameManager : MonoBehaviour
+    {
+
+    // Define the achievements and their corresponding messages and badge numbers
+    string[] messages = {
+        "Nice, scored {0} point!",
+        "Great, scored {0} points!",
+        "Excellent, scored {0} points!",
+        "Amazing, scored {0} points!",
+        "Awesome, scored {0} points!",
+        "Exciting, scored {0} points!",
+        "Incredible, scored {0} points!",
+        "Unbelievable, scored {0} points!",
+        "Outstanding, scored {0} points!",
+        "Otherworldly, scored {0} points!",
+        "Superhuman, scored {0} points!",
+        "Fantastic, scored {0} points!"
+    };
+        string[] enemyMessages = {
+        "Nice, defeated {0} enemies!",
+        "Great, defeated {0} enemies!",
+        "Excellent, defeated {0} enemies!",
+        "Amazing, defeated {0} enemies!",
+        "Awesome, defeated {0} enemies!",
+        "Exciting, defeated {0} enemies!",
+        "Incredible, defeated {0} enemies!",
+        "Unbelievable, defeated {0} enemies!",
+        "Outstanding, defeated {0} enemies!",
+        "Otherworldly, defeated {0} enemies!",
+        "Superhuman, defeated {0} enemies!",
+        "Fantastic, defeated {0} enemies!"
+    };
+
+
+    int[] badgeNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    private int nextScoreAward = 10;
+    private int nextEnemyKilledAward = 10;
+
 
     public AchievementManager achievementManager;
     private bool enableDebugLogs = false; // Control debug logs
@@ -83,43 +119,52 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int pointsAwarded)
     {
-        playerScore += pointsAwarded;
-        if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
-        UpdateScoreVisual();
-        scoreSound.Play();
+    playerScore += pointsAwarded;
+    if (enableDebugLogs) Debug.Log("AddScore(), Points awarded to player; playerScore: " + playerScore); //DEBUG
+    UpdateScoreVisual();
+    scoreSound.Play();
 
+    // Check if the score is in the range for the next badge
+    if (playerScore >= nextScoreAward && playerScore < nextScoreAward + 10)
+    {
+        // Pick a random index for the message and badgeNumber
+        int randomIndex = Random.Range(0, messages.Length);
+        string message = string.Format(messages[randomIndex], nextScoreAward);
+        int badgeNumber = badgeNumbers[randomIndex];
 
-        // Check for achievements based on playerScore
-        if (playerScore >= 1) achievementManager.ShowBadge("Nice, scored 1 point!", 1);
-        if (playerScore >= 5) achievementManager.ShowBadge("Great, scored 5 points!", 2);
-        if (playerScore >= 10) achievementManager.ShowBadge("Excellent, scored 10 points!", 3);
-        if (playerScore >= 20) achievementManager.ShowBadge("Amazing, scored 20 points!", 4);
-        if (playerScore >= 30) achievementManager.ShowBadge("Awesome, scored 30 points!", 5);
-        if (playerScore >= 40) achievementManager.ShowBadge("Exciting, scored 40 points!", 6);
-        if (playerScore >= 50) achievementManager.ShowBadge("Incredible, scored 50 points!", 7);
-        if (playerScore >= 60) achievementManager.ShowBadge("Unbelievable, scored 60 points!", 8);
-        if (playerScore >= 70) achievementManager.ShowBadge("Outstanding, scored 70 points!", 9);
-        if (playerScore >= 80) achievementManager.ShowBadge("Otherworldly, scored 80 points!", 10);
-        if (playerScore >= 90) achievementManager.ShowBadge("Superhuman, scored 90 points!", 11);
-        if (playerScore >= 100) achievementManager.ShowBadge("Fantastic, scored 100 points!", 12);
+        achievementManager.ShowBadge(message, badgeNumber);
+
+        // Increment nextScoreAward by 10
+        nextScoreAward += 10;
+        }
     }
+
+
 
     public void AddEnemyKilled(int enemiesKilled)
     {
         enemyKilled += enemiesKilled;
         if (enableDebugLogs) Debug.Log("AddEnemyKilled(), Enemies killed; enemyKilled: " + enemyKilled); //DEBUG
-        if (enemyKilled >= 1) achievementManager.ShowBadge("Nice, killed 1 enemy!", 13);
-        if (enemyKilled >= 5) achievementManager.ShowBadge("Great, killed 5 enemies!", 14);
-        if (enemyKilled >= 10) achievementManager.ShowBadge("Excellent, killed 10 enemies!", 15);
-        if (enemyKilled >= 20) achievementManager.ShowBadge("Amazing, killed 20 enemies!", 16);
-        if (enemyKilled >= 30) achievementManager.ShowBadge("Awesome, killed 30 enemies!", 17);
-        if (enemyKilled >= 40) achievementManager.ShowBadge("Exciting, killed 40 enemies!", 18);
-        if (enemyKilled >= 50) achievementManager.ShowBadge("Incredible, killed 50 enemies!", 19);
-        if (enemyKilled >= 60) achievementManager.ShowBadge("Unbelievable, killed 60 enemies!", 20);
-        if (enemiesKilled >= 70) achievementManager.ShowBadge("Outstanding, killed 70 enemies!", 21);
-        if (enemiesKilled >= 80) achievementManager.ShowBadge("Otherworldly, killed 80 enemies!", 22);
-        if (enemiesKilled >= 90) achievementManager.ShowBadge("Superhuman, killed 90 enemies!", 23);
-        if (enemiesKilled >= 100) achievementManager.ShowBadge("Fantastic, killed 100 enemies!", 24);
+
+        // Check if the enemyKilled is in the range for the next badge
+        if (enemyKilled >= nextEnemyKilledAward && enemyKilled < nextEnemyKilledAward + 10)
+        {
+            // Pick a random index for the message and badgeNumber
+            int randomIndex = Random.Range(0, enemyMessages.Length);
+            string message = string.Format(enemyMessages[randomIndex], nextEnemyKilledAward);
+            int badgeNumber = badgeNumbers[randomIndex];
+
+            achievementManager.ShowBadge(message, badgeNumber);
+
+            // Increment nextEnemyKilledAward by 10
+            nextEnemyKilledAward += 10;
+
+            // If nextEnemyKilledAward exceeds the maximum, wrap around to the beginning
+            if (nextEnemyKilledAward >= enemyMessages.Length * 10)
+            {
+                nextEnemyKilledAward = 10;
+            }
+        }
     }
 
     public void AddMoney(int moneyAwarded)
