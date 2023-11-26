@@ -4,7 +4,7 @@ public class ReticleController : MonoBehaviour
 {
     // Adjust the speed of reticle movement
 
-void Awake()
+void Awake() 
 {
     Cursor.visible = false;
 }

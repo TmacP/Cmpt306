@@ -101,6 +101,7 @@ using UnityEngine.SceneManagement;
 
     void Start()
     {
+        Cursor.visible = false;
         player = GameObject.FindGameObjectWithTag("Player");
         playerScore = 0;
         playerMoney = 0;
