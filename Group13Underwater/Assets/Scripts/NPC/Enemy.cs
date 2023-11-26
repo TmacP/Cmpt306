@@ -82,6 +82,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.instance.AddEnemyKilled(1);
+            GameManager.instance.AddScore(1);
             GameObject effect = Instantiate(deathParticle, transform.position, transform.rotation);
         }
     }

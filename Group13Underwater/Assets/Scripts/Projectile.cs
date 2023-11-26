@@ -31,9 +31,17 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("Coral"))
         {
-            other.GetComponent<Enemy>().TakeDamage(damage);
+            if (other.CompareTag("Enemy"))
+            {
+                other.GetComponent<Enemy>().TakeDamage(damage);
+            }
+            else if (other.CompareTag("Coral"))
+            {
+                other.GetComponent<Coral>().TakeDamage(damage);
+            }
+
             Destroy(this.gameObject);
         }
     }
