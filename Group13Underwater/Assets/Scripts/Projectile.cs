@@ -31,6 +31,10 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other == null)
+        {
+            return; // Exit the method if 'other' is null
+        }
         if (other.CompareTag("Enemy") || other.CompareTag("Coral"))
         {
             if (other.CompareTag("Enemy"))

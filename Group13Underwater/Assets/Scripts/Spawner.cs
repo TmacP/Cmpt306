@@ -87,12 +87,6 @@ public class Spawner : MonoBehaviour
         GameObject newlySpawnedEntity = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
         // Pass a reference to the spawner to the spawned object
         newlySpawnedEntity.AddComponent<Despawnable>();
-        
 
-
-
-        //if (enableDebugLogs) { Debug.Log("Spawned item at position: " + spawnPosition); } //DEBUG
-        // Remove the used position from the list
-        //tileGeneration.emptyTilePositions.RemoveAt(randomIndex);
     }
 }

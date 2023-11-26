@@ -235,8 +235,7 @@ using UnityEngine.SceneManagement;
         nextMoneyAward = 10;
         UpdateScoreVisual();
         UpdateMoneyVisual();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene(GameOver);
+        Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
     }
 }
