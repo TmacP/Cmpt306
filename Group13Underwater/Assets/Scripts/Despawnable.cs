@@ -10,6 +10,14 @@ using UnityEngine;
 public class Despawnable : MonoBehaviour
 {
     private int despawnOffset = 80;
+    private Spawner spawner; // Reference to the Spawner script which has our list of empty tile positions
+
+    // Assign the spawner when the object is spawned
+    public void SetSpawner(Spawner _spawner)
+    {
+        spawner = _spawner;
+    }
+
 
     private void Awake()
     {
@@ -21,6 +29,9 @@ public class Despawnable : MonoBehaviour
     {
         if (GameManager.instance.GetPlayerPosition().y < gameObject.transform.position.y - despawnOffset)
         {
+
+            // Call a method in the spawner to decrement the spawnedItems list
+            spawner.DecrementSpawnedItemsList(gameObject);
             Destroy(gameObject);
         }
         else
