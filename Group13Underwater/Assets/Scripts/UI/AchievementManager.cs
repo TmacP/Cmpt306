@@ -182,7 +182,6 @@ public class AchievementManager : MonoBehaviour
                 selectedBadge = moneyBadge11;
                 break;           
             
-
             default:
                 Debug.LogWarning("Unknown badge number: " + badgeNumber);
                 return;

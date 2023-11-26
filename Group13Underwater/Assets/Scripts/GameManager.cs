@@ -53,7 +53,12 @@ using UnityEngine.SceneManagement;
     };
 
 
-    int[] badgeNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+    int[] badgeNumbersScore = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+    int[] badgeNumbersEnemy = { 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24};
+
+    int[] badgeNumbersMoney = { 25, 26, 27, 28, 29, 30, 31, 32, 33, 33, 34, 35 };
+    
     private int nextScoreAward = 10;
     private int nextEnemyKilledAward = 10;
     private int nextMoneyAward = 10;
@@ -146,7 +151,7 @@ using UnityEngine.SceneManagement;
         // Pick a random index for the message and badgeNumber
         int randomIndex = Random.Range(0, messages.Length);
         string message = string.Format(messages[randomIndex], nextScoreAward);
-        int badgeNumber = badgeNumbers[randomIndex];
+        int badgeNumber = badgeNumbersScore[randomIndex];
 
         achievementManager.ShowBadge(message, badgeNumber);
 
@@ -168,7 +173,7 @@ using UnityEngine.SceneManagement;
             // Pick a random index for the message and badgeNumber
             int randomIndex = Random.Range(0, enemyMessages.Length);
             string message = string.Format(enemyMessages[randomIndex], nextEnemyKilledAward);
-            int badgeNumber = badgeNumbers[randomIndex];
+            int badgeNumber = badgeNumbersEnemy[randomIndex];
 
             achievementManager.ShowBadge(message, badgeNumber);
 
@@ -198,7 +203,7 @@ using UnityEngine.SceneManagement;
             // Pick a random index for the message and badgeNumber
             int randomIndex = Random.Range(0, moneyMessages.Length);
             string message = string.Format(moneyMessages[randomIndex], nextMoneyAward);
-            int badgeNumber = badgeNumbers[randomIndex];
+            int badgeNumber = badgeNumbersMoney[randomIndex];
 
             achievementManager.ShowBadge(message, badgeNumber);
 
