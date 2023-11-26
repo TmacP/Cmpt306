@@ -8,6 +8,7 @@ public class SkinSelectMenu : MonoBehaviour
 {
     public GameObject skinselectmenu;
     public GameObject pauseScreen;
+    public Button quitButton;
     public Button skinSwitchButton;
     public Button skin1SwitchButton;
     public Button skin2SwitchButton;
@@ -17,6 +18,7 @@ public class SkinSelectMenu : MonoBehaviour
 
     void Start()
     {
+        quitButton.onClick.AddListener(ExitGame);
         skinSwitchButton.onClick.AddListener(OnClickSkin);
         skin1SwitchButton.onClick.AddListener(OnClickSkin1);
         skin2SwitchButton.onClick.AddListener(OnClickSkin2);
@@ -43,6 +45,12 @@ public class SkinSelectMenu : MonoBehaviour
         }
     }
 
+    // This will let the user exit the game and go to credits
+    public void ExitGame()
+    {   
+        Time.timeScale = 1;
+        SceneManager.LoadScene("GameOver");
+    }
     void OnClickSkin()
     {
         TrySwitchSkin(1); // Assuming 0 corresponds to the default skin
