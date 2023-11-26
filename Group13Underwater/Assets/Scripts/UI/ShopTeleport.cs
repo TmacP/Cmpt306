@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopTeleport : MonoBehaviour
 {
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     public GameObject itemPrefab; // Reference to the item prefab
     public TileGeneration tileGeneration; // Reference to the TileGeneration script which has our list of empty tile positions
     public float teleportInterval = 10f; // Adjust this interval as needed
