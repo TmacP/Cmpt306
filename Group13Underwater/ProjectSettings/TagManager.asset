@@ -14,6 +14,7 @@ TagManager:
   - SpecialFish
   - LegendFish
   - Shop
+  - Coral
   layers:
   - Default
   - TransparentFX
