@@ -31,9 +31,11 @@ public class Despawnable : MonoBehaviour
         {
 
             // Call a method in the spawner to decrement the spawnedItems list
-            spawner.DecrementSpawnedItemsList(gameObject);
+            if (spawner != null) {
+                spawner.DecrementSpawnedItemsList(gameObject);
+            }
             Destroy(gameObject);
-        }
+                    }
         else
         {
             yield return new WaitForSeconds(10);
