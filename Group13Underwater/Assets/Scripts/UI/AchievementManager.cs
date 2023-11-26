@@ -30,6 +30,18 @@ public class AchievementManager : MonoBehaviour
     public GameObject enemyBadge10;
     public GameObject enemyBadge11;
     public GameObject enemyBadge12;
+    // money badges
+    public GameObject moneyBadge1;
+    public GameObject moneyBadge2;
+    public GameObject moneyBadge3;
+    public GameObject moneyBadge4;
+    public GameObject moneyBadge5;
+    public GameObject moneyBadge6;
+    public GameObject moneyBadge7;
+    public GameObject moneyBadge8;
+    public GameObject moneyBadge9;
+    public GameObject moneyBadge10;
+    public GameObject moneyBadge11;
 
 
 
@@ -135,8 +147,41 @@ public class AchievementManager : MonoBehaviour
             case 24:
                 selectedBadge = enemyBadge12;
                 break;
-            // next badge 
-
+            // Money badges
+            case 25:
+                selectedBadge = moneyBadge1;
+                break;
+            case 26:
+                selectedBadge = moneyBadge2;
+                break;  
+            case 27:
+                selectedBadge = moneyBadge3;
+                break;  
+            case 28:    
+                selectedBadge = moneyBadge4;
+                break;
+            case 29:    
+                selectedBadge = moneyBadge5;
+                break;
+            case 30:
+                selectedBadge = moneyBadge6;
+                break;
+            case 31:
+                selectedBadge = moneyBadge7;
+                break;
+            case 32:
+                selectedBadge = moneyBadge8;
+                break;
+            case 33:
+                selectedBadge = moneyBadge9;
+                break;           
+            case 34:
+                selectedBadge = moneyBadge10;
+                break;            
+            case 35:
+                selectedBadge = moneyBadge11;
+                break;           
+            
 
             default:
                 Debug.LogWarning("Unknown badge number: " + badgeNumber);
@@ -185,5 +230,17 @@ public class AchievementManager : MonoBehaviour
         enemyBadge10.SetActive(false);
         enemyBadge11.SetActive(false);
         enemyBadge12.SetActive(false);
+        // Money badges
+        moneyBadge1.SetActive(false);
+        moneyBadge2.SetActive(false);
+        moneyBadge3.SetActive(false);
+        moneyBadge4.SetActive(false);
+        moneyBadge5.SetActive(false);
+        moneyBadge6.SetActive(false);
+        moneyBadge7.SetActive(false);
+        moneyBadge8.SetActive(false);
+        moneyBadge9.SetActive(false);
+        moneyBadge10.SetActive(false);
+        moneyBadge11.SetActive(false);
     }
 }

@@ -23,25 +23,40 @@ using UnityEngine.SceneManagement;
         "Fantastic, scored {0} points!"
     };
         string[] enemyMessages = {
-        "Nice, defeated {0} enemies!",
-        "Great, defeated {0} enemies!",
-        "Excellent, defeated {0} enemies!",
-        "Amazing, defeated {0} enemies!",
-        "Awesome, defeated {0} enemies!",
-        "Exciting, defeated {0} enemies!",
-        "Incredible, defeated {0} enemies!",
-        "Unbelievable, defeated {0} enemies!",
-        "Outstanding, defeated {0} enemies!",
-        "Otherworldly, defeated {0} enemies!",
-        "Superhuman, defeated {0} enemies!",
-        "Fantastic, defeated {0} enemies!"
+        "Skilled! Defeated {0} enemies!",
+        "Mighty! Triumphed over {0} foes!",
+        "Warrior! Conquered {0} enemies!",
+        "Heroic! Against {0} adversaries!",
+        "Formidable! Against {0} opponents!",
+        "Valiant! Victory against {0} enemies!",
+        "Unyielding! Overcame {0} adversaries!",
+        "Invincible! Defeated {0} enemies!",
+        "Supreme! Vanquished {0} foes!",
+        "Legendary! Against {0} adversaries!",
+        "Warlord! Conquered {0} enemies!",
+        "Epic! Triumphant against {0} foes!"
+    };
+
+    string[] moneyMessages = {
+        "Thrifty! Collected {0} money!",
+        "Prosperous! Collected {0} money!",
+        "Wealthy! Collected {0} money!",
+        "Opulent! Collected {0} money!",
+        "Affluent! Collected {0} money!",
+        "Grandiose! Collected {0} money!",
+        "Sumptuous! Collected {0} money!",
+        "Extravagant! Collected {0} money!",
+        "Majestic! Collected {0} money!",
+        "Affluence! Collected {0} money!",
+        "Fortunate! Collected {0} money!",
+        "Bountiful! Collected {0} money!"
     };
 
 
     int[] badgeNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
     private int nextScoreAward = 10;
     private int nextEnemyKilledAward = 10;
-
+    private int nextMoneyAward = 10;
 
     public AchievementManager achievementManager;
     private bool enableDebugLogs = false; // Control debug logs
@@ -61,6 +76,7 @@ using UnityEngine.SceneManagement;
     public Text moneyVisual;
     private int playerScore = 0; 
     public int playerMoney = 0;
+    public int totalMoney = 0;
     public int enemyKilled = 0; // Used for achievements
 
     private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
@@ -170,10 +186,25 @@ using UnityEngine.SceneManagement;
     public void AddMoney(int moneyAwarded)
     {
         playerMoney += moneyAwarded;
+        totalMoney += moneyAwarded; // Used for achievements
         if (enableDebugLogs) Debug.Log("AddMoney(), Money awarded to player; playerMoney: " + playerMoney); //DEBUG
         UpdateMoneyVisual();
         // sound
         moneySound.Play();
+
+        // Check if the money is in the range for the next badge
+        if (totalMoney >= nextMoneyAward && totalMoney < nextMoneyAward + 10)
+        {
+            // Pick a random index for the message and badgeNumber
+            int randomIndex = Random.Range(0, moneyMessages.Length);
+            string message = string.Format(moneyMessages[randomIndex], nextMoneyAward);
+            int badgeNumber = badgeNumbers[randomIndex];
+
+            achievementManager.ShowBadge(message, badgeNumber);
+
+            // Increment nextMoneyAward by 10
+            nextMoneyAward += 10;
+        }
 
     }
 
@@ -194,6 +225,9 @@ using UnityEngine.SceneManagement;
         if (enableDebugLogs) Debug.Log("ReloadGameScene;"); //DEBUG
         playerScore = 0;
         playerMoney = 0;
+        nextScoreAward = 10;
+        nextEnemyKilledAward = 10;
+        nextMoneyAward = 10;
         UpdateScoreVisual();
         UpdateMoneyVisual();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
