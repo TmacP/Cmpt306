@@ -38,7 +38,7 @@ public class Despawnable : MonoBehaviour
                     }
         else
         {
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(1);
             StartCoroutine(checkForDespawn());
         }
 
