@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7842393242119672411}
   - component: {fileID: 4042634091446031540}
   - component: {fileID: 7750117105684596193}
-  - component: {fileID: 8530051006893923774}
+  - component: {fileID: 6304031844276627159}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Shop
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8530051006893923774
+--- !u!114 &6304031844276627159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,3 +170,4 @@ MonoBehaviour:
   skin4Button: {fileID: 0}
   skin5Button: {fileID: 0}
   pauseScreen: {fileID: 0}
+  skinselectmenu: {fileID: 0}

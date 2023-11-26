@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &14493371
 Transform:
   m_ObjectHideFlags: 0
@@ -263,8 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7116325711183489634, guid: 57cd13dfecdb644d2b5ba0c457bc77a7, type: 3}
-  spawnInterval: 0.01
-  maxItems: 3
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &48513654
@@ -5695,7 +5694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &77167170
 Transform:
   m_ObjectHideFlags: 0
@@ -5724,8 +5723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 4144994029890468861, guid: 5868fa16d725c7347bee010ce8195d60, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &105222885
@@ -6039,7 +6037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &183651948
 Transform:
   m_ObjectHideFlags: 0
@@ -6068,8 +6066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2537708894850166052, guid: c30ce4d35feb686429beaa3cf7ff4644, type: 3}
-  spawnInterval: 0.01
-  maxItems: 4
+  spawnInterval: 1.5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &190331558
@@ -6088,7 +6085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &190331559
 Transform:
   m_ObjectHideFlags: 0
@@ -6117,8 +6114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
-  spawnInterval: 0.01
-  maxItems: 2
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &211490425 stripped
@@ -6319,7 +6315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &240575411
 Transform:
   m_ObjectHideFlags: 0
@@ -6348,8 +6344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7355670818062537168, guid: 57c1e511e6c8bed44b38233bf2fbb25f, type: 3}
-  spawnInterval: 0.01
-  maxItems: 3
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &253916706
@@ -7397,7 +7392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &481393761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7411,8 +7406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8225202820594584473, guid: 5ac4656100f2c4b4b8eef7e345cd81d5, type: 3}
-  spawnInterval: 0.01
-  maxItems: 1
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &481393762
@@ -8223,6 +8217,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skinButton
+      value: 
+      objectReference: {fileID: 1691910568}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: heartButton
+      value: 
+      objectReference: {fileID: 1488839235}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 3960623133231788443}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skin1Button
+      value: 
+      objectReference: {fileID: 499100428}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skin2Button
+      value: 
+      objectReference: {fileID: 1086918896}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skin3Button
+      value: 
+      objectReference: {fileID: 993858481}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skin4Button
+      value: 
+      objectReference: {fileID: 137015838}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skin5Button
+      value: 
+      objectReference: {fileID: 1696708085}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: damageButton
+      value: 
+      objectReference: {fileID: 265087968}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: skinselectmenu
+      value: 
+      objectReference: {fileID: 3960623131917168358}
     - target: {fileID: 7543503161941697812, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 99.7
@@ -8263,58 +8297,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skinButton
-      value: 
-      objectReference: {fileID: 1691910568}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: heartButton
-      value: 
-      objectReference: {fileID: 1488839235}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: pauseScreen
-      value: 
-      objectReference: {fileID: 3960623133231788443}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skin1Button
-      value: 
-      objectReference: {fileID: 499100428}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skin2Button
-      value: 
-      objectReference: {fileID: 1086918896}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skin3Button
-      value: 
-      objectReference: {fileID: 993858481}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skin4Button
-      value: 
-      objectReference: {fileID: 137015838}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skin5Button
-      value: 
-      objectReference: {fileID: 1696708085}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: damageButton
-      value: 
-      objectReference: {fileID: 265087968}
-    - target: {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
-      propertyPath: skinselectmenu
-      value: 
-      objectReference: {fileID: 3960623131917168358}
-    m_RemovedComponents:
-    - {fileID: 8530051006893923774, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4064986294138138388, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1679481821}
+      addedObject: {fileID: 1679481826}
   m_SourcePrefab: {fileID: 100100000, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
 --- !u!114 &614166244 stripped
 MonoBehaviour:
@@ -9407,7 +9396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69535283537338492, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: maxItems
@@ -9415,7 +9404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: spawnInterval
-      value: 0.01
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: tileGeneration
@@ -11240,7 +11229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1039423702
 Transform:
   m_ObjectHideFlags: 0
@@ -11269,8 +11258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7047853394374307243, guid: 86ec3e94f142a9345a54cb21424d1a25, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1060802203
@@ -11789,7 +11777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1154248408
 Transform:
   m_ObjectHideFlags: 0
@@ -11818,8 +11806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
-  spawnInterval: 0.01
-  maxItems: 1
+  spawnInterval: 3
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1001 &1180486734
@@ -11836,7 +11823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481928575026941713, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: maxItems
@@ -11844,7 +11831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: spawnInterval
-      value: 0.01
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3129388425884481418, guid: a38c1adbb397a4ab8a0fedc86c0f72fd, type: 3}
       propertyPath: tileGeneration
@@ -11990,55 +11977,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181644823}
   m_CullTransparentMesh: 1
---- !u!1 &1222293021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1222293022}
-  - component: {fileID: 1222293023}
-  m_Layer: 0
-  m_Name: ShopSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1222293022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222293021}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1772691251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222293023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222293021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1679481816}
-  spawnInterval: 0.01
-  maxItems: 1
-  tileGeneration: {fileID: 744247514}
-  emptyTilePositions: []
 --- !u!1 &1223134250
 GameObject:
   m_ObjectHideFlags: 0
@@ -12055,7 +11993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1223134251
 Transform:
   m_ObjectHideFlags: 0
@@ -12084,8 +12022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
-  spawnInterval: 0.01
-  maxItems: 2
+  spawnInterval: 2.5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1224122659
@@ -12308,7 +12245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1284815509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12322,8 +12259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 5490299660330610288, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1284815510
@@ -12636,7 +12572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1298039797
 Transform:
   m_ObjectHideFlags: 0
@@ -12665,8 +12601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1644180577571292567, guid: f20b3e8f01362884a916e23d25009408, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!114 &1308724194 stripped
@@ -13429,7 +13364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1419175614
 Transform:
   m_ObjectHideFlags: 0
@@ -13458,8 +13393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2399133645213031334, guid: d32f0fea743bb46e28f83ab20ceabce2, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1426469899
@@ -13478,7 +13412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1426469900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13492,8 +13426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3807621385668324646, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
-  spawnInterval: 0.01
-  maxItems: 10
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1426469901
@@ -14423,7 +14356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1625404062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14437,8 +14370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2092571781234386689, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1625404063
@@ -14545,7 +14477,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4064986294138138388, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
   m_PrefabInstance: {fileID: 607086953}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1679481821
+--- !u!114 &1679481826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14554,19 +14486,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679481816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d67533d254e15479bd490bc6c69e13, type: 3}
+  m_Script: {fileID: 11500000, guid: e23871c103a55498d93015026835c67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageButton: {fileID: 265087968}
-  heartButton: {fileID: 1488839235}
-  skinButton: {fileID: 1691910568}
-  skin1Button: {fileID: 499100428}
-  skin2Button: {fileID: 1086918896}
-  skin3Button: {fileID: 993858481}
-  skin4Button: {fileID: 137015838}
-  skin5Button: {fileID: 1696708085}
-  pauseScreen: {fileID: 3960623133231788443}
-  skinselectmenu: {fileID: 3960623131917168358}
+  itemPrefab: {fileID: 1679481816}
+  tileGeneration: {fileID: 744247514}
+  teleportInterval: 1
 --- !u!1 &1688412043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14977,7 +14902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1744477541
 Transform:
   m_ObjectHideFlags: 0
@@ -15006,8 +14931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1259430098114208807, guid: 5ad0fcefedc57ff42a0a117597bfbb5f, type: 3}
-  spawnInterval: 0.01
-  maxItems: 2
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1757234145
@@ -15206,7 +15130,6 @@ Transform:
   - {fileID: 1426469901}
   - {fileID: 1971016609}
   - {fileID: 190331559}
-  - {fileID: 1222293022}
   - {fileID: 77167170}
   - {fileID: 1039423702}
   - {fileID: 1298039797}
@@ -15661,7 +15584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1927323087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15675,8 +15598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 4439393717628524484, guid: d586c33170b1142b7913dd981d60e1a6, type: 3}
-  spawnInterval: 0.01
-  maxItems: 5
+  spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1927323088

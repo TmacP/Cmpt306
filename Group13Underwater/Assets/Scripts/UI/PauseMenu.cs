@@ -60,19 +60,19 @@ void Update()
     {
         PlayerShoot playerShoot = FindObjectOfType<PlayerShoot>(); // Assuming only one PlayerShoot script in the scene
 
-        if (GameManager.instance.playerMoney >= 5 && playerShoot != null)
+        if (GameManager.instance.playerMoney >= 10 && playerShoot != null)
         {
             // Get the current damage
             float currentDamage = playerShoot.GetProjectileDamage();
 
             // Increase the damage by 2
-            float newDamage = currentDamage + 2;
+            float newDamage = currentDamage + 1;
 
             // Set the new damage
             playerShoot.SetProjectileDamage(newDamage);
 
             // Deduct money and update the visual
-            GameManager.instance.playerMoney -= 5;
+            GameManager.instance.playerMoney -= 10;
             GameManager.instance.UpdateMoneyVisual();
 
             if (enableDebugLogs) Debug.Log("Buy damage. New damage: " + newDamage); // DEBUG
@@ -87,9 +87,9 @@ void Update()
     {
         PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
         HealthBar healthBar = FindObjectOfType<HealthBar>();
-        if (GameManager.instance.playerMoney >= 10 && healthBar.SpawnHearts < 10 )
+        if (GameManager.instance.playerMoney >= 20 && healthBar.SpawnHearts < 10 )
         {
-            GameManager.instance.playerMoney -= 10;
+            GameManager.instance.playerMoney -= 20;
             GameManager.instance.UpdateMoneyVisual();
 
             if (playerHealth != null && healthBar != null)
