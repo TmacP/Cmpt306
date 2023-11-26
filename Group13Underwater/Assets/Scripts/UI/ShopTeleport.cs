@@ -82,8 +82,8 @@ public class ShopTeleport : MonoBehaviour
         }
 
         // If we made it this far, we can teleport the shop
-            // Move the shop to the new position
-            transform.position = spawnPosition;
+        // Move the shop to the new position
+        transform.position = spawnPosition;
 
 
     }

@@ -66,7 +66,7 @@ void Update()
             float currentDamage = playerShoot.GetProjectileDamage();
 
             // Increase the damage by 2
-            float newDamage = currentDamage + 1;
+            float newDamage = currentDamage + 10;
 
             // Set the new damage
             playerShoot.SetProjectileDamage(newDamage);

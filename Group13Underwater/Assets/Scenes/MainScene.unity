@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7116325711183489634, guid: 57cd13dfecdb644d2b5ba0c457bc77a7, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &48513654
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6316560282846793674, guid: ed6d739ab618cbd4493b8f026f5b4e1b, type: 3}
-  shotCooldown: 0.5
+  shotCooldown: 0.15
   projectileDamage: 10
   shootSound: {fileID: 65470203}
 --- !u!114 &65470198
@@ -5723,7 +5723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 4144994029890468861, guid: 5868fa16d725c7347bee010ce8195d60, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &105222885
@@ -6066,7 +6066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2537708894850166052, guid: c30ce4d35feb686429beaa3cf7ff4644, type: 3}
-  spawnInterval: 1.5
+  spawnInterval: 0.75
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &190331558
@@ -6114,7 +6114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &211490425 stripped
@@ -6344,7 +6344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7355670818062537168, guid: 57c1e511e6c8bed44b38233bf2fbb25f, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &253916706
@@ -7406,7 +7406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8225202820594584473, guid: 5ac4656100f2c4b4b8eef7e345cd81d5, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &481393762
@@ -9404,7 +9404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: spawnInterval
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544180154193142043, guid: 013b581fafd82204cab2fbfc8bf8da47, type: 3}
       propertyPath: tileGeneration
@@ -11258,7 +11258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7047853394374307243, guid: 86ec3e94f142a9345a54cb21424d1a25, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1060802203
@@ -12022,7 +12022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
-  spawnInterval: 2.5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1224122659
@@ -12259,7 +12259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 5490299660330610288, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1284815510
@@ -12601,7 +12601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1644180577571292567, guid: f20b3e8f01362884a916e23d25009408, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!114 &1308724194 stripped
@@ -13393,7 +13393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2399133645213031334, guid: d32f0fea743bb46e28f83ab20ceabce2, type: 3}
-  spawnInterval: 1
+  spawnInterval: 0.5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1426469899
@@ -13426,7 +13426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3807621385668324646, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
-  spawnInterval: 1
+  spawnInterval: 0.5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1426469901
@@ -14370,7 +14370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2092571781234386689, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1625404063
@@ -14491,7 +14491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1679481816}
   tileGeneration: {fileID: 744247514}
-  teleportInterval: 1
+  teleportInterval: 5
 --- !u!1 &1688412043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14931,7 +14931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1259430098114208807, guid: 5ad0fcefedc57ff42a0a117597bfbb5f, type: 3}
-  spawnInterval: 5
+  spawnInterval: 3
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!1 &1757234145
@@ -15598,7 +15598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 4439393717628524484, guid: d586c33170b1142b7913dd981d60e1a6, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &1927323088
