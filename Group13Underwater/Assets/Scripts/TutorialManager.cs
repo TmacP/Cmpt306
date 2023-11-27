@@ -51,11 +51,17 @@ public class TutorialManager : MonoBehaviour
         }
          else if (popUpIndex == 4 && Input.GetKeyDown(KeyCode.Escape) )
         {
-            if(Input.GetKeyDown(KeyCode.Escape))// If Esc is pressed, move to the next popUp
-            popUpIndex++;
+            {popUpIndex++;}
         }
 
-        else if (popUpIndex == 5 && Input.GetMouseButtonDown(0))
+         else if (popUpIndex == 5 && Input.GetKeyDown(KeyCode.Escape) )
+        {
+            {popUpIndex++;}
+        }
+
+        
+
+        else if (popUpIndex == 6 && Input.GetMouseButtonDown(0))
         {
             spawner.SetActive(true);
             popUpIndex++;
