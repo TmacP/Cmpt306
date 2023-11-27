@@ -15381,7 +15381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbbc7ca51a0042ea9dbbb332c851e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3807621385668324646, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
+  itemPrefab: {fileID: 2937148558865993028, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
   spawnInterval: 5
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
