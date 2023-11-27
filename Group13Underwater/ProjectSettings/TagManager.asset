@@ -15,6 +15,7 @@ TagManager:
   - LegendFish
   - Shop
   - Coral
+  - Coin
   layers:
   - Default
   - TransparentFX

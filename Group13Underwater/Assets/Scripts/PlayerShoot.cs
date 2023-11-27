@@ -26,6 +26,16 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
+        // if the player has no ammo, don't shoot
+        if (GameManager.instance.ammo <= 0)
+        {
+            return;
+        }
+
+        // Reduce ammo by 1
+        GameManager.instance.ammo -= 1;
+        GameManager.instance.UpdateAmmoVisual();
+
         // Play the shoot sound
         shootSound.Play();
         // Reset the shot timer when shooting

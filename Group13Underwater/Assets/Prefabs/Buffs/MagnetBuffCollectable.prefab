@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8315921300104866630}
   - component: {fileID: 183276667619488202}
   - component: {fileID: 5654993648229404816}
-  - component: {fileID: 2455637038522254473}
+  - component: {fileID: 2078778242600632437}
   m_Layer: 0
   m_Name: MagnetBuffCollectable
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.059357643, y: 0.06926526}
   m_Size: {x: 10.350346, y: 8.114383}
   m_Direction: 1
---- !u!114 &2455637038522254473
+--- !u!114 &2078778242600632437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4439393717628524484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8019f75e73bd7c42b7a880ff17a3dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: b7a6107e634d5485aa23b5276c791e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupEffect: {fileID: 11400000, guid: 7347df10bdbe3e049884965840f62f8c, type: 2}

@@ -79,10 +79,12 @@ using UnityEngine.SceneManagement;
     // Score Variables
     public Text scoreVisual;
     public Text moneyVisual;
+    public Text ammoVisual;
     private int playerScore = 0; 
     public int playerMoney = 0;
     public int totalMoney = 0;
     public int enemyKilled = 0; // Used for achievements
+    public int ammo = 25; // Used for player shooting
 
     private List<int> purchasedSkins = new List<int>(); // List to store purchased skin IDs
 
@@ -106,6 +108,7 @@ using UnityEngine.SceneManagement;
         playerMoney = 0;
         UpdateScoreVisual();
         UpdateMoneyVisual();
+        UpdateAmmoVisual();
         msBuff.IsBuffedRestart();
         magnetismBuff.IsBuffedRestart();
         if (enableDebugLogs) Debug.Log("GameManager Start"); //DEBUG
@@ -136,6 +139,12 @@ using UnityEngine.SceneManagement;
     {
         moneyVisual.text = "Money: " + playerMoney.ToString() + " $";
         if (enableDebugLogs) Debug.Log("Updating Money Visual;"); //DEBUG
+    }
+
+    public void UpdateAmmoVisual()
+    {
+        ammoVisual.text = "Ammo: " + ammo.ToString();
+        if (enableDebugLogs) Debug.Log("Updating Ammo Visual;"); //DEBUG
     }
 
     public void AddScore(int pointsAwarded)
@@ -211,6 +220,14 @@ using UnityEngine.SceneManagement;
             nextMoneyAward += 10;
         }
 
+    }
+
+
+    public void AddAmmo(int ammoAwarded)
+    {
+        ammo += ammoAwarded;
+        if (enableDebugLogs) Debug.Log("AddAmmo(), Ammo awarded to player; ammo: " + ammo); //DEBUG
+        UpdateAmmoVisual();
     }
 
     public Vector3 GetPlayerPosition()
