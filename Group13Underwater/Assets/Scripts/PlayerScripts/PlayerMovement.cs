@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
  // Public property to access and modify moveSpeed
     public float moveSpeed = 1000;
+    
     private float originalMoveSpeed;
     public float MoveSpeed
     {
@@ -51,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.down * moveSpeed);
         }
+
+                transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * 15, 5));
     }
 
         // Function to reset the speed to its original value
