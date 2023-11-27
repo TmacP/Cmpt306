@@ -10,8 +10,8 @@ public class BubbleAnimation : MonoBehaviour
     Transform tf;
     SpriteRenderer spriteRenderer;
 
-    private float YSpeed = 0.1f;
-    private float maximumXSpeed = 0.2f;
+    private float YSpeed = 0.01f;
+    private float maximumXSpeed = 0.02f;
 
     private float xMomentum;
     private int changeMomentumTimer;

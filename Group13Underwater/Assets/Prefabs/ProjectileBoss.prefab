@@ -4901,8 +4901,8 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.05
-  m_MaxParticleSize: 0.25
+  m_MinParticleSize: 0.01
+  m_MaxParticleSize: 0.05
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -4940,6 +4940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d206e3e9cf35f554d9bca470ffd8982a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
+  lifeTime: 2
   moveSpeed: 50
   damage: 10
