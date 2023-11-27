@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 183276667619488202}
   - component: {fileID: 5654993648229404816}
   - component: {fileID: 2078778242600632437}
+  - component: {fileID: 2239744374140334829}
   m_Layer: 0
   m_Name: MagnetBuffCollectable
   m_TagString: Untagged
@@ -133,3 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a6107e634d5485aa23b5276c791e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2239744374140334829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439393717628524484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8019f75e73bd7c42b7a880ff17a3dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupEffect: {fileID: 11400000, guid: 7347df10bdbe3e049884965840f62f8c, type: 2}
