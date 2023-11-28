@@ -43,6 +43,10 @@ public class EnemyProjectile : MonoBehaviour
             }
             Destroy(this.gameObject);
         }
+        else if (other.CompareTag("Coral"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Public method to set the damage from external scripts if needed

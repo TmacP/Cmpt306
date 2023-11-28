@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Button ammoButton;
     public Button damageButton;
     public Button heartButton;
     public Button skinButton;
@@ -21,6 +22,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         // Assuming skinButton is properly assigned in the Unity Editor
+        ammoButton.onClick.AddListener(OnClickAmmo);
         damageButton.onClick.AddListener(OnClickDamage);
         heartButton.onClick.AddListener(OnClickHeart);
         skinButton.onClick.AddListener(OnClickSkin);
@@ -54,6 +56,16 @@ void Update()
         }
     }
 
+    public void OnClickAmmo()
+    {
+        GameManager gameManager = GameManager.instance;
+        if (GameManager.instance.playerMoney >= 5)
+        {
+            gameManager.AddAmmo(10);  
+            GameManager.instance.playerMoney -= 5;
+            GameManager.instance.UpdateMoneyVisual();
+        }
+    }
 
 
     public void OnClickDamage()

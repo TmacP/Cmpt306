@@ -6,6 +6,7 @@ public class NemoBomb : MonoBehaviour
 {
     private PlayerHealth playerHealth;
     [SerializeField] private float bombDamage = 25.0f;
+    [SerializeField] private GameObject deathParticle;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class NemoBomb : MonoBehaviour
                 other.transform.GetComponent<PlayerHealth>().TakeDamage(bombDamage);
             }
             Destroy(this.gameObject);
+            GameObject effect = Instantiate(deathParticle, transform.position, transform.rotation);
+
         }
     }
 }
