@@ -9,9 +9,15 @@ public class TreasureChest : MonoBehaviour
     public GameObject itemPrefab2; // Reference to the item prefab - money
     public GameObject itemPrefab3; // Reference to the item prefab - money
     public GameObject itemPrefab4; // Reference to the item prefab - money
+    private Spawner spawner; // Reference to the Spawner class
 
     void Start()
     {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
     }
     void Update()
     {   
@@ -29,17 +35,23 @@ public class TreasureChest : MonoBehaviour
             GameObject newlyAddedItem;
             newlyAddedItem = Instantiate(itemPrefab1, spawnPosition1, Quaternion.identity);
             newlyAddedItem.AddComponent<Despawnable>();
+            spawner.healthCount++;
 
             newlyAddedItem = Instantiate(itemPrefab2, spawnPosition2, Quaternion.identity);
             newlyAddedItem.AddComponent<Despawnable>();
+            spawner.scoreCollectableCount++;
 
             newlyAddedItem = Instantiate(itemPrefab3, spawnPosition3, Quaternion.identity);
             newlyAddedItem.AddComponent<Despawnable>();
+            spawner.scoreCollectableCount++;
 
             newlyAddedItem = Instantiate(itemPrefab4, spawnPosition4, Quaternion.identity);
             newlyAddedItem.AddComponent<Despawnable>();
+            spawner.scoreCollectableCount++;
 
             Destroy(this.gameObject);
+            spawner.treasureChestCount--;
+
         }
     }
 }
