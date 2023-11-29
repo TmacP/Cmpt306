@@ -85,7 +85,7 @@ public class Spawner : MonoBehaviour
     int nemoMineCount;
 
     private bool enableDebugLogs = true; // Control debug logs
-    public GameObject itemPrefab; // Reference to the item prefab to be spawned
+    GameObject itemPrefab; // Reference to the item prefab to be spawned
     private float nextSpawnTime = 0f;
     public float spawnInterval = 2f; // Adjust this interval as needed
     private float playerYCoordinate;
@@ -201,6 +201,83 @@ public class Spawner : MonoBehaviour
 
         // Pass a reference to the spawner to the spawned object
         newlySpawnedEntity.AddComponent<Despawnable>();
+        //if (enableDebugLogs) { Debug.Log("Spawner reference passed to spawned object." + newlySpawnedEntity); } //DEBUG
 
     }
+
+
+    public void DecrementCount(GameObject item)
+    {
+        if (enableDebugLogs) { Debug.Log("DecrementCount() called. " + item); } //DEBUG
+        switch (item.name)
+        {
+            case "EnemyFish 1(Clone)":
+                enemyCount--;
+                break;
+            case "EnemyFish1(Clone)":
+                enemy2Count--;
+                break;
+            case "EnemyFishBoss(Clone)":
+                enemyBossCount--;
+                break;
+            case "BasicFish(Clone)":
+                basicFishCount--;
+                break;
+            case "Fish2(Clone)":
+                uncommonFishCount--;
+                break;
+            case "Fish3(Clone)":
+                specialFishCount--;
+                break;
+            case "LionFish(Clone)":
+                legendaryFishCount--;
+                break;
+            case "Fish7(Clone)":
+                rareFishCount--;
+                break;
+            case "HealthBuffCollectable(Clone)":
+                healthCount--;
+                break;
+            case "MagnetBuffCollectable(Clone)":
+                magnetCount--;
+                break;
+            case "AmmoBuff(Clone)":
+                ammoCount--;
+                break;
+            case "MoveSpeedBuffCollectable(Clone)":
+                moveBuffCount--;
+                break;
+            case "ScoreCollectable(Clone)":
+                scoreCollectableCount--;
+                break;
+            case "MessageBottle(Clone)":
+                bottlesCount--;
+                break;
+            case "TreasureChest(Clone)":
+                treasureChestCount--;
+                break;
+            case "CoralYellow(Clone)":
+                yellowCoralCount--;
+                break;
+            case "CoralRed(Clone)":
+                redCoralCount--;
+                break;
+            case "CoralBlue(Clone)":
+                blueCoralCount--;
+                break;
+            case "LongCoralObstacle(Clone)":
+                longCoralCount--;
+                break;
+            case "NemoMine(Clone)":
+                nemoMineCount--;
+                break;
+            default:
+                if (enableDebugLogs) { Debug.Log("DecrementCount(), item name not found."); } //DEBUG
+                break;
+        }
+    }
+
+
+
+
 }
