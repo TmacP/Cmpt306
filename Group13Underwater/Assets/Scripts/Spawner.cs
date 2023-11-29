@@ -6,83 +6,83 @@ public class Spawner : MonoBehaviour
 {
     public GameObject Enemy;
     [SerializeField] int maxEnemyCount;
-    int enemyCount;
+    public int enemyCount;
 
     public GameObject Enemy2;
     [SerializeField] int maxEnemy2Count;
-    int enemy2Count;
+    public int enemy2Count;
 
     public GameObject EnemyBoss;
     [SerializeField] int maxEnemyBossCount;
-    int enemyBossCount;
+    public int enemyBossCount;
 
     public GameObject BasicFish;
     [SerializeField] int maxBasicFishCount;
-    int basicFishCount;
+    public int basicFishCount;
 
     public GameObject UncommonFish;
     [SerializeField] int maxUncommonFishCount;
-    int uncommonFishCount;
+    public int uncommonFishCount;
 
     public GameObject SpecialFish;
     [SerializeField] int maxSpecialFishCount;
-    int specialFishCount;
+    public int specialFishCount;
 
     public GameObject LegendaryFish;
     [SerializeField] int maxLegendaryFishCount;
-    int legendaryFishCount;
+    public int legendaryFishCount;
 
     public GameObject RareFish;
     [SerializeField] int maxRareFishCount;
-    int rareFishCount;
+    public int rareFishCount;
 
     public GameObject health;
     [SerializeField] int maxHealthCount;
-    int healthCount;
+    public int healthCount;
 
     public GameObject Magnet;
     [SerializeField] int maxMagnetCount;
-    int magnetCount;
+    public int magnetCount;
 
     public GameObject Ammo;
     [SerializeField] int maxAmmoCount;
-    int ammoCount;
+    public int ammoCount;
 
     public GameObject MoveBuff;
     [SerializeField] int maxMoveBuffCount;
-    int moveBuffCount;
+    public int moveBuffCount;
 
     public GameObject ScoreCollectable;
     [SerializeField] int maxScoreCollectableCount;
-    int scoreCollectableCount;
+    public int scoreCollectableCount;
 
     public GameObject Bottles;
     [SerializeField] int maxBottlesCount;
-    int bottlesCount;
+    public int bottlesCount;
 
     public GameObject TreasureChest;
     [SerializeField] int maxTreasureChestCount;
-    int treasureChestCount;
+    public int treasureChestCount;
 
     public GameObject YellowCoral;
     [SerializeField] int maxYellowCoralCount;
-    int yellowCoralCount;
+    public int yellowCoralCount;
 
     public GameObject RedCoral;
     [SerializeField] int maxRedCoralCount;
-    int redCoralCount;
+    public int redCoralCount;
 
     public GameObject BlueCoral;
     [SerializeField] int maxBlueCoralCount;
-    int blueCoralCount;
+    public int blueCoralCount;
 
     public GameObject LongCoral;
     [SerializeField] int maxLongCoralCount;
-    int longCoralCount;
+    public int longCoralCount;
 
     public GameObject NemoMine;
     [SerializeField] int maxNemoMineCount;
-    int nemoMineCount;
+    public int nemoMineCount;
 
     private bool enableDebugLogs = true; // Control debug logs
     GameObject itemPrefab; // Reference to the item prefab to be spawned

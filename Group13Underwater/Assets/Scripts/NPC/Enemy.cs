@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private Spawner spawner; // Reference to the Spawner class
     [SerializeField] private float moveSpeed = 15.0f;
     [SerializeField] private float health = 100.0f;
     [SerializeField] private float damageToPlayer = 10.0f;
@@ -26,6 +27,12 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get SpriteRenderer component
         if (enableDebugLogs) { Debug.Log("Enemy Start with health: " + health); }
         StartCoroutine(Wiggle());
+
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
     }
 
     private void FixedUpdate()
@@ -81,6 +88,13 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+
+            if (spawner != null)
+            {
+                // Pass the reference to the Spawner to decrement the count
+                spawner.DecrementCount(this.gameObject);
+            }
+
             GameManager.instance.AddEnemyKilled(1);
             GameManager.instance.AddScore(1);
             GameObject effect = Instantiate(deathParticle, transform.position, transform.rotation);
