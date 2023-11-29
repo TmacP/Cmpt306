@@ -6,16 +6,20 @@ using UnityEngine.UI;
 
 public class PlayerBottle : MonoBehaviour
 {
+    private Spawner spawner; // Reference to the Spawner class
     public GameObject messageScreen;
     public GameObject bottle;
 
     public TextMeshProUGUI bottleMessage; // This is the message that appears in the scroll pop up
-    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Don’t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
+    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Donï¿½t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
 
     void Start()
     {
-        // this should change the text of the message
-        //messagePicker();
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
     }
     private void Update()
     {
@@ -49,6 +53,8 @@ public class PlayerBottle : MonoBehaviour
             gameManager.AddMoney(5);
             // Destroy the bottle 
             Destroy(other.gameObject);
+            spawner.bottlesCount--;
+            
 
             // Show the message (pause game, show message panel)
             //Time.timeScale = 0;

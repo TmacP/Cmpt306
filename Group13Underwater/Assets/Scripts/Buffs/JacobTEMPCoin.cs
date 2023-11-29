@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class JacobTEMPCoin : MonoBehaviour
 {
+    private Spawner spawner; // Reference to the Spawner class
     private bool enableDebugLogs = false; // Control debug logs
+
+    void Start()
+    {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -16,6 +26,7 @@ public class JacobTEMPCoin : MonoBehaviour
                 if (enableDebugLogs) Debug.Log("Money added when item was collected."); //DEBUG
                                                                                         // If the collectable is colliding with player, apply powerup
                 Destroy(this.gameObject);
+                spawner.scoreCollectableCount--;
             }
 
         }
