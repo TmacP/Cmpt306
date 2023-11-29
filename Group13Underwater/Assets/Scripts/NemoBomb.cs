@@ -5,7 +5,7 @@ using UnityEngine;
 public class NemoBomb : MonoBehaviour
 {
     private PlayerHealth playerHealth;
-    [SerializeField] private float bombDamage = 25.0f;
+    [SerializeField] private float bombDamage = 20.0f;
     [SerializeField] private GameObject deathParticle;
     private Spawner spawner; // Reference to the Spawner class
 
