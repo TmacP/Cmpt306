@@ -84,7 +84,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] int maxNemoMineCount;
     public int nemoMineCount;
 
-    private bool enableDebugLogs = true; // Control debug logs
+    private bool enableDebugLogs = false; // Control debug logs
     GameObject itemPrefab; // Reference to the item prefab to be spawned
     private float nextSpawnTime = 0f;
     public float spawnInterval = 2f; // Adjust this interval as needed

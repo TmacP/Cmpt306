@@ -7644,13 +7644,13 @@ MonoBehaviour:
   maxEnemyBossCount: 1
   enemyBossCount: 0
   BasicFish: {fileID: 2399133645213031334, guid: d32f0fea743bb46e28f83ab20ceabce2, type: 3}
-  maxBasicFishCount: 5
+  maxBasicFishCount: 4
   basicFishCount: 0
   UncommonFish: {fileID: 2537708894850166052, guid: c30ce4d35feb686429beaa3cf7ff4644, type: 3}
-  maxUncommonFishCount: 4
+  maxUncommonFishCount: 3
   uncommonFishCount: 0
   SpecialFish: {fileID: 188378820109672910, guid: 9de854067c2e5f54593c9cd45b728321, type: 3}
-  maxSpecialFishCount: 3
+  maxSpecialFishCount: 2
   specialFishCount: 0
   LegendaryFish: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
   maxLegendaryFishCount: 2
@@ -7659,39 +7659,39 @@ MonoBehaviour:
   maxRareFishCount: 1
   rareFishCount: 0
   health: {fileID: 5490299660330610288, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
-  maxHealthCount: 3
+  maxHealthCount: 2
   healthCount: 0
   Magnet: {fileID: 4439393717628524484, guid: d586c33170b1142b7913dd981d60e1a6, type: 3}
-  maxMagnetCount: 3
+  maxMagnetCount: 2
   magnetCount: 0
   Ammo: {fileID: 2092571781234386689, guid: 5cfbac8632ac1404ea5bed82df68dfa6, type: 3}
-  maxAmmoCount: 3
+  maxAmmoCount: 2
   ammoCount: 0
   MoveBuff: {fileID: 2092571781234386689, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
-  maxMoveBuffCount: 3
+  maxMoveBuffCount: 2
   moveBuffCount: 0
   ScoreCollectable: {fileID: 2937148558865993028, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
-  maxScoreCollectableCount: 25
+  maxScoreCollectableCount: 20
   scoreCollectableCount: 0
   Bottles: {fileID: 339714012760111515, guid: dbdd5f3e90e478743b330dcf347016e4, type: 3}
-  maxBottlesCount: 3
+  maxBottlesCount: 1
   bottlesCount: 0
   TreasureChest: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
-  maxTreasureChestCount: 5
+  maxTreasureChestCount: 1
   treasureChestCount: 0
   YellowCoral: {fileID: 4144994029890468861, guid: 5868fa16d725c7347bee010ce8195d60, type: 3}
-  maxYellowCoralCount: 5
+  maxYellowCoralCount: 3
   yellowCoralCount: 0
   RedCoral: {fileID: 7047853394374307243, guid: 86ec3e94f142a9345a54cb21424d1a25, type: 3}
-  maxRedCoralCount: 5
+  maxRedCoralCount: 3
   redCoralCount: 0
   LongCoral: {fileID: 7355670818062537168, guid: 57c1e511e6c8bed44b38233bf2fbb25f, type: 3}
-  maxLongCoralCount: 5
+  maxLongCoralCount: 3
   longCoralCount: 0
   NemoMine: {fileID: 1259430098114208807, guid: 5ad0fcefedc57ff42a0a117597bfbb5f, type: 3}
-  maxNemoMineCount: 3
+  maxNemoMineCount: 2
   nemoMineCount: 0
-  spawnInterval: 1
+  spawnInterval: 2
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &481393762
@@ -16351,7 +16351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 1679481816}
   tileGeneration: {fileID: 744247514}
-  teleportInterval: 5
+  teleportInterval: 7.5
 --- !u!1 &1688412043
 GameObject:
   m_ObjectHideFlags: 0

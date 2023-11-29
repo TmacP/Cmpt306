@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  health: 10
-  damageToPlayer: 10
-  damageRate: 0.2
+  health: 5
+  damageToPlayer: 5
+  damageRate: 0.1
   wiggleSpeed: 10
   deathParticle: {fileID: 625696049721579682, guid: 21e847a5dde8d4866abee68bdcb8470e, type: 3}
 --- !u!212 &5874092464048677499

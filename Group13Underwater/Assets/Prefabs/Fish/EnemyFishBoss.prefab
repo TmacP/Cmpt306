@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc330658767c334db34d92092b761b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  health: 10
+  moveSpeed: 5
+  health: 50
   damageToPlayer: 10
   damageRate: 0.2
   wiggleSpeed: 10
