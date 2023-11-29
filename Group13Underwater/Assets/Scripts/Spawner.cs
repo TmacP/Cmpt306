@@ -72,9 +72,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] int maxRedCoralCount;
     public int redCoralCount;
 
-    public GameObject BlueCoral;
-    [SerializeField] int maxBlueCoralCount;
-    public int blueCoralCount;
+    // public GameObject BlueCoral;
+    // [SerializeField] int maxBlueCoralCount;
+    // public int blueCoralCount;
 
     public GameObject LongCoral;
     [SerializeField] int maxLongCoralCount;
@@ -122,7 +122,7 @@ public class Spawner : MonoBehaviour
             SpawnItems(TreasureChest, maxTreasureChestCount, ref treasureChestCount);
             SpawnItems(YellowCoral, maxYellowCoralCount, ref yellowCoralCount);
             SpawnItems(RedCoral, maxRedCoralCount, ref redCoralCount);
-            SpawnItems(BlueCoral, maxBlueCoralCount, ref blueCoralCount);
+            //SpawnItems(BlueCoral, maxBlueCoralCount, ref blueCoralCount);
             SpawnItems(LongCoral, maxLongCoralCount, ref longCoralCount);
             SpawnItems(NemoMine, maxNemoMineCount, ref nemoMineCount);
 
@@ -279,10 +279,10 @@ public class Spawner : MonoBehaviour
                 redCoralCount--;
                 if (enableDebugLogs) { Debug.Log("redCoralCount: " + redCoralCount); } //DEBUG
                 break;
-            case "CoralBlue(Clone)":
-                blueCoralCount--;
-                if (enableDebugLogs) { Debug.Log("blueCoralCount: " + blueCoralCount); } //DEBUG
-                break;
+            // case "CoralBlue(Clone)":
+            //     blueCoralCount--;
+            //     if (enableDebugLogs) { Debug.Log("blueCoralCount: " + blueCoralCount); } //DEBUG
+            //     break;
             case "LongCoralObstacle(Clone)":
                 longCoralCount--;
                 if (enableDebugLogs) { Debug.Log("longCoralCount: " + longCoralCount); } //DEBUG

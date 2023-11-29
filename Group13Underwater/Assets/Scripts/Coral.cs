@@ -5,10 +5,17 @@ using UnityEngine;
 public class Coral : MonoBehaviour
 {
     [SerializeField] private GameObject bubbles;
+    private Spawner spawner; // Reference to the Spawner class
+
 
     // Start is called before the first frame update
     void Start()
     {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
         
     }
 
@@ -23,5 +30,11 @@ public class Coral : MonoBehaviour
  
         Destroy(this.gameObject);
         GameObject effect = Instantiate(bubbles, transform.position, transform.rotation);
+        if (spawner != null)
+        {
+            // Pass the reference to the Spawner to decrement the count
+            spawner.DecrementCount(this.gameObject);
+        }
+
     }
 }
