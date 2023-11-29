@@ -208,68 +208,88 @@ public class Spawner : MonoBehaviour
 
     public void DecrementCount(GameObject item)
     {
-        if (enableDebugLogs) { Debug.Log("DecrementCount() called. " + item); } //DEBUG
+        if (enableDebugLogs) { Debug.Log("DecrementCount() called. " + item.name); } //DEBUG
         switch (item.name)
         {
             case "EnemyFish 1(Clone)":
                 enemyCount--;
+                if (enableDebugLogs) { Debug.Log("enemyCount: " + enemyCount); } //DEBUG
                 break;
             case "EnemyFish1(Clone)":
                 enemy2Count--;
+                if (enableDebugLogs) { Debug.Log("enemy2Count: " + enemy2Count); } //DEBUG
                 break;
             case "EnemyFishBoss(Clone)":
                 enemyBossCount--;
+                if (enableDebugLogs) { Debug.Log("enemyBossCount: " + enemyBossCount); } //DEBUG
                 break;
             case "BasicFish(Clone)":
                 basicFishCount--;
+                if (enableDebugLogs) { Debug.Log("basicFishCount: " + basicFishCount); } //DEBUG
                 break;
             case "Fish2(Clone)":
                 uncommonFishCount--;
+                if (enableDebugLogs) { Debug.Log("uncommonFishCount: " + uncommonFishCount); } //DEBUG
                 break;
             case "Fish3(Clone)":
                 specialFishCount--;
+                if (enableDebugLogs) { Debug.Log("specialFishCount: " + specialFishCount); } //DEBUG
                 break;
             case "LionFish(Clone)":
                 legendaryFishCount--;
+                if (enableDebugLogs) { Debug.Log("legendaryFishCount: " + legendaryFishCount); } //DEBUG
                 break;
             case "Fish7(Clone)":
                 rareFishCount--;
+                if (enableDebugLogs) { Debug.Log("rareFishCount: " + rareFishCount); } //DEBUG
                 break;
             case "HealthBuffCollectable(Clone)":
                 healthCount--;
+                if (enableDebugLogs) { Debug.Log("healthCount: " + healthCount); } //DEBUG
                 break;
             case "MagnetBuffCollectable(Clone)":
                 magnetCount--;
+                if (enableDebugLogs) { Debug.Log("magnetCount: " + magnetCount); } //DEBUG
                 break;
             case "AmmoBuff(Clone)":
                 ammoCount--;
+                if (enableDebugLogs) { Debug.Log("ammoCount: " + ammoCount); } //DEBUG
                 break;
             case "MoveSpeedBuffCollectable(Clone)":
                 moveBuffCount--;
+                if (enableDebugLogs) { Debug.Log("moveBuffCount: " + moveBuffCount); } //DEBUG
                 break;
             case "ScoreCollectable(Clone)":
                 scoreCollectableCount--;
+                if (enableDebugLogs) { Debug.Log("scoreCollectableCount: " + scoreCollectableCount); } //DEBUG
                 break;
             case "MessageBottle(Clone)":
                 bottlesCount--;
+                if (enableDebugLogs) { Debug.Log("bottlesCount: " + bottlesCount); } //DEBUG
                 break;
             case "TreasureChest(Clone)":
                 treasureChestCount--;
+                if (enableDebugLogs) { Debug.Log("treasureChestCount: " + treasureChestCount); } //DEBUG
                 break;
             case "CoralYellow(Clone)":
                 yellowCoralCount--;
+                if (enableDebugLogs) { Debug.Log("yellowCoralCount: " + yellowCoralCount); } //DEBUG
                 break;
             case "CoralRed(Clone)":
                 redCoralCount--;
+                if (enableDebugLogs) { Debug.Log("redCoralCount: " + redCoralCount); } //DEBUG
                 break;
             case "CoralBlue(Clone)":
                 blueCoralCount--;
+                if (enableDebugLogs) { Debug.Log("blueCoralCount: " + blueCoralCount); } //DEBUG
                 break;
             case "LongCoralObstacle(Clone)":
                 longCoralCount--;
+                if (enableDebugLogs) { Debug.Log("longCoralCount: " + longCoralCount); } //DEBUG
                 break;
             case "NemoMine(Clone)":
                 nemoMineCount--;
+                if (enableDebugLogs) { Debug.Log("nemoMineCount: " + nemoMineCount); } //DEBUG
                 break;
             default:
                 if (enableDebugLogs) { Debug.Log("DecrementCount(), item name not found."); } //DEBUG
