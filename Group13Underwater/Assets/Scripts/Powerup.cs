@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
+    private Spawner spawner; // Reference to the Spawner class
     public PowerupEffect powerupEffect;
+
+
+    void Start()
+    {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +24,12 @@ public class Powerup : MonoBehaviour
             // If the collectable is colliding with player, apply powerup
             powerupEffect.Apply(collision.gameObject);
             Destroy(this.gameObject);
+
+            if (spawner != null)
+            {
+                // Pass the reference to the Spawner to decrement the count
+                spawner.DecrementCount(this.gameObject);
+            }
         }
     }
 }

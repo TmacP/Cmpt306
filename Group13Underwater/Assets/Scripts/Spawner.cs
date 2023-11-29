@@ -243,7 +243,7 @@ public class Spawner : MonoBehaviour
                 rareFishCount--;
                 if (enableDebugLogs) { Debug.Log("rareFishCount: " + rareFishCount); } //DEBUG
                 break;
-            case "HealthBuffCollectable(Clone)":
+            case "HealBuffCollectable(Clone)":
                 healthCount--;
                 if (enableDebugLogs) { Debug.Log("healthCount: " + healthCount); } //DEBUG
                 break;

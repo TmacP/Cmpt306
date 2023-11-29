@@ -5,6 +5,16 @@ using UnityEngine;
 public class Ammo : MonoBehaviour
 {
     // OnTriggerEnter is called when another collider enters this object's collider
+    private Spawner spawner; // Reference to the Spawner class
+
+    void Start()
+    {
+        spawner = FindObjectOfType<Spawner>();
+        if (spawner == null)
+        {
+            Debug.LogError("Spawner not found in the scene. Make sure it's present.");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +25,12 @@ public class Ammo : MonoBehaviour
             {
                 gameManager.AddAmmo(25);                                          
                 Destroy(this.gameObject);
+
+            if (spawner != null)
+            {
+                // Pass the reference to the Spawner to decrement the count
+                spawner.DecrementCount(this.gameObject);
+            }
             }
 
         }
