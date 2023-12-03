@@ -7635,63 +7635,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 8225202820594584473, guid: 5ac4656100f2c4b4b8eef7e345cd81d5, type: 3}
-  maxEnemyCount: 2
+  maxEnemyCount: 1
+  enemyCountCap: 5
   enemyCount: 0
   Enemy2: {fileID: 7116325711183489634, guid: 57cd13dfecdb644d2b5ba0c457bc77a7, type: 3}
-  maxEnemy2Count: 5
+  maxEnemy2Count: 2
+  enemy2CountCap: 10
   enemy2Count: 0
   EnemyBoss: {fileID: 6437793019356106345, guid: ed7500b49c8aa406182bc9df1cd2c4a6, type: 3}
-  maxEnemyBossCount: 1
+  maxEnemyBossCount: 0
+  enemyBossCountCap: 3
   enemyBossCount: 0
   BasicFish: {fileID: 2399133645213031334, guid: d32f0fea743bb46e28f83ab20ceabce2, type: 3}
-  maxBasicFishCount: 4
+  maxBasicFishCount: 3
+  basicFishCountCap: 10
   basicFishCount: 0
   UncommonFish: {fileID: 2537708894850166052, guid: c30ce4d35feb686429beaa3cf7ff4644, type: 3}
-  maxUncommonFishCount: 3
+  maxUncommonFishCount: 2
+  uncommonFishCountCap: 8
   uncommonFishCount: 0
   SpecialFish: {fileID: 188378820109672910, guid: 9de854067c2e5f54593c9cd45b728321, type: 3}
-  maxSpecialFishCount: 2
+  maxSpecialFishCount: 1
+  specialFishCountCap: 6
   specialFishCount: 0
   LegendaryFish: {fileID: 3347878440531439305, guid: d44720ebc72acb34e866cf589962de2c, type: 3}
-  maxLegendaryFishCount: 2
+  maxLegendaryFishCount: 0
+  legendaryFishCountCap: 4
   legendaryFishCount: 0
   RareFish: {fileID: 8000083755570699017, guid: 94aa4e5ce19eb9a42a8046817e31e42a, type: 3}
-  maxRareFishCount: 1
+  maxRareFishCount: 0
+  rareFishCountCap: 3
   rareFishCount: 0
   health: {fileID: 5490299660330610288, guid: a55cef41e90874e5b902bf0ddee06680, type: 3}
-  maxHealthCount: 2
+  maxHealthCount: 1
+  healthCountCap: 5
   healthCount: 0
   Magnet: {fileID: 4439393717628524484, guid: d586c33170b1142b7913dd981d60e1a6, type: 3}
-  maxMagnetCount: 2
+  maxMagnetCount: 1
+  magnetCountCap: 5
   magnetCount: 0
   Ammo: {fileID: 2092571781234386689, guid: 5cfbac8632ac1404ea5bed82df68dfa6, type: 3}
-  maxAmmoCount: 2
+  maxAmmoCount: 1
+  ammoCountCap: 5
   ammoCount: 0
   MoveBuff: {fileID: 2092571781234386689, guid: 2915ddae5c12f4597be888528e12aa7a, type: 3}
-  maxMoveBuffCount: 2
+  maxMoveBuffCount: 1
+  moveBuffCountCap: 5
   moveBuffCount: 0
   ScoreCollectable: {fileID: 2937148558865993028, guid: 32e07ecfa27ec40cfabdf70d6ab5ee84, type: 3}
-  maxScoreCollectableCount: 20
+  maxScoreCollectableCount: 10
+  scoreCollectableCountCap: 50
   scoreCollectableCount: 0
   Bottles: {fileID: 339714012760111515, guid: dbdd5f3e90e478743b330dcf347016e4, type: 3}
   maxBottlesCount: 1
+  bottlesCountCap: 5
   bottlesCount: 0
   TreasureChest: {fileID: 2342218448430975892, guid: 2d22dcf143b37a04d9be87fec5fdab40, type: 3}
   maxTreasureChestCount: 1
+  treasureChestCountCap: 5
   treasureChestCount: 0
   YellowCoral: {fileID: 4144994029890468861, guid: 5868fa16d725c7347bee010ce8195d60, type: 3}
   maxYellowCoralCount: 3
+  yellowCoralCountCap: 10
   yellowCoralCount: 0
   RedCoral: {fileID: 7047853394374307243, guid: 86ec3e94f142a9345a54cb21424d1a25, type: 3}
   maxRedCoralCount: 3
+  redCoralCountCap: 10
   redCoralCount: 0
   LongCoral: {fileID: 7355670818062537168, guid: 57c1e511e6c8bed44b38233bf2fbb25f, type: 3}
-  maxLongCoralCount: 3
+  maxLongCoralCount: 1
+  longCoralCountCap: 5
   longCoralCount: 0
   NemoMine: {fileID: 1259430098114208807, guid: 5ad0fcefedc57ff42a0a117597bfbb5f, type: 3}
-  maxNemoMineCount: 2
+  maxNemoMineCount: 1
+  nemoMineCountCap: 10
   nemoMineCount: 0
-  spawnInterval: 2
+  spawnInterval: 1
   tileGeneration: {fileID: 744247514}
   emptyTilePositions: []
 --- !u!4 &481393762
