@@ -26,7 +26,7 @@ public class JacobTEMPCoin : MonoBehaviour
                 if (enableDebugLogs) Debug.Log("Money added when item was collected."); //DEBUG
                                                                                         // If the collectable is colliding with player, apply powerup
                 Destroy(this.gameObject);
-                spawner.scoreCollectableCount--;
+                //spawner.scoreCollectableCount--; //HACK this is to fix a bug that causes the score to go down when a collectable is despawned.
             }
 
         }
