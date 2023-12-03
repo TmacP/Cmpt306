@@ -6,6 +6,8 @@ public class Ammo : MonoBehaviour
 {
     // OnTriggerEnter is called when another collider enters this object's collider
     private Spawner spawner; // Reference to the Spawner class
+    [SerializeField] private GameObject starParticle;
+
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class Ammo : MonoBehaviour
             {
                 gameManager.AddAmmo(25);                                          
                 Destroy(this.gameObject);
+                gameManager.buffSoundPlay();
+                GameObject effect = Instantiate(starParticle, transform.position, transform.rotation);
 
             if (spawner != null)
             {

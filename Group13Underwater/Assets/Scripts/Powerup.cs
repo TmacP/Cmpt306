@@ -6,6 +6,7 @@ public class Powerup : MonoBehaviour
 {
     private Spawner spawner; // Reference to the Spawner class
     public PowerupEffect powerupEffect;
+    [SerializeField] private GameObject starParticle;
 
 
     void Start()
@@ -24,7 +25,9 @@ public class Powerup : MonoBehaviour
             // If the collectable is colliding with player, apply powerup
             powerupEffect.Apply(collision.gameObject);
             Destroy(this.gameObject);
-
+            GameObject effect = Instantiate(starParticle, transform.position, transform.rotation);
+            GameManager gameManager = GameManager.instance;
+            gameManager.buffSoundPlay();
             if (spawner != null)
             {
                 // Pass the reference to the Spawner to decrement the count

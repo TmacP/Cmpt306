@@ -75,6 +75,7 @@ using UnityEngine.SceneManagement;
     // Sound Variables
     public AudioSource moneySound; // Assign in Unity Editor
     public AudioSource scoreSound; // Assign in Unity Editor
+    public AudioSource buffSound; // Assign in Unity Editor
 
     // Score Variables
     public Text scoreVisual;
@@ -254,5 +255,11 @@ using UnityEngine.SceneManagement;
         UpdateMoneyVisual();
         Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
+    }
+
+
+    public void buffSoundPlay()
+    {
+        buffSound.Play();
     }
 }

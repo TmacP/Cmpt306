@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupEffect: {fileID: 11400000, guid: b549a47a42dd7e542ad04d32e0b4918f, type: 2}
+  starParticle: {fileID: 6154534622122256330, guid: 4ec7a0a9f79374d159d24e105ef96d68, type: 3}
