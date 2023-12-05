@@ -11,7 +11,7 @@ public class PlayerBottle : MonoBehaviour
     public GameObject bottle;
 
     public TextMeshProUGUI bottleMessage; // This is the message that appears in the scroll pop up
-    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Don�t be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
+    string[] messages = new string[] { "Be shore of yourself!", "Seas the day!", "You are doing fin-tastic!", "Do not be crabby!", "Treat yourshellf!", "Seas and greetings!", "Water you waiting for?", "Good things come to those who bait!" };
 
     void Start()
     {

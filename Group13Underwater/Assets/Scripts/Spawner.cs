@@ -106,7 +106,7 @@ public class Spawner : MonoBehaviour
     private float playerYCoordinate;
     public TileGeneration tileGeneration; // Reference to the TileGeneration script which has our list of empty tile positions
     public List<Vector3Int> emptyTilePositions;
-    private float depthGoal = -250f;
+    private float depthGoal = -150f;
 
     private void Start()
     {
