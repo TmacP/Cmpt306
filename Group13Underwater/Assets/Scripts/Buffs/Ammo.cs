@@ -7,7 +7,7 @@ public class Ammo : MonoBehaviour
     // OnTriggerEnter is called when another collider enters this object's collider
     private Spawner spawner; // Reference to the Spawner class
     [SerializeField] private GameObject starParticle;
-
+    public GameObject BuffPopUp;
 
     void Start()
     {
@@ -18,10 +18,11 @@ public class Ammo : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
+        {   BuffPopUp.SetActive(true);
             GameManager gameManager = GameManager.instance;
             if (gameManager != null)
             {
@@ -29,7 +30,8 @@ public class Ammo : MonoBehaviour
                 Destroy(this.gameObject);
                 gameManager.buffSoundPlay();
                 GameObject effect = Instantiate(starParticle, transform.position, transform.rotation);
-
+                BuffPopUp.SetActive(false);
+    
             if (spawner != null)
             {
                 // Pass the reference to the Spawner to decrement the count

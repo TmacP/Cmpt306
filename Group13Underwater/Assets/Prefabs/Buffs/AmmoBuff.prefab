@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starParticle: {fileID: 6154534622122256330, guid: 4ec7a0a9f79374d159d24e105ef96d68, type: 3}
+  BuffPopUp: {fileID: 2076061293779758166, guid: b6e26516ea379cd449556306b24adc3b, type: 3}
