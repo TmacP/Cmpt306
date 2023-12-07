@@ -7,6 +7,7 @@ public class PlayerBasicFish : MonoBehaviour
     // When the player contacts a fish, add point and destroy fish
     
     private Spawner spawner; // Reference to the Spawner class
+    [SerializeField] private GameObject pickupParticle;
 
     private void Start()
     {
@@ -24,6 +25,8 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
             spawner.basicFishCount--;
+            GameObject effect = Instantiate(pickupParticle, transform.position, transform.rotation);
+
 
         }
         if (other.transform.tag == "UncommonFish" && (GameManager.instance != null))
@@ -36,6 +39,8 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
             spawner.uncommonFishCount--;
+            GameObject effect = Instantiate(pickupParticle, transform.position, transform.rotation);
+
 
         }
         if (other.transform.tag == "SpecialFish" && (GameManager.instance != null))
@@ -48,6 +53,8 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
             spawner.specialFishCount--;
+            GameObject effect = Instantiate(pickupParticle, transform.position, transform.rotation);
+
 
         }
         if (other.transform.tag == "RareFish" && (GameManager.instance != null))
@@ -60,6 +67,8 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
             spawner.legendaryFishCount--;
+            GameObject effect = Instantiate(pickupParticle, transform.position, transform.rotation);
+
 
 
         }
@@ -73,6 +82,8 @@ public class PlayerBasicFish : MonoBehaviour
             // Destroy the fish instance
             Destroy(other.gameObject);
             spawner.rareFishCount--;
+            GameObject effect = Instantiate(pickupParticle, transform.position, transform.rotation);
+
         }
     }
 
