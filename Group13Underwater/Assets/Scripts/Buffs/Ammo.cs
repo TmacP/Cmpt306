@@ -6,12 +6,14 @@ public class Ammo : MonoBehaviour
 {
     // OnTriggerEnter is called when another collider enters this object's collider
     private Spawner spawner; // Reference to the Spawner class
+    private BuffMessage buffMessage;
     [SerializeField] private GameObject starParticle;
 
 
     void Start()
     {
         spawner = FindObjectOfType<Spawner>();
+        buffMessage = FindObjectOfType<BuffMessage>();
         if (spawner == null)
         {
             Debug.LogError("Spawner not found in the scene. Make sure it's present.");
@@ -28,6 +30,7 @@ public class Ammo : MonoBehaviour
                 gameManager.AddAmmo(25);                                          
                 Destroy(this.gameObject);
                 gameManager.buffSoundPlay();
+                buffMessage.ShowMessage("Ammo");
                 GameObject effect = Instantiate(starParticle, transform.position, transform.rotation);
 
             if (spawner != null)

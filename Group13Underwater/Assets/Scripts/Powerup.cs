@@ -5,6 +5,7 @@ using UnityEngine;
 public class Powerup : MonoBehaviour
 {
     private Spawner spawner; // Reference to the Spawner class
+    private BuffMessage buffMessage;
     public PowerupEffect powerupEffect;
     [SerializeField] private GameObject starParticle;
 
@@ -12,6 +13,7 @@ public class Powerup : MonoBehaviour
     void Start()
     {
         spawner = FindObjectOfType<Spawner>();
+        buffMessage = FindObjectOfType<BuffMessage>();
         if (spawner == null)
         {
             Debug.LogError("Spawner not found in the scene. Make sure it's present.");
@@ -25,6 +27,7 @@ public class Powerup : MonoBehaviour
             // If the collectable is colliding with player, apply powerup
             powerupEffect.Apply(collision.gameObject);
             Destroy(this.gameObject);
+            buffMessage.ShowMessage(powerupEffect.name);
             GameObject effect = Instantiate(starParticle, transform.position, transform.rotation);
             GameManager gameManager = GameManager.instance;
             gameManager.buffSoundPlay();
