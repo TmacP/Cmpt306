@@ -49,7 +49,7 @@ public class BuffMessage : MonoBehaviour
         }
     }
 
-    void DeactivateAllBuffs()
+    public void DeactivateAllBuffs()
     {
         AmmoBuff.SetActive(false);
         SpeedBuff.SetActive(false);

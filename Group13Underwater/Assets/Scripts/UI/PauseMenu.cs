@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public BuffMessage buffMessage;
     public Button ammoButton;
     public Button damageButton;
     public Button heartButton;
@@ -53,6 +54,7 @@ void Update()
         if (enableDebugLogs) Debug.Log("pause: "); // DEBUG
         Time.timeScale = 0;
         pauseScreen.SetActive(true);
+        buffMessage.DeactivateAllBuffs();
         }
     }
 

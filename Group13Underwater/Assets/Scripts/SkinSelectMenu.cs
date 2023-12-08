@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SkinSelectMenu : MonoBehaviour
 {
+    public BuffMessage buffMessage;
     public GameObject skinselectmenu;
     public GameObject pauseScreen;
     public Button quitButton;
@@ -41,6 +42,7 @@ public class SkinSelectMenu : MonoBehaviour
             {
                 Time.timeScale = 0;
                 skinselectmenu.SetActive(true);
+                buffMessage.DeactivateAllBuffs();
             }
         }
     }

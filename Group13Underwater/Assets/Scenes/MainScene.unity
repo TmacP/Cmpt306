@@ -7159,6 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6bc14a4068849099d6d9baed525e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buffMessage: {fileID: 1532209198}
   skinselectmenu: {fileID: 3960623131917168358}
   pauseScreen: {fileID: 3960623133231788443}
   quitButton: {fileID: 1411838907}
@@ -9025,6 +9026,10 @@ PrefabInstance:
       propertyPath: skinButton
       value: 
       objectReference: {fileID: 1691910568}
+    - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
+      propertyPath: buffMessage
+      value: 
+      objectReference: {fileID: 1532209198}
     - target: {fileID: 6304031844276627159, guid: 72858fb6d9eb5428e8304aa8986e4f11, type: 3}
       propertyPath: heartButton
       value: 
