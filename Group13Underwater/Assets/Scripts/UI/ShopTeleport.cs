@@ -19,9 +19,12 @@ public class ShopTeleport : MonoBehaviour
 
     void Update()
     {
+        
         // Check if it's time to teleport
-        if (Time.time >= nextTeleportTime)
+        if (Time.time >= nextTeleportTime && (Mathf.Abs(GameManager.instance.GetPlayerPosition().y + 20) >= Mathf.Abs(transform.position.y)))
         {
+            Debug.Log("this.position.y <= " +  Mathf.Abs(transform.position.y)); //DEBUG
+            Debug.Log("player position.y " + Mathf.Abs(GameManager.instance.GetPlayerPosition().y + 20)); //DEBUG
             TeleportShop();
             // Update the next teleport time
             nextTeleportTime = Time.time + teleportInterval;
